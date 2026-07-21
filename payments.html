@@ -6,7 +6,7 @@
     
     <!-- SEO & Title -->
     <title>Client Secure Checkout | Just Consult Adrian</title>
-    <meta name="description" content="Secure payment and checkout portal for Just Consult Adrian. Process payments easily via EcoCash, InnBucks, or Bank Transfer.">
+    <meta name="description" content="Secure direct payment portal for Just Consult Adrian.">
     
     <!-- Tailwind CSS & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,10 +34,10 @@
     <main class="py-16 max-w-4xl mx-auto px-6 w-full flex-grow">
         <div class="text-center mb-12">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-4">
-                🔒 Secure Client Portal
+                🔒 Direct Secure Checkout
             </div>
             <h1 class="text-3xl md:text-5xl font-black text-white">Project Investment Checkout</h1>
-            <p class="text-slate-400 mt-3 text-sm max-w-lg mx-auto">Confirm your investment amount and select your preferred regional or international payment method below.</p>
+            <p class="text-slate-400 mt-3 text-sm max-w-lg mx-auto">Select your package, trigger your preferred mobile payment option, and confirm instantly on-site.</p>
         </div>
 
         <div class="grid md:grid-cols-12 gap-8 items-start">
@@ -67,56 +67,62 @@
                 </div>
             </div>
 
-            <!-- Right Side: Payment Methods Accordion/Tabs -->
+            <!-- Right Side: Interactive Payment Buttons -->
             <div class="md:col-span-7 bg-white/[0.02] border border-white/10 p-6 rounded-2xl space-y-6">
-                <h2 class="text-lg font-bold text-white border-b border-white/10 pb-4">2. Choose Payment Method</h2>
+                <h2 class="text-lg font-bold text-white border-b border-white/10 pb-4">2. Click to Pay On-Site</h2>
                 
                 <!-- Method Selection Tabs -->
-                <div class="grid grid-cols-3 gap-2 bg-black p-1.5 rounded-xl border border-white/10">
-                    <button onclick="switchTab('ecocash')" id="tab-ecocash" class="py-2.5 text-xs font-bold rounded-lg transition bg-amber-500 text-black">EcoCash</button>
-                    <button onclick="switchTab('innbucks')" id="tab-innbucks" class="py-2.5 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white">InnBucks</button>
-                    <button onclick="switchTab('bank')" id="tab-bank" class="py-2.5 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white">Bank Transfer</button>
+                <div class="grid grid-cols-2 gap-2 bg-black p-1.5 rounded-xl border border-white/10">
+                    <button onclick="switchTab('ecocash')" id="tab-ecocash" class="py-3 text-xs font-bold rounded-lg transition bg-amber-500 text-black">EcoCash Direct</button>
+                    <button onclick="switchTab('innbucks')" id="tab-innbucks" class="py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white">InnBucks Direct</button>
                 </div>
 
                 <!-- Tab Content: EcoCash -->
                 <div id="content-ecocash" class="space-y-4 pt-2">
-                    <div class="bg-black border border-white/10 p-4 rounded-xl space-y-2">
-                        <div class="text-xs text-slate-400 uppercase tracking-wider">EcoCash Number (Send Money)</div>
-                        <div class="flex justify-between items-center">
-                            <span id="ecocash-number" class="text-lg font-bold text-white tracking-wide">+263 77 423 5841</span>
-                            <button onclick="copyToClipboard('ecocash-number', this)" class="text-xs bg-white/10 hover:bg-amber-500 hover:text-black px-3 py-1.5 rounded transition font-semibold">Copy</button>
+                    <div class="bg-black border border-white/10 p-5 rounded-xl space-y-3 text-center">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">EcoCash Send Money Number</div>
+                        <div class="text-xl font-extrabold text-white tracking-wide">+263 77 423 5841</div>
+                        <div class="text-xs text-slate-500">Name: Adrian Chombe</div>
+                        
+                        <div class="pt-2 flex gap-2">
+                            <a href="tel:*151*1*2*263774235841#1" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
+                                <span>📱 Dial EcoCash USSD</span>
+                            </a>
+                            <button onclick="copyNumber('+263774235841', this)" class="bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg text-xs font-bold transition">
+                                Copy Number
+                            </button>
                         </div>
-                        <div class="text-xs text-slate-500">Name: Adrian Chombe (Just Consult Adrian)</div>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">After completing your EcoCash transaction, click the confirmation button below to notify our finance desk with your transaction reference.</p>
                 </div>
 
                 <!-- Tab Content: InnBucks -->
                 <div id="content-innbucks" class="space-y-4 pt-2 hidden">
-                    <div class="bg-black border border-white/10 p-4 rounded-xl space-y-2">
-                        <div class="text-xs text-slate-400 uppercase tracking-wider">InnBucks Phone Number</div>
-                        <div class="flex justify-between items-center">
-                            <span id="innbucks-number" class="text-lg font-bold text-white tracking-wide">+263 77 423 5841</span>
-                            <button onclick="copyToClipboard('innbucks-number', this)" class="text-xs bg-white/10 hover:bg-amber-500 hover:text-black px-3 py-1.5 rounded transition font-semibold">Copy</button>
-                        </div>
+                    <div class="bg-black border border-white/10 p-5 rounded-xl space-y-3 text-center">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">InnBucks Authorized Account</div>
+                        <div class="text-xl font-extrabold text-white tracking-wide">+263 77 423 5841</div>
                         <div class="text-xs text-slate-500">Name: Adrian Chombe</div>
+                        
+                        <div class="pt-2 flex gap-2">
+                            <a href="tel:*569#" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
+                                <span>📱 Dial InnBucks USSD</span>
+                            </a>
+                            <button onclick="copyNumber('+263774235841', this)" class="bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg text-xs font-bold transition">
+                                Copy Number
+                            </button>
+                        </div>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">Authorize payment through your InnBucks application and copy your confirmation receipt.</p>
                 </div>
 
-                <!-- Tab Content: Bank Transfer -->
-                <div id="content-bank" class="space-y-4 pt-2 hidden">
-                    <div class="bg-black border border-white/10 p-4 rounded-xl space-y-3 text-center py-6">
-                        <div class="text-amber-500 font-bold text-sm">Bank Account Finalization in Progress</div>
-                        <p class="text-xs text-slate-400">Direct bank transfer details will be provided directly via WhatsApp upon request while account setup is finalized.</p>
-                        <a href="https://wa.me/263774235841?text=Hello%20Adrian,%20please%20send%20me%20bank%20transfer%20details." target="_blank" class="inline-block mt-2 text-xs bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2 rounded font-semibold transition">Request Bank Details via WhatsApp</a>
-                    </div>
+                <!-- Optional Reference Input for On-Site Tracking -->
+                <div class="space-y-2 pt-2">
+                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Transaction Reference / Phone Used</label>
+                    <input type="text" id="tx-ref" placeholder="e.g. EcoCash SMS Ref or Sender Phone" class="w-full bg-white/5 border border-white/10 p-3 rounded text-white text-xs focus:border-amber-500 outline-none transition">
                 </div>
 
-                <!-- Action Button -->
-                <div class="pt-4">
-                    <button onclick="proceedToWhatsApp()" class="w-full gold-gradient text-black font-bold py-4 rounded-xl text-sm hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
-                        <span>Confirm Payment via WhatsApp</span>
+                <!-- On-Site Finalization Button -->
+                <div class="pt-2">
+                    <button onclick="completeOnSitePayment()" class="w-full gold-gradient text-black font-bold py-4 rounded-xl text-sm hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
+                        <span>I Have Paid — Generate Instant Invoice</span>
                         <span>→</span>
                     </button>
                 </div>
@@ -128,7 +134,7 @@
 
     <!-- Footer -->
     <footer class="py-8 border-t border-white/10 text-center text-xs text-slate-500 space-y-2">
-        <p>Encrypted 256-bit Secure Client Transaction Portal</p>
+        <p>Direct On-Site Secure Payment Portal</p>
         <p>&copy; 2026 Just Consult Adrian. All Rights Reserved.</p>
     </footer>
 
@@ -160,40 +166,38 @@
         }
 
         function switchTab(method) {
-            const tabs = ['ecocash', 'innbucks', 'bank'];
+            const tabs = ['ecocash', 'innbucks'];
             tabs.forEach(t => {
                 const tabBtn = document.getElementById('tab-' + t);
                 const contentDiv = document.getElementById('content-' + t);
                 
                 if(t === method) {
-                    tabBtn.className = "py-2.5 text-xs font-bold rounded-lg transition bg-amber-500 text-black";
+                    tabBtn.className = "py-3 text-xs font-bold rounded-lg transition bg-amber-500 text-black";
                     contentDiv.classList.remove('hidden');
                 } else {
-                    tabBtn.className = "py-2.5 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white";
+                    tabBtn.className = "py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white";
                     contentDiv.classList.add('hidden');
                 }
             });
         }
 
-        function copyToClipboard(elementId, btnElement) {
-            const textToCopy = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
+        function copyNumber(text, btnElement) {
+            navigator.clipboard.writeText(text).then(() => {
                 const originalText = btnElement.innerText;
                 btnElement.innerText = "Copied!";
-                btnElement.classList.add("bg-amber-500", "text-black");
                 setTimeout(() => {
                     btnElement.innerText = originalText;
-                    btnElement.classList.remove("bg-amber-500", "text-black");
                 }, 2000);
             });
         }
 
-        function proceedToWhatsApp() {
+        function completeOnSitePayment() {
             const tierSelect = document.getElementById('payment-tier');
             const tierText = tierSelect.options[tierSelect.selectedIndex].text;
-            const message = `Hello Adrian, I have just completed/prepared payment of $${currentAmount} for ${tierText}. Please verify and process my project.`;
-            const encoded = encodeURIComponent(message);
-            window.open(`https://wa.me/263774235841?text=${encoded}`, '_blank');
+            const ref = document.getElementById('tx-ref').value || 'Direct Portal Payment';
+            
+            // Instantly moves the client to your success page to download their PDF invoice on-site
+            window.location.href = `success.html?amount=${currentAmount}&package=${encodeURIComponent(tierText)}&ref=${encodeURIComponent(ref)}`;
         }
     </script>
 </body>
