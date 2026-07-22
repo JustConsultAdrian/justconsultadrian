@@ -65,6 +65,11 @@
                     <span class="text-sm text-slate-400 font-medium">Total Due:</span>
                     <span id="display-total" class="text-3xl font-black text-amber-500">$350</span>
                 </div>
+                <!-- Add this input box in your left column (e.g., right under the package selector) -->
+<div class="mt-4">
+    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Your Full Name / Company</label>
+    <input type="text" id="client-name" placeholder="e.g. John Smith" class="w-full bg-white/5 border border-white/10 p-3.5 rounded text-white text-sm focus:border-amber-500 outline-none transition">
+</div>
             </div>
 
             <!-- Right Side: Interactive Payment Buttons -->
@@ -194,12 +199,13 @@
         }
 
         function completeOnSitePayment() {
-            const tierSelect = document.getElementById('payment-tier');
-            const tierText = tierSelect.options[tierSelect.selectedIndex].text;
-            const ref = document.getElementById('tx-ref').value || 'Direct Portal Payment';
-            
-            window.location.href = `success.html?amount=${currentAmount}&package=${encodeURIComponent(tierText)}&ref=${encodeURIComponent(ref)}`;
-        }
+    const tierSelect = document.getElementById('payment-tier');
+    const tierText = tierSelect.options[tierSelect.selectedIndex].text;
+    const clientName = document.getElementById('client-name').value || 'Valued Client';
+    const ref = document.getElementById('tx-ref').value || 'Direct Portal Payment';
+    
+    window.location.href = `success.html?amount=${currentAmount}&package=${encodeURIComponent(tierText)}&name=${encodeURIComponent(clientName)}&ref=${encodeURIComponent(ref)}`;
+}
     </script>
 </body>
 </html>
