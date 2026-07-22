@@ -85,7 +85,8 @@
                         <div class="text-xs text-slate-500">Name: Adrian Chombe</div>
                         
                         <div class="pt-2 flex gap-2">
-                            <a href="tel:*151*1*2*263774235841#1" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
+                            <!-- Fixed USSD link with encoded %23 tag -->
+                            <a href="tel:*151*1*2*263774235841%23" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
                                 <span>📱 Dial EcoCash USSD</span>
                             </a>
                             <button onclick="copyNumber('+263774235841', this)" class="bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg text-xs font-bold transition">
@@ -103,7 +104,8 @@
                         <div class="text-xs text-slate-500">Name: Adrian Chombe</div>
                         
                         <div class="pt-2 flex gap-2">
-                            <a href="tel:*569#" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
+                            <!-- Fixed USSD link with encoded %23 tag -->
+                            <a href="tel:*569%23" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
                                 <span>📱 Dial InnBucks USSD</span>
                             </a>
                             <button onclick="copyNumber('+263774235841', this)" class="bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg text-xs font-bold transition">
@@ -196,7 +198,6 @@
             const tierText = tierSelect.options[tierSelect.selectedIndex].text;
             const ref = document.getElementById('tx-ref').value || 'Direct Portal Payment';
             
-            // Instantly moves the client to your success page to download their PDF invoice on-site
             window.location.href = `success.html?amount=${currentAmount}&package=${encodeURIComponent(tierText)}&ref=${encodeURIComponent(ref)}`;
         }
     </script>
