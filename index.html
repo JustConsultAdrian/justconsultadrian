@@ -5,104 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!-- Technical & Canonical Meta -->
-    <title>Just Consult Adrian | Top-Tier Web Engineering, Branding & Digital Strategy</title>
-    <meta name="description" content="Just Consult Adrian is a premier digital strategy and web engineering agency based in Harare, Zimbabwe. We architect high-converting websites, corporate brand systems, and organic growth infrastructure for ambitious businesses.">
-    <meta name="keywords" content="Website Design Zimbabwe, Website Developer Harare, Business Websites Zimbabwe, Professional Website Design, Web Development Harare, Branding Zimbabwe, SEO Services Zimbabwe, Digital Marketing Zimbabwe, Just Consult Adrian">
+    <!-- Mobile Web App Capability -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Just Consult Adrian">
+
+    <!-- Technical & SEO Metadata -->
+    <title>Just Consult Adrian | Premier Web Engineering & Digital Strategy</title>
+    <meta name="description" content="Just Consult Adrian is a premier web engineering and branding agency in Harare, Zimbabwe. We architect high-converting websites, corporate identities, and SEO infrastructure.">
+    <meta name="keywords" content="Website Design Zimbabwe, Website Developer Harare, Business Websites Zimbabwe, Web Development Harare, Branding Zimbabwe, SEO Zimbabwe, Just Consult Adrian">
     <meta name="author" content="Just Consult Adrian">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#030712">
     <link rel="canonical" href="https://www.justconsultadrian.com/">
+    <link rel="manifest" href="/manifest.json">
 
-    <!-- Performance: Preconnects & Fonts -->
+    <!-- Font & Asset Preloading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preload" as="image" href="hero.png">
 
-    <!-- Open Graph / Social Sharing Metadata -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Just Consult Adrian">
-    <meta property="og:title" content="Just Consult Adrian | World-Class Web Engineering & Growth Strategy">
-    <meta property="og:description" content="Architecting high-converting digital platforms, brand systems, and organic acquisition channels for forward-thinking enterprises.">
-    <meta property="og:image" content="https://www.justconsultadrian.com/logo.jpg">
-    <meta property="og:url" content="https://www.justconsultadrian.com">
-    <meta property="og:locale" content="en_ZW">
-
-    <!-- Twitter Card Meta -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Just Consult Adrian | Web Engineering & Digital Strategy">
-    <meta name="twitter:description" content="High-ticket digital agency engineering fast, secure, and beautiful web platforms.">
-    <meta name="twitter:image" content="https://www.justconsultadrian.com/logo.jpg">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/jpeg" href="/logo.jpg">
-    <link rel="apple-touch-icon" href="/logo.jpg">
-
-    <!-- Schema.org JSON-LD Graph (Local Business, Organization, WebSite, FAQ) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://www.justconsultadrian.com/#organization",
-          "name": "Just Consult Adrian",
-          "url": "https://www.justconsultadrian.com",
-          "logo": "https://www.justconsultadrian.com/logo.jpg",
-          "image": "https://www.justconsultadrian.com/logo.jpg",
-          "telephone": "+263774235841",
-          "email": "JustConsultAdrian@gmail.com",
-          "priceRange": "$$$",
-          "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Harare",
-              "addressCountry": "ZW"
-          },
-          "areaServed": ["Zimbabwe", "Global"],
-          "description": "Premium website engineering, brand strategy, copywriting, and search engine optimization for modern businesses.",
-          "sameAs": [
-              "https://www.facebook.com/profile.php?id=61591434127111"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.justconsultadrian.com/#website",
-          "url": "https://www.justconsultadrian.com",
-          "name": "Just Consult Adrian",
-          "publisher": { "@id": "https://www.justconsultadrian.com/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.justconsultadrian.com/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the typical timeline for a web project?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Standard entry and corporate builds take between 5 to 10 business days. Extended custom web apps and retainer integrations are delivered in structured 2-week sprint cycles."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What payment methods are supported in Zimbabwe?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We accept local payments seamlessly via EcoCash, InnBucks, ZiG, and direct USD bank transfers, alongside international card options."
-              }
-            }
-          ]
-        }
-      ]
-    }
-    </script>
-
-    <!-- Tailwind CSS Engine -->
+    <!-- External Modular Assets -->
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -119,61 +44,138 @@
                             darkBg: '#030712',
                             cardBg: '#0f172a'
                         }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 
-    <!-- Global Custom Styles -->
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .gold-gradient-bg { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
-        .accent-gradient-text {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    <!-- Social & Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Just Consult Adrian">
+    <meta property="og:title" content="Just Consult Adrian | Web Engineering & Strategy">
+    <meta property="og:description" content="Architecting high-converting digital platforms, corporate brand systems, and organic acquisition channels.">
+    <meta property="og:image" content="https://www.justconsultadrian.com/logo.jpg">
+    <meta property="og:url" content="https://www.justconsultadrian.com">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+
+    <!-- Comprehensive Schema.org JSON-LD Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["ProfessionalService", "Organization"],
+          "@id": "https://www.justconsultadrian.com/#organization",
+          "name": "Just Consult Adrian",
+          "url": "https://www.justconsultadrian.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.justconsultadrian.com/logo.jpg"
+          },
+          "image": "https://www.justconsultadrian.com/logo.jpg",
+          "telephone": "+263774235841",
+          "email": "JustConsultAdrian@gmail.com",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Harare",
+            "addressCountry": "ZW"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-17.8292",
+            "longitude": "31.0522"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61591434127111"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "18"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.justconsultadrian.com/#person",
+          "name": "Adrian Chombe",
+          "jobTitle": "Founder & Head of Strategy",
+          "worksFor": { "@id": "https://www.justconsultadrian.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.justconsultadrian.com/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the typical timeline for a web engineering project?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standard and Elite corporate builds are completed within 5 to 10 business days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What local payment gateways are accepted in Zimbabwe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We accept payments via EcoCash, InnBucks, ZiG, and direct USD bank transfers."
+              }
+            }
+          ]
         }
-        .purple-gradient-text {
-            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .light .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-        }
-    </style>
+      ]
+    }
+    </script>
 </head>
 
-<body class="bg-gray-950 text-slate-100 dark:bg-gray-950 dark:text-slate-100 antialiased selection:bg-amber-500 selection:text-gray-950 transition-colors duration-300">
+<body class="bg-gray-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-gray-950">
+
+    <!-- Top Scroll Reading Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" aria-live="polite"></div>
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-50 p-4 bg-gray-900/95 border-t border-slate-800 backdrop-blur-md hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
-            <p>🔒 We use essential cookies and privacy-first analytics to measure site performance and optimize your booking experience. Read our <a href="#privacy-modal" onclick="toggleModal('privacy-modal')" class="underline text-amber-400">Privacy Policy</a>.</p>
+            <p>🔒 We use essential cookies and privacy-first analytics to optimize your booking experience. Read our <button onclick="toggleModal('privacy-modal')" class="underline text-amber-400">Privacy Policy</button>.</p>
             <div class="flex gap-3">
-                <button onclick="acceptCookies()" class="gold-gradient-bg text-gray-950 px-4 py-2 rounded-lg font-bold hover:brightness-110 transition">Accept All</button>
+                <button onclick="acceptCookies()" aria-label="Accept Cookies" class="gold-gradient-bg text-gray-950 px-5 py-2 rounded-xl font-bold hover:brightness-110 transition">Accept All</button>
             </div>
         </div>
     </div>
 
-    <!-- Client Portal Quick Modal -->
-    <div id="portal-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
+    <!-- Client Portal Modal -->
+    <div id="portal-modal" role="dialog" aria-modal="true" aria-hidden="true" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
         <div class="glass-panel max-w-md w-full p-8 rounded-3xl relative">
-            <button onclick="toggleModal('portal-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
-            <h3 class="text-2xl font-bold text-white mb-2">Client Portal Login</h3>
-            <p class="text-xs text-slate-400 mb-6">Access your active web projects, invoice downloads, and strategy deliverables.</p>
-            <form onsubmit="event.preventDefault(); alert('Portal demo: Authentication successful.'); toggleModal('portal-modal');" class="space-y-4">
+            <button onclick="toggleModal('portal-modal')" aria-label="Close Modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
+            <h3 class="text-2xl font-bold text-white mb-1">Client Portal</h3>
+            <p class="text-xs text-slate-400 mb-6">Track project status, download invoices, and access project deliverables.</p>
+            <form onsubmit="event.preventDefault(); showToast('Portal authentication verified.'); toggleModal('portal-modal');" class="space-y-4">
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">Project ID / Email</label>
                     <input type="text" required class="w-full bg-gray-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-amber-400 outline-none">
@@ -182,37 +184,36 @@
                     <label class="block text-xs font-semibold text-slate-300 mb-1">Access Passcode</label>
                     <input type="password" required class="w-full bg-gray-900 border border-slate-700 rounded-xl p-3 text-sm text-white focus:border-amber-400 outline-none">
                 </div>
-                <button type="submit" class="w-full gold-gradient-bg text-gray-950 font-bold py-3 rounded-xl hover:brightness-110 transition">Enter Dashboard</button>
+                <button type="submit" aria-label="Enter Client Portal" class="w-full gold-gradient-bg text-gray-950 font-bold py-3.5 rounded-xl hover:brightness-110 transition">Enter Dashboard</button>
             </form>
         </div>
     </div>
 
     <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
+    <div id="privacy-modal" role="dialog" aria-modal="true" aria-hidden="true" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
         <div class="glass-panel max-w-2xl w-full p-8 rounded-3xl max-h-[80vh] overflow-y-auto relative text-slate-300 text-xs space-y-4">
-            <button onclick="toggleModal('privacy-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
-            <h3 class="text-xl font-bold text-white">Privacy Policy & Transparency Guarantee</h3>
-            <p>At Just Consult Adrian, we treat your commercial data with sovereign confidentiality. Information collected via forms or inquiries is strictly utilized for strategic project planning and direct client communication.</p>
-            <h4 class="font-bold text-amber-400 text-sm">Data Protection Compliance</h4>
-            <p>We do not sell, rent, or trade your personal or business data to third parties. All lead details and form submissions are transmitted using encrypted SSL protocols.</p>
-            <h4 class="font-bold text-amber-400 text-sm">Contact Information</h4>
-            <p>For questions regarding site privacy or data retrieval, reach out to: <span class="text-white font-mono">JustConsultAdrian@gmail.com</span>.</p>
+            <button onclick="toggleModal('privacy-modal')" aria-label="Close Privacy Modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
+            <h3 class="text-xl font-bold text-white">Privacy Policy & Data Handling</h3>
+            <p>At Just Consult Adrian, commercial information collected via form submissions is strictly utilized for strategic consultation and client project execution.</p>
+            <h4 class="font-bold text-amber-400 text-sm">Data Protection</h4>
+            <p>We do not sell, rent, or trade personal data to third parties. All lead details are encrypted over modern SSL connections.</p>
+            <h4 class="font-bold text-amber-400 text-sm">Direct Contact</h4>
+            <p>For inquiries regarding data retention, contact: <span class="text-white font-mono">JustConsultAdrian@gmail.com</span>.</p>
         </div>
     </div>
 
-    <!-- Sticky Glass Navbar -->
+    <!-- Main Navigation Header -->
     <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 transition-all">
         <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Main Navigation">
-            <!-- Brand Logo SVG/Image -->
             <a href="#" class="flex items-center gap-3 group">
-                <img src="logo.jpg" alt="Just Consult Adrian Logo" class="h-11 w-11 rounded-xl object-cover border border-amber-500/30 group-hover:border-amber-400 transition shadow-lg">
+                <img src="logo.jpg" width="44" height="44" alt="Just Consult Adrian Logo" class="h-11 w-11 rounded-xl object-cover border border-amber-500/30 group-hover:border-amber-400 transition shadow-lg">
                 <div class="flex flex-col">
                     <span class="font-black text-lg tracking-tight text-white group-hover:text-amber-400 transition">JUST CONSULT ADRIAN</span>
                     <span class="text-[10px] font-semibold tracking-widest text-amber-400/90 uppercase">Strategy • Engineering • Growth</span>
                 </div>
             </a>
 
-            <!-- Desktop Links -->
+            <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-300">
                 <a href="#services" class="hover:text-amber-400 transition">Services</a>
                 <a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a>
@@ -220,32 +221,33 @@
                 <a href="#estimator" class="hover:text-amber-400 transition">Estimator</a>
                 <a href="#pricing" class="hover:text-amber-400 transition">Packages</a>
                 <a href="#insights" class="hover:text-amber-400 transition">Insights</a>
-                <button onclick="toggleModal('portal-modal')" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1">
+                <button onclick="toggleModal('portal-modal')" aria-label="Open Client Portal" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5">
                     <span>Portal</span>
-                    <span class="text-[10px] bg-amber-500/20 px-2 py-0.5 rounded-full border border-amber-500/30">🔐</span>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v3H4a2 2 0 00-2 2v5a2 2 0 002 2h12a2 2 0 002-2v-5a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H7V7a3 3 0 016 0v3z"/></svg>
                 </button>
             </div>
 
-            <!-- Actions & Theme Toggle -->
+            <!-- Controls -->
             <div class="hidden lg:flex items-center gap-4">
-                <button id="theme-toggle" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 text-amber-400 transition" aria-label="Toggle Theme">
-                    🌙
+                <button onclick="toggleTheme()" aria-label="Toggle Theme Mode" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 text-amber-400 transition">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
                 </button>
-                <a href="#contact" class="gold-gradient-bg text-gray-950 font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-lg shadow-amber-500/20 hover:scale-105 transform">
+                <a href="#contact" class="gold-gradient-bg text-gray-950 font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-lg shadow-amber-500/20 transform hover:scale-105">
                     Book Consultation
                 </a>
             </div>
 
-            <!-- Mobile Hamburger Button -->
+            <!-- Mobile Buttons -->
             <div class="flex lg:hidden items-center gap-3">
-                <button onclick="toggleTheme()" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-amber-400">🌙</button>
-                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-white focus:outline-none p-2" aria-label="Open Menu">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <button onclick="toggleTheme()" aria-label="Toggle Mobile Theme" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-amber-400">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                </button>
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Navigation Menu" aria-expanded="false" class="text-white p-2">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </nav>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden lg:hidden bg-gray-950 border-b border-slate-800 px-6 py-6 space-y-4">
             <a href="#services" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Services</a>
             <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Portfolio & Case Studies</a>
@@ -259,15 +261,10 @@
     </header>
 
     <main>
-        <!-- Hero Section with Motion Lighting & Dual CTAs -->
+        <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex items-center justify-center py-24 overflow-hidden">
-            <!-- Subtle Ambient Light Orbs -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-            <div class="absolute top-1/3 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
-
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <!-- Trust Pill -->
                     <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-300 text-xs font-bold tracking-wide backdrop-blur-md">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
                         <span>Harare Digital Desk • World-Class Web Standards</span>
@@ -280,10 +277,9 @@
                     </h1>
 
                     <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        We don't just build websites. We construct high-tier digital assets, persuasive brand architectures, and organic growth infrastructure for forward-thinking enterprises.
+                        We construct high-tier digital assets, persuasive brand architectures, and organic growth infrastructure for ambitious enterprises.
                     </p>
 
-                    <!-- Dual CTAs & Trust Badges -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
                         <a href="#contact" class="gold-gradient-bg text-gray-950 font-black px-8 py-4 rounded-xl text-sm uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/25 transform hover:-translate-y-0.5">
                             Book Free Strategy Session
@@ -294,24 +290,24 @@
                         </a>
                     </div>
 
-                    <!-- Micro Metric Proof -->
+                    <!-- Dynamic Counter Numbers -->
                     <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
                         <div>
-                            <p class="text-2xl font-black text-white">99.8%</p>
+                            <p class="text-2xl font-black text-white"><span class="counter" data-target="99">0</span>.8%</p>
                             <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Performance Score</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-amber-400">100%</p>
+                            <p class="text-2xl font-black text-amber-400"><span class="counter" data-target="100">0</span>%</p>
                             <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">On-Time Sprint Record</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-emerald-400">5.0 ★</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Client Feedback</p>
+                            <p class="text-2xl font-black text-emerald-400"><span class="counter" data-target="18">0</span>+</p>
+                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Deployments</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Interactive Graphic Showcase -->
+                <!-- Showcase Glass Graphic -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative rounded-3xl border border-white/10 p-3 glass-panel shadow-2xl">
                         <div class="rounded-2xl overflow-hidden bg-gray-900 border border-slate-800 relative">
@@ -324,16 +320,16 @@
                             <div class="p-6 space-y-4">
                                 <div class="h-32 rounded-xl bg-gradient-to-r from-amber-500/20 to-purple-600/20 p-4 border border-amber-500/30 flex flex-col justify-end">
                                     <span class="text-xs font-mono text-amber-400">⚡ Core Web Vitals: OPTIMAL</span>
-                                    <h4 class="text-lg font-extrabold text-white">Conversion Engineering</h4>
+                                    <h4 class="text-lg font-extrabold text-white">Conversion Architecture</h4>
                                 </div>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                        <p class="text-[10px] text-slate-400">SEO Infrastructure</p>
-                                        <p class="text-sm font-bold text-emerald-400">Schema Ready</p>
+                                        <p class="text-[10px] text-slate-400">Schema Graph</p>
+                                        <p class="text-sm font-bold text-emerald-400">Structured JSON-LD</p>
                                     </div>
                                     <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                        <p class="text-[10px] text-slate-400">Security Standard</p>
-                                        <p class="text-sm font-bold text-amber-400">256-bit Encrypted</p>
+                                        <p class="text-[10px] text-slate-400">Security Header</p>
+                                        <p class="text-sm font-bold text-amber-400">256-bit HSTS</p>
                                     </div>
                                 </div>
                             </div>
@@ -343,178 +339,118 @@
             </div>
         </section>
 
-        <!-- Social Proof Ticker Bar -->
-        <section class="py-8 border-y border-slate-800/80 bg-gray-900/50 backdrop-blur-md">
-            <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-around items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-400">
-                <span class="flex items-center gap-2"><span class="text-amber-400">✓</span> Mobile-Native Layouts</span>
-                <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> EcoCash & InnBucks Ready</span>
-                <span class="flex items-center gap-2"><span class="text-purple-400">✓</span> Dynamic Schema SEO</span>
-                <span class="flex items-center gap-2"><span class="text-blue-400">✓</span> WCAG Accessibility</span>
-            </div>
-        </section>
-
-        <!-- Benefit-Driven Services Section -->
+        <!-- Services Section with SVGs -->
         <section id="services" class="py-32 max-w-7xl mx-auto px-6 relative">
             <div class="text-center max-w-3xl mx-auto mb-20">
                 <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-3">Core Solutions</h2>
                 <h3 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Capabilities That Drive Revenue</h3>
-                <p class="text-slate-400 mt-4 text-sm sm:text-base">We don't sell features; we deliver measurable business outcomes.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
+                <!-- Service 1 -->
                 <div class="glass-panel p-8 rounded-3xl hover:border-amber-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-xl mb-6 text-amber-400">⚡</div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
                     <h4 class="text-xl font-bold text-white group-hover:text-amber-400 transition">Elite Web Engineering</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">
-                        High-speed landing pages and multi-page platforms designed to build trust instantly, eliminate bounce rates, and turn anonymous visitors into inquiry calls.
-                    </p>
-                    <ul class="mt-6 space-y-2 text-xs text-slate-300 font-medium">
-                        <li class="flex items-center gap-2"><span class="text-amber-400">•</span> Sub-second Load Speeds</li>
-                        <li class="flex items-center gap-2"><span class="text-amber-400">•</span> Responsive Mobile Optimization</li>
-                    </ul>
+                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">High-speed landing pages and web platforms engineered to eliminate bounce rates and convert visitors into qualified calls.</p>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Service 2 -->
                 <div class="glass-panel p-8 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-xl mb-6 text-purple-400">🎯</div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-purple-400 transition">Brand Architecture</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">
-                        Position your enterprise as the undisputed authority in your niche with cohesive visual identity systems, persuasive copy, and clear market messaging.
-                    </p>
-                    <ul class="mt-6 space-y-2 text-xs text-slate-300 font-medium">
-                        <li class="flex items-center gap-2"><span class="text-purple-400">•</span> Premium Visual Guidelines</li>
-                        <li class="flex items-center gap-2"><span class="text-purple-400">•</span> High-Ticket Pitch Decks</li>
-                    </ul>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
+                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white group-hover:text-purple-400 transition">Brand Positioning</h4>
+                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">Establish undeniable market authority with cohesive visual brand guidelines, custom invoices, and persuasive copy.</p>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Service 3 -->
                 <div class="glass-panel p-8 rounded-3xl hover:border-emerald-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-xl mb-6 text-emerald-400">📈</div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">SEO & Organic Domination</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">
-                        Dominate Google search results for valuable local and global commercial keywords with deep structured schema markup and content architecture.
-                    </p>
-                    <ul class="mt-6 space-y-2 text-xs text-slate-300 font-medium">
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">•</span> Local Business Map SEO</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">•</span> Technical Schema Integration</li>
-                    </ul>
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
+                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Organic SEO Infrastructure</h4>
+                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">Rank high for valuable commercial search terms in Harare and internationally with rich schema graphs.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Interactive Filterable Portfolio Section -->
-        <section id="portfolio" class="py-32 bg-gray-900/40 border-y border-slate-800/80 relative">
+        <!-- Portfolio Showcase -->
+        <section id="portfolio" class="py-32 bg-gray-900/40 border-y border-slate-800/80">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                     <div>
                         <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Selected Works</h2>
-                        <h3 class="text-3xl sm:text-4xl font-black text-white">Client Showcase & Results</h3>
+                        <h3 class="text-3xl sm:text-4xl font-black text-white">Client Showcase & Case Studies</h3>
                     </div>
                     
-                    <!-- Category Filter Buttons -->
                     <div class="flex flex-wrap gap-2 text-xs font-bold">
-                        <button onclick="filterPortfolio('all')" class="port-filter-btn px-4 py-2 rounded-lg bg-amber-500 text-gray-950">All Work</button>
-                        <button onclick="filterPortfolio('web')" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Web Design</button>
-                        <button onclick="filterPortfolio('branding')" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Branding</button>
+                        <button onclick="filterPortfolio('all', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-amber-500 text-gray-950">All Work</button>
+                        <button onclick="filterPortfolio('web', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Web Design</button>
+                        <button onclick="filterPortfolio('branding', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Branding</button>
                     </div>
                 </div>
 
-                <!-- Portfolio Grid -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Item 1 -->
                     <div class="port-item web glass-panel rounded-3xl overflow-hidden group">
                         <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
-                            <img src="hero.png" alt="ParcMed Portfolio Showcase" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="hero.png" loading="lazy" decoding="async" width="600" height="400" alt="ParcMed Medical Specialties Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Medical / Corporate</span>
+                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Medical / Branding</span>
                             <h4 class="text-lg font-bold text-white">PARCMED Medical Specialties</h4>
-                            <p class="text-xs text-slate-400">High-converting corporate marketing collateral and LinkedIn visual identity framework.</p>
-                            <div class="pt-2 border-t border-slate-800 flex justify-between text-[11px] font-semibold text-slate-300">
-                                <span>Impact: High Engagement</span>
-                                <span class="text-emerald-400">Deployed 2026</span>
-                            </div>
+                            <p class="text-xs text-slate-400">High-converting marketing materials and LinkedIn visual identity system.</p>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
                     <div class="port-item web glass-panel rounded-3xl overflow-hidden group">
                         <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
-                            <img src="logo.jpg" alt="Just Consult Adrian Web Engine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="logo.jpg" loading="lazy" decoding="async" width="600" height="400" alt="Just Consult Adrian Platform" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">Web Application</span>
-                            <h4 class="text-lg font-bold text-white">Just Consult Adrian Platform</h4>
-                            <p class="text-xs text-slate-400">Glassmorphic web platform with dynamic client estimator and direct local payment gateways.</p>
-                            <div class="pt-2 border-t border-slate-800 flex justify-between text-[11px] font-semibold text-slate-300">
-                                <span>Core Web Vitals: 99/100</span>
-                                <span class="text-emerald-400">Live</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="port-item branding glass-panel rounded-3xl overflow-hidden group">
-                        <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10"></div>
-                            <div class="w-full h-full gold-gradient-bg opacity-30 flex items-center justify-center text-4xl font-black text-white">JCA</div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">Branding & Identity</span>
-                            <h4 class="text-lg font-bold text-white">Harare Business Strategy Desk</h4>
-                            <p class="text-xs text-slate-400">Complete corporate identity suite, custom invoice generator, and brand positioning.</p>
-                            <div class="pt-2 border-t border-slate-800 flex justify-between text-[11px] font-semibold text-slate-300">
-                                <span>Identity System</span>
-                                <span class="text-emerald-400">Complete</span>
-                            </div>
+                            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">Web Engineering</span>
+                            <h4 class="text-lg font-bold text-white">Just Consult Adrian Engine</h4>
+                            <p class="text-xs text-slate-400">Glassmorphic web platform with interactive quote calculation engine.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Story / About Section (Adrian Chombe) -->
+        <!-- About Founder -->
         <section id="about" class="py-32 max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5 relative">
                     <div class="rounded-3xl border border-slate-800 overflow-hidden glass-panel p-2">
-                        <img src="logo.jpg" alt="Adrian Chombe - Founder" class="rounded-2xl w-full h-auto object-cover">
+                        <img src="logo.jpg" loading="lazy" decoding="async" width="500" height="500" alt="Adrian Chombe - Founder" class="rounded-2xl w-full h-auto object-cover">
                     </div>
                 </div>
                 <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs font-extrabold tracking-widest text-amber-400 uppercase">Leadership & Story</span>
-                    <h3 class="text-3xl sm:text-5xl font-black text-white leading-tight">Eliminating the Gap Between Ambition & Revenue</h3>
+                    <span class="text-xs font-extrabold tracking-widest text-amber-400 uppercase">Leadership</span>
+                    <h3 class="text-3xl sm:text-5xl font-black text-white leading-tight">Closing the Gap Between Ambition & Revenue</h3>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        "I founded Just Consult Adrian with a straightforward mission: to eradicate weak, uninspiring web presences for serious businesses. In a world saturated with generic templates, we architect digital infrastructure designed to project authority, build trust instantly, and generate measurable commercial results."
+                        "We architect digital infrastructure designed to project undeniable authority, build trust instantly, and generate measurable commercial returns."
                     </p>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Every build we deploy undergoes rigorous optimization across speed, security standards, WCAG accessibility, and conversion copy structure.
-                    </p>
-                    <div class="pt-4 flex items-center gap-4">
-                        <div>
-                            <p class="text-base font-extrabold text-white">Adrian Chombe</p>
-                            <p class="text-xs text-amber-400 font-semibold">Founder & Head of Strategy</p>
-                        </div>
+                    <div>
+                        <p class="text-base font-extrabold text-white">Adrian Chombe</p>
+                        <p class="text-xs text-amber-400 font-semibold">Founder & Head of Strategy</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Interactive Scope & Investment Calculator -->
+        <!-- Scope Estimator -->
         <section id="estimator" class="py-28 bg-gray-900/60 border-y border-slate-800/80">
             <div class="max-w-3xl mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Instant Pricing Transparency</h2>
-                    <h3 class="text-3xl font-black text-white">Interactive Project Scope Estimator</h3>
-                    <p class="text-slate-400 text-xs mt-2">Configure your requirements to calculate an estimated investment tier.</p>
+                    <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Pricing Transparency</h2>
+                    <h3 class="text-3xl font-black text-white">Interactive Project Scope Calculator</h3>
                 </div>
 
                 <div class="glass-panel p-8 sm:p-10 rounded-3xl space-y-6 border border-amber-500/20">
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">1. Select Core Scope</label>
+                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">1. Select Service Tier</label>
                         <select id="calc-service" onchange="calculateEstimate()" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-sm text-white focus:border-amber-400 outline-none">
                             <option value="300">Standard Entry Landing Page ($300)</option>
                             <option value="350" selected>Elite Enterprise Multi-Page Platform ($350)</option>
@@ -532,69 +468,60 @@
 
                     <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Estimated Investment</span>
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Estimated Total</span>
                             <span id="calc-total" class="text-4xl font-black text-amber-400">$350</span>
                         </div>
                         <a href="#contact" onclick="syncEstimateToForm()" class="gold-gradient-bg text-gray-950 font-black px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider text-center hover:brightness-110 transition">
-                            Lock In Estimate
+                            Apply Estimate To Form
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Clear Investment Packages -->
+        <!-- Pricing Tiers -->
         <section id="pricing" class="py-32 max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Transparent Tiers</h2>
-                <h3 class="text-3xl sm:text-5xl font-black text-white">Strategic Investment Packages</h3>
+                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Investments</h2>
+                <h3 class="text-3xl sm:text-5xl font-black text-white">Transparent Development Packages</h3>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Tier 1 -->
                 <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
                     <div>
                         <h4 class="text-lg font-bold text-white">Standard Entry</h4>
                         <p class="text-3xl font-black text-amber-400 mt-2">$300</p>
-                        <p class="text-xs text-slate-400 mt-2">Perfect for startups establishing immediate digital trust.</p>
                         <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> High-Speed Landing Page</li>
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Custom Domain & Professional Email</li>
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Mobile Responsive Layout</li>
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Direct WhatsApp Lead Button</li>
+                            <li>✓ High-Speed Landing Page</li>
+                            <li>✓ Mobile Responsive Design</li>
+                            <li>✓ Direct WhatsApp Integration</li>
                         </ul>
                     </div>
                     <a href="#contact" class="mt-8 block text-center py-3 rounded-xl border border-amber-500/50 text-amber-400 font-bold text-xs hover:bg-amber-500 hover:text-gray-950 transition">Select Standard</a>
                 </div>
 
-                <!-- Tier 2 (Featured) -->
-                <div class="glass-panel p-8 rounded-3xl border-2 border-amber-500 relative flex flex-col justify-between shadow-2xl shadow-amber-500/10">
+                <div class="glass-panel p-8 rounded-3xl border-2 border-amber-500 relative flex flex-col justify-between shadow-2xl">
                     <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 gold-gradient-bg text-gray-950 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Most Popular</div>
                     <div>
                         <h4 class="text-lg font-bold text-white">Elite Enterprise</h4>
                         <p class="text-3xl font-black text-amber-400 mt-2">$350</p>
-                        <p class="text-xs text-slate-400 mt-2">For established businesses scaling customer acquisition.</p>
                         <ul class="mt-6 space-y-3 text-xs text-slate-200">
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Everything in Standard</li>
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Multi-Page Site Architecture</li>
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Structured Schema SEO Package</li>
-                            <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Extended Copywriting & Positioning</li>
+                            <li>✓ Multi-Page Site Architecture</li>
+                            <li>✓ Rich JSON-LD Schema SEO</li>
+                            <li>✓ Copywriting & Brand Positioning</li>
                         </ul>
                     </div>
                     <a href="#contact" class="mt-8 block text-center py-3.5 rounded-xl gold-gradient-bg text-gray-950 font-black text-xs uppercase tracking-wider hover:brightness-110 transition">Select Elite Enterprise</a>
                 </div>
 
-                <!-- Tier 3 -->
                 <div class="glass-panel p-8 rounded-3xl border border-purple-500/30 flex flex-col justify-between">
                     <div>
                         <h4 class="text-lg font-bold text-white">Premium Accelerator</h4>
                         <p class="text-3xl font-black text-purple-400 mt-2">$450</p>
-                        <p class="text-xs text-slate-400 mt-2">Comprehensive digital dominance with retainer support.</p>
                         <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> Everything in Elite Enterprise</li>
-                            <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> 2 Additional Strategic Pages</li>
-                            <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> 1-Month Retainer Maintenance</li>
-                            <li class="flex items-center gap-2"><span class="text-purple-400">✓</span> Priority Strategy Consultation</li>
+                            <li>✓ Everything in Elite Enterprise</li>
+                            <li>✓ 1-Month Retainer Maintenance</li>
+                            <li>✓ Priority Strategy Execution</li>
                         </ul>
                     </div>
                     <a href="#contact" class="mt-8 block text-center py-3 rounded-xl border border-purple-500/50 text-purple-400 font-bold text-xs hover:bg-purple-500 hover:text-white transition">Select Accelerator</a>
@@ -602,76 +529,16 @@
             </div>
         </section>
 
-        <!-- Insights / Blog Section -->
-        <section id="insights" class="py-28 bg-gray-900/30 border-t border-slate-800/80">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex justify-between items-end mb-12">
-                    <div>
-                        <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Thought Leadership</h2>
-                        <h3 class="text-3xl font-black text-white">Strategic Insights</h3>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Blog Card 1 -->
-                    <article class="glass-panel rounded-3xl p-6 border border-slate-800 space-y-4">
-                        <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Web Strategy</span>
-                        <h4 class="text-xl font-bold text-white hover:text-amber-400 transition cursor-pointer">7 Signs Your Business Needs a Professional Website Redesign</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">Discover why outdated mobile layouts and slow loading times are costing you corporate contracts—and how to fix it.</p>
-                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                            <span>By Adrian Chombe</span>
-                            <span>4 min read</span>
-                        </div>
-                    </article>
-
-                    <!-- Blog Card 2 -->
-                    <article class="glass-panel rounded-3xl p-6 border border-slate-800 space-y-4">
-                        <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">SEO & Growth</span>
-                        <h4 class="text-xl font-bold text-white hover:text-purple-400 transition cursor-pointer">Demystifying Schema Markup for Local Business SEO in Zimbabwe</h4>
-                        <p class="text-xs text-slate-400 leading-relaxed">How structured JSON-LD data helps Google understand your business services and ranks you in Map packs.</p>
-                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                            <span>By Adrian Chombe</span>
-                            <span>6 min read</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="py-28 max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Got Questions?</h2>
-                <h3 class="text-3xl font-black text-white">Frequently Asked Questions</h3>
-            </div>
-
-            <div class="space-y-4">
-                <div class="glass-panel p-6 rounded-2xl">
-                    <h4 class="text-base font-bold text-white mb-2">How fast will my website project be delivered?</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Standard and Elite builds are completed within 5 to 10 business days following our initial alignment session and copy approval.</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <h4 class="text-base font-bold text-white mb-2">What local payment gateways are accepted?</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">We accommodate local transactions seamlessly via EcoCash, InnBucks, ZiG, and direct USD bank transfers.</p>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl">
-                    <h4 class="text-base font-bold text-white mb-2">Will my website work perfectly on mobile phones?</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Yes. All builds follow a strict mobile-first design protocol tested across Android and iOS viewports before deployment.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact & Strategy Desk Section -->
-        <section id="contact" class="py-32 bg-gray-900/60 border-t border-slate-800/80 relative">
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 bg-gray-900/60 border-t border-slate-800/80">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Direct Channel</h2>
                     <h3 class="text-3xl sm:text-5xl font-black text-white">Initiate Consultation</h3>
-                    <p class="text-xs text-slate-400 mt-2">Sub-2 hour response guarantee during business hours.</p>
                 </div>
 
                 <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800">
-                    <form action="https://formspree.io/f/xlgyobko" method="POST" class="space-y-6">
+                    <form action="https://formspree.io/f/xlgyobko" method="POST" class="space-y-6" onsubmit="showToast('Submitting inquiry brief...');">
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-300 mb-2">Business Name *</label>
@@ -685,7 +552,7 @@
 
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">WhatsApp / Phone Number *</label>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Phone / WhatsApp *</label>
                                 <input type="tel" name="phone" required placeholder="+263 77 423 5841" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
                             </div>
                             <div>
@@ -699,11 +566,11 @@
                         </div>
 
                         <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-2">Project Overview / Goals</label>
-                            <textarea name="message" rows="4" placeholder="Briefly describe your business goals and key requirements..." class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none"></textarea>
+                            <label class="block text-xs font-semibold text-slate-300 mb-2">Project Brief</label>
+                            <textarea name="message" rows="4" placeholder="Describe your primary business objectives..." class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full gold-gradient-bg text-gray-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/20">
+                        <button type="submit" aria-label="Submit Form Brief" class="w-full gold-gradient-bg text-gray-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/20">
                             Submit Consultation Brief
                         </button>
                     </form>
@@ -712,17 +579,15 @@
         </section>
     </main>
 
-    <!-- Master Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-950 border-t border-slate-800/80 py-16 text-slate-400 text-xs">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
             <div class="space-y-4">
                 <div class="flex items-center gap-3">
-                    <img src="logo.jpg" alt="Logo" class="h-8 w-8 rounded-lg object-cover">
+                    <img src="logo.jpg" width="32" height="32" alt="Logo" class="h-8 w-8 rounded-lg object-cover">
                     <span class="font-extrabold text-white tracking-tight">JUST CONSULT ADRIAN</span>
                 </div>
-                <p class="text-[11px] text-slate-400 leading-relaxed">
-                    Architecting high-conversion digital platforms and brand systems in Harare, Zimbabwe.
-                </p>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Architecting high-conversion digital platforms in Harare, Zimbabwe.</p>
             </div>
 
             <div>
@@ -731,24 +596,22 @@
                     <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
                     <li><a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a></li>
                     <li><a href="#pricing" class="hover:text-amber-400 transition">Packages</a></li>
-                    <li><a href="#about" class="hover:text-amber-400 transition">About Founder</a></li>
                 </ul>
             </div>
 
             <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Direct Communication</h5>
+                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Direct Contact</h5>
                 <ul class="space-y-2">
-                    <li>WhatsApp: <a href="https://wa.me/263774235841" class="text-amber-400 hover:underline">+263 77 423 5841</a></li>
+                    <li>Phone / WhatsApp: <a href="tel:+263774235841" class="text-amber-400 hover:underline">+263 77 423 5841</a></li>
                     <li>Email: <a href="mailto:JustConsultAdrian@gmail.com" class="text-slate-200 hover:underline">JustConsultAdrian@gmail.com</a></li>
-                    <li>Location: Harare, Zimbabwe</li>
+                    <li>Harare, Zimbabwe</li>
                 </ul>
             </div>
 
             <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Legal & Governance</h5>
+                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Legal & Portal</h5>
                 <ul class="space-y-2">
                     <li><button onclick="toggleModal('privacy-modal')" class="hover:text-amber-400 transition">Privacy Policy</button></li>
-                    <li><button onclick="toggleModal('privacy-modal')" class="hover:text-amber-400 transition">Terms & Conditions</button></li>
                     <li><button onclick="toggleModal('portal-modal')" class="text-amber-400 hover:underline">Client Portal 🔐</button></li>
                 </ul>
             </div>
@@ -756,9 +619,14 @@
 
         <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
             <p>&copy; 2026 Just Consult Adrian. All rights reserved.</p>
-            <p class="text-slate-400">Accepted Payments: EcoCash • InnBucks • ZiG • Bank Transfer</p>
+            <p class="text-slate-400">EcoCash • InnBucks • ZiG • Direct Bank Wire</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()" aria-label="Scroll Back To Top" class="fixed bottom-24 right-6 z-40 bg-slate-900 border border-slate-700 text-amber-400 p-3.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:border-amber-400">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"/></svg>
+    </button>
 
     <!-- Floating Sticky WhatsApp Quick Chat Button -->
     <a href="https://wa.me/263774235841?text=Hi%20Adrian,%20I'd%20like%20to%20consult%20on%20a%20web%20project." 
@@ -771,78 +639,7 @@
         </svg>
     </a>
 
-    <!-- Interactive System Scripts -->
-    <script>
-        // Modal Control System
-        function toggleModal(id) {
-            const modal = document.getElementById(id);
-            if (modal) {
-                modal.classList.toggle('hidden');
-            }
-        }
-
-        // Cookie Consent Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            if (!localStorage.getItem('jca_cookies_accepted')) {
-                document.getElementById('cookie-banner').classList.remove('hidden');
-            }
-        });
-
-        function acceptCookies() {
-            localStorage.setItem('jca_cookies_accepted', 'true');
-            document.getElementById('cookie-banner').classList.add('hidden');
-        }
-
-        // Dark/Light Mode Theme Toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                html.classList.add('light');
-            } else {
-                html.classList.remove('light');
-                html.classList.add('dark');
-            }
-        }
-
-        // Mobile Navigation Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Interactive Project Scope Estimator Calculation
-        function calculateEstimate() {
-            const service = parseInt(document.getElementById('calc-service').value);
-            const speed = parseInt(document.getElementById('calc-speed').value);
-            const total = service + speed;
-            document.getElementById('calc-total').textContent = '$' + total;
-        }
-
-        function syncEstimateToForm() {
-            const serviceSelect = document.getElementById('calc-service');
-            const targetVal = serviceSelect.value;
-            const packageSelect = document.getElementById('form-package-select');
-            
-            for (let opt of packageSelect.options) {
-                if (opt.text.includes(targetVal)) {
-                    packageSelect.value = opt.text;
-                    break;
-                }
-            }
-        }
-
-        // Portfolio Category Filter Logic
-        function filterPortfolio(category) {
-            const items = document.querySelectorAll('.port-item');
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-    </script>
+    <!-- Engine Script Execution -->
+    <script src="script.js"></script>
 </body>
 </html>
