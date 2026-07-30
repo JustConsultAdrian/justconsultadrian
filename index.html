@@ -579,49 +579,73 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-slate-800/80 py-16 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
-            <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                    <img src="logo.jpg" width="32" height="32" alt="Logo" class="h-8 w-8 rounded-lg object-cover">
-                    <span class="font-extrabold text-white tracking-tight">JUST CONSULT ADRIAN</span>
-                </div>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Architecting high-conversion digital platforms in Harare, Zimbabwe.</p>
+  <!-- Footer Section -->
+<footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 4-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            
+            <!-- Column 1: Brand Info -->
+            <div>
+                <h4 class="text-xl font-bold text-white mb-4">
+                    Just Consult <span class="text-amber-400">Adrian</span>
+                </h4>
+                <p class="text-sm leading-relaxed mb-4 text-gray-400">
+                    Crafting high-converting, responsive websites and bespoke digital solutions for growing businesses.
+                </p>
+                <p class="text-xs text-gray-500">
+                    📍 Harare, Zimbabwe
+                </p>
             </div>
 
+            <!-- Column 2: Quick Links -->
             <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Navigation</h5>
-                <ul class="space-y-2">
+                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Quick Links</h5>
+                <ul class="space-y-2 text-sm">
                     <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
                     <li><a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a></li>
-                    <li><a href="#pricing" class="hover:text-amber-400 transition">Packages</a></li>
+                    <li><a href="#pricing" class="hover:text-amber-400 transition">Pricing</a></li>
+                    <li><a href="#insights" class="hover:text-amber-400 transition">Insights</a></li>
                 </ul>
             </div>
 
+            <!-- Column 3: Core Services -->
             <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Direct Contact</h5>
-                <ul class="space-y-2">
-                    <li>Phone / WhatsApp: <a href="tel:+263774235841" class="text-amber-400 hover:underline">+263 77 423 5841</a></li>
-                    <li>Email: <a href="mailto:JustConsultAdrian@gmail.com" class="text-slate-200 hover:underline">JustConsultAdrian@gmail.com</a></li>
-                    <li>Harare, Zimbabwe</li>
+                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Services</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#services" class="hover:text-amber-400 transition">Web Design & Development</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">SEO & Speed Optimization</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">UI/UX Design</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition">Website Maintenance</a></li>
                 </ul>
             </div>
 
+            <!-- Column 4: Legal & Portal (Updated) -->
             <div>
                 <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Legal & Portal</h5>
-                <ul class="space-y-2">
-                    <li><button onclick="toggleModal('privacy-modal')" class="hover:text-amber-400 transition">Privacy Policy</button></li>
-                    <li><button onclick="toggleModal('portal-modal')" class="text-amber-400 hover:underline">Client Portal 🔐</button></li>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <button onclick="toggleModal('privacy-modal')" class="hover:text-amber-400 transition text-left">Privacy Policy</button>
+                    </li>
+                    <li>
+                        <!-- Direct link to terms.html for Search Console / Sitemap indexing -->
+                        <a href="terms.html" class="hover:text-amber-400 transition block">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <button onclick="toggleModal('portal-modal')" class="text-amber-400 hover:underline text-left">Client Portal 🔐</button>
+                    </li>
                 </ul>
             </div>
+
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <!-- Bottom Copyright Bar -->
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
             <p>&copy; 2026 Just Consult Adrian. All rights reserved.</p>
-            <p class="text-slate-400">EcoCash • InnBucks • ZiG • Direct Bank Wire</p>
+            <a href="#" class="hover:text-amber-400 transition">Back to top ↑</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" onclick="scrollToTop()" aria-label="Scroll Back To Top" class="fixed bottom-24 right-6 z-40 bg-slate-900 border border-slate-700 text-amber-400 p-3.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:border-amber-400">
