@@ -3,22 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agency Admin Panel - Just Consult Adrian</title>
+    <title>Agency Admin Panel &amp; Article Studio - Just Consult Adrian</title>
+    
+    <!-- TAILWIND CSS & GOOGLE FONTS FOR EDITORIAL TYPOGRAPHY -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { amber: { 400: '#fbbf24' } } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { amber: { 400: '#fbbf24' } },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Merriweather"', 'serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .article-preview h1 { font-size: 1.875rem; font-weight: 800; color: #ffffff; margin-top: 1.5rem; margin-bottom: 0.75rem; line-height: 1.25; }
+        .article-preview h2 { font-size: 1.35rem; font-weight: 700; color: #fbbf24; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+        .article-preview h3 { font-size: 1.1rem; font-weight: 600; color: #f3f4f6; margin-top: 1rem; margin-bottom: 0.5rem; }
+        .article-preview p { margin-bottom: 1rem; line-height: 1.75; color: #d1d5db; }
+        .article-preview blockquote { border-left: 3px solid #fbbf24; padding-left: 1rem; margin: 1.25rem 0; font-style: italic; color: #f3f4f6; background: rgba(251, 191, 36, 0.05); padding-top: 0.5rem; padding-bottom: 0.5rem; border-radius: 0 0.5rem 0.5rem 0; }
+        .article-preview ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem; color: #d1d5db; }
+        .article-preview li { margin-bottom: 0.25rem; }
+        .article-preview code { background: #111827; color: #fbbf24; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.85em; }
+    </style>
 </head>
 <body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen">
 
-    <header class="border-b border-gray-800 bg-gray-900 py-4">
-        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-lg font-bold text-white">JCA <span class="text-amber-400">Admin Control</span></h1>
-            <a href="index.html" class="text-xs text-gray-400 hover:text-white">← Return Main Site</a>
+    <!-- HEADER -->
+    <header class="border-b border-gray-800 bg-gray-900 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-lg font-extrabold text-white">JCA <span class="text-amber-400">Admin Control Studio</span></h1>
+            <a href="index.html" class="text-xs text-gray-400 hover:text-white transition">← Return Main Site</a>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8 space-y-8">
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-10">
         
-        <!-- KPI Summary -->
+        <!-- KPI SUMMARY CARDS -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div class="bg-gray-900 border border-gray-800 p-5 rounded-2xl">
                 <span class="text-xs font-mono text-gray-400 uppercase">Active Retainers</span>
@@ -34,7 +65,68 @@
             </div>
         </div>
 
-        <!-- Active Projects Control Table -->
+        <!-- INSTANT ARTICLE ENGINE & VISUAL PUBLISHER -->
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-gray-800 pb-4">
+                <div>
+                    <span class="text-[10px] font-mono text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2.5 py-1 rounded-full uppercase">
+                        Auto-Typography Engine
+                    </span>
+                    <h2 class="text-xl font-bold text-white mt-1">Instant Article Studio</h2>
+                    <p class="text-xs text-gray-400">Paste your raw text or notes below. It automatically applies high-end typography formatting.</p>
+                </div>
+                
+                <!-- Font Preset Controls -->
+                <div class="flex items-center gap-2 bg-gray-950 p-1.5 rounded-xl border border-gray-800 text-xs">
+                    <span class="text-gray-500 font-mono px-2 text-[10px]">FONT STYLE:</span>
+                    <button type="button" onclick="setFontStyle('font-sans')" id="btn-sans" class="px-3 py-1 rounded-lg bg-amber-400 text-gray-950 font-bold">Sans</button>
+                    <button type="button" onclick="setFontStyle('font-serif')" id="btn-serif" class="px-3 py-1 rounded-lg text-gray-400 hover:text-white">Serif</button>
+                    <button type="button" onclick="setFontStyle('font-mono')" id="btn-mono" class="px-3 py-1 rounded-lg text-gray-400 hover:text-white">Mono</button>
+                </div>
+            </div>
+
+            <!-- TWO-COLUMN EDITOR & LIVE PREVIEW -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+                <!-- INPUT RAW TEXT AREA -->
+                <div class="space-y-3">
+                    <label class="block text-xs font-mono text-gray-400 uppercase">Paste Raw Text / Notes Here</label>
+                    <textarea id="raw-input" oninput="processArticle()" placeholder="# Write Heading Here
+
+Paste your plain text paragraph here. Use quotes starting with > for callouts.
+
+## Subheading Title
+- Add bullet point items easily
+- Automatic paragraph formatting
+- Clean typography output" 
+                    class="w-full h-96 bg-gray-950 border border-gray-800 rounded-xl p-4 text-xs font-mono text-gray-200 focus:border-amber-400 outline-none resize-none leading-relaxed"></textarea>
+                    
+                    <div class="flex gap-2">
+                        <button type="button" onclick="copyFormattedHTML()" class="flex-1 bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase py-3 rounded-xl transition">
+                            Copy Formatted HTML Code
+                        </button>
+                        <button type="button" onclick="clearEditor()" class="px-4 border border-gray-800 text-gray-400 hover:text-white text-xs rounded-xl">
+                            Clear
+                        </button>
+                    </div>
+                </div>
+
+                <!-- LIVE STYLED PREVIEW -->
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <label class="block text-xs font-mono text-amber-400 uppercase">Formatted Live Output</label>
+                        <span class="text-[10px] text-gray-500 font-mono">Auto-Updating</span>
+                    </div>
+                    
+                    <div id="article-preview" class="article-preview font-sans w-full h-96 bg-gray-950 border border-gray-800 rounded-xl p-6 overflow-y-auto">
+                        <!-- Dynamic rendered output appears here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ACTIVE PROJECTS CONTROL TABLE -->
         <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 space-y-4">
             <h2 class="text-sm font-bold text-white uppercase font-mono">Active Client Projects</h2>
             <div class="overflow-x-auto">
@@ -51,14 +143,14 @@
                     <tbody class="divide-y divide-gray-800 text-gray-300">
                         <tr>
                             <td class="py-3 font-bold text-white">Omni Presence Audits</td>
-                            <td>Corporate Web & Legal</td>
+                            <td>Corporate Web &amp; Legal</td>
                             <td class="font-mono text-amber-400">75%</td>
                             <td><span class="bg-amber-400/10 text-amber-400 px-2 py-0.5 rounded text-[10px]">Phase 3</span></td>
                             <td class="py-3 text-right"><button class="bg-gray-800 px-2.5 py-1 rounded hover:text-amber-400">Update</button></td>
                         </tr>
                         <tr>
                             <td class="py-3 font-bold text-white">Harare Legal Consultancy</td>
-                            <td>SEO & Site Speed</td>
+                            <td>SEO &amp; Site Speed</td>
                             <td class="font-mono text-emerald-400">100%</td>
                             <td><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px]">Completed</span></td>
                             <td class="py-3 text-right"><button class="bg-gray-800 px-2.5 py-1 rounded hover:text-amber-400">View</button></td>
@@ -69,6 +161,83 @@
         </div>
 
     </main>
+
+    <!-- AUTO-PARSING JAVASCRIPT ENGINE -->
+    <script>
+        // 1. Text Parsing Engine
+        function processArticle() {
+            const raw = document.getElementById('raw-input').value;
+            const preview = document.getElementById('article-preview');
+
+            if (!raw.trim()) {
+                preview.innerHTML = '<p class="text-gray-600 italic text-xs">Formatted live preview will display here once you paste your text...</p>';
+                return;
+            }
+
+            let lines = raw.split('\n');
+            let html = '';
+            let inList = false;
+
+            lines.forEach(line => {
+                let trimmed = line.trim();
+
+                if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+                    if (!inList) { html += '<ul>'; inList = true; }
+                    html += `<li>${trimmed.substring(2)}</li>`;
+                    return;
+                } else if (inList) {
+                    html += '</ul>';
+                    inList = false;
+                }
+
+                if (trimmed.startsWith('# ')) {
+                    html += `<h1>${trimmed.substring(2)}</h1>`;
+                } else if (trimmed.startsWith('## ')) {
+                    html += `<h2>${trimmed.substring(3)}</h2>`;
+                } else if (trimmed.startsWith('### ')) {
+                    html += `<h3>${trimmed.substring(4)}</h3>`;
+                } else if (trimmed.startsWith('> ')) {
+                    html += `<blockquote>${trimmed.substring(2)}</blockquote>`;
+                } else if (trimmed === '') {
+                    // Empty space skip
+                } else {
+                    html += `<p>${trimmed}</p>`;
+                }
+            });
+
+            if (inList) html += '</ul>';
+            preview.innerHTML = html;
+        }
+
+        // 2. Font Style Toggle
+        function setFontStyle(fontClass) {
+            const preview = document.getElementById('article-preview');
+            preview.className = `article-preview ${fontClass} w-full h-96 bg-gray-950 border border-gray-800 rounded-xl p-6 overflow-y-auto`;
+
+            document.querySelectorAll('[id^="btn-"]').forEach(btn => {
+                btn.className = "px-3 py-1 rounded-lg text-gray-400 hover:text-white";
+            });
+            
+            if (fontClass === 'font-sans') document.getElementById('btn-sans').className = "px-3 py-1 rounded-lg bg-amber-400 text-gray-950 font-bold";
+            if (fontClass === 'font-serif') document.getElementById('btn-serif').className = "px-3 py-1 rounded-lg bg-amber-400 text-gray-950 font-bold";
+            if (fontClass === 'font-mono') document.getElementById('btn-mono').className = "px-3 py-1 rounded-lg bg-amber-400 text-gray-950 font-bold";
+        }
+
+        // 3. Helper Functions
+        function copyFormattedHTML() {
+            const content = document.getElementById('article-preview').innerHTML;
+            navigator.clipboard.writeText(content);
+            alert("Formatted HTML copied to clipboard!");
+        }
+
+        function clearEditor() {
+            document.getElementById('raw-input').value = '';
+            processArticle();
+        }
+
+        // Initial launch
+        processArticle();
+    </script>
 
 </body>
 </html>
