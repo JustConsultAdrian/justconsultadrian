@@ -1,211 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & Title -->
-    <title>Client Secure Checkout | Just Consult Adrian</title>
-    <meta name="description" content="Secure direct payment portal for Just Consult Adrian.">
-    
-    <!-- Tailwind CSS & Fonts -->
+    <title>Payment Gateway - Just Consult Adrian</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #aa8828 100%); }
-    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        amber: { 300: '#fcd34d', 400: '#fbbf24', 500: '#f59e0b' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('jca_theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
 </head>
-<body class="bg-black text-slate-200 antialiased selection:bg-amber-600/30 min-h-screen flex flex-col justify-between">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="logo.jpg" alt="Just Consult Adrian Logo" class="h-12 w-auto">
-                <span class="text-white font-bold tracking-wider text-sm hidden sm:inline">JUST CONSULT ADRIAN</span>
+    <header class="border-b border-gray-800 bg-gray-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-lg font-extrabold text-white">
+                Just Consult <span class="text-amber-400">Adrian</span>
             </a>
-            <a href="index.html" class="text-xs font-semibold text-slate-400 hover:text-amber-500 transition">← Return to Home</a>
+            <a href="index.html" class="text-xs text-gray-400 hover:text-white transition">← Back to Site</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Checkout Container -->
-    <main class="py-16 max-w-4xl mx-auto px-6 w-full flex-grow">
-        <div class="text-center mb-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-4">
-                🔒 Direct Secure Checkout
+    <main class="max-w-xl mx-auto px-4 py-12 w-full">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-mono text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full uppercase">
+                    Secure Payment Engine
+                </span>
+                <h1 class="text-2xl font-extrabold text-white">Settle Retainer / Invoice</h1>
+                <p class="text-xs text-gray-400">Accepting USD Card, Paynow, EcoCash & ZiG Local Transfers.</p>
             </div>
-            <h1 class="text-3xl md:text-5xl font-black text-white">Project Investment Checkout</h1>
-            <p class="text-slate-400 mt-3 text-sm max-w-lg mx-auto">Select your package, trigger your preferred mobile payment option, and confirm instantly on-site.</p>
-        </div>
 
-        <div class="grid md:grid-cols-12 gap-8 items-start">
-            
-            <!-- Left Side: Amount Selection -->
-            <div class="md:col-span-5 bg-white/[0.02] border border-white/10 p-6 rounded-2xl space-y-6">
-                <h2 class="text-lg font-bold text-white border-b border-white/10 pb-4">1. Confirm Amount</h2>
-                
+            <form onsubmit="handlePayment(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Select Package or Enter Custom</label>
-                    <select id="payment-tier" onchange="updateCheckoutAmount()" class="w-full bg-white/5 border border-white/10 p-3.5 rounded text-white text-sm focus:border-amber-500 outline-none transition">
-                        <option value="300" class="bg-black text-white">Standard Entry ($300)</option>
-                        <option value="350" selected class="bg-black text-white">Elite Enterprise ($350)</option>
-                        <option value="450" class="bg-black text-white">Premium Growth Accelerator ($450)</option>
-                        <option value="custom" class="bg-black text-white">Custom Invoice Amount</option>
-                    </select>
+                    <label class="block text-xs font-mono text-gray-400 uppercase mb-1">Invoice / Reference ID</label>
+                    <input type="text" required placeholder="e.g. INV-84920 or Full Name" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-xs text-white focus:border-amber-400 outline-none">
                 </div>
 
-                <div id="custom-amount-box" class="hidden">
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Enter Custom Amount ($ USD)</label>
-                    <input type="number" id="custom-input" oninput="syncCustomAmount()" placeholder="e.g. 200" class="w-full bg-white/5 border border-white/10 p-3.5 rounded text-white text-sm focus:border-amber-500 outline-none transition">
-                </div>
-
-                <div class="pt-4 border-t border-white/10 flex justify-between items-center">
-                    <span class="text-sm text-slate-400 font-medium">Total Due:</span>
-                    <span id="display-total" class="text-3xl font-black text-amber-500">$350</span>
-                </div>
-                <!-- Add this input box in your left column (e.g., right under the package selector) -->
-<div class="mt-4">
-    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Your Full Name / Company</label>
-    <input type="text" id="client-name" placeholder="e.g. John Smith" class="w-full bg-white/5 border border-white/10 p-3.5 rounded text-white text-sm focus:border-amber-500 outline-none transition">
-</div>
-            </div>
-
-            <!-- Right Side: Interactive Payment Buttons -->
-            <div class="md:col-span-7 bg-white/[0.02] border border-white/10 p-6 rounded-2xl space-y-6">
-                <h2 class="text-lg font-bold text-white border-b border-white/10 pb-4">2. Click to Pay On-Site</h2>
-                
-                <!-- Method Selection Tabs -->
-                <div class="grid grid-cols-2 gap-2 bg-black p-1.5 rounded-xl border border-white/10">
-                    <button onclick="switchTab('ecocash')" id="tab-ecocash" class="py-3 text-xs font-bold rounded-lg transition bg-amber-500 text-black">EcoCash Direct</button>
-                    <button onclick="switchTab('innbucks')" id="tab-innbucks" class="py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white">InnBucks Direct</button>
-                </div>
-
-                <!-- Tab Content: EcoCash -->
-                <div id="content-ecocash" class="space-y-4 pt-2">
-                    <div class="bg-black border border-white/10 p-5 rounded-xl space-y-3 text-center">
-                        <div class="text-xs text-slate-400 uppercase tracking-wider">EcoCash Send Money Number</div>
-                        <div class="text-xl font-extrabold text-white tracking-wide">+263 77 423 5841</div>
-                        <div class="text-xs text-slate-500">Name: Adrian Chombe</div>
-                        
-                        <div class="pt-2 flex gap-2">
-                            <!-- Fixed USSD link with encoded %23 tag -->
-                            <a href="tel:*151*1*2*263774235841%23" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
-                                <span>📱 Dial EcoCash USSD</span>
-                            </a>
-                            <button onclick="copyNumber('+263774235841', this)" class="bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg text-xs font-bold transition">
-                                Copy Number
-                            </button>
-                        </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-mono text-gray-400 uppercase mb-1">Amount</label>
+                        <input type="number" step="0.01" required placeholder="0.00" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-xs text-white focus:border-amber-400 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-gray-400 uppercase mb-1">Currency</label>
+                        <select class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-xs text-white focus:border-amber-400 outline-none">
+                            <option value="USD">USD ($)</option>
+                            <option value="ZiG">ZiG (Local)</option>
+                        </select>
                     </div>
                 </div>
 
-                <!-- Tab Content: InnBucks -->
-                <div id="content-innbucks" class="space-y-4 pt-2 hidden">
-                    <div class="bg-black border border-white/10 p-5 rounded-xl space-y-3 text-center">
-                        <div class="text-xs text-slate-400 uppercase tracking-wider">InnBucks Authorized Account</div>
-                        <div class="text-xl font-extrabold text-white tracking-wide">+263 77 423 5841</div>
-                        <div class="text-xs text-slate-500">Name: Adrian Chombe</div>
-                        
-                        <div class="pt-2 flex gap-2">
-                            <!-- Fixed USSD link with encoded %23 tag -->
-                            <a href="tel:*569%23" class="flex-1 bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 rounded-lg text-xs transition flex items-center justify-center gap-1.5">
-                                <span>📱 Dial InnBucks USSD</span>
-                            </a>
-                            <button onclick="copyNumber('+263774235841', this)" class="bg-amber-500/20 text-amber-400 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg text-xs font-bold transition">
-                                Copy Number
-                            </button>
-                        </div>
+                <div>
+                    <label class="block text-xs font-mono text-gray-400 uppercase mb-1">Payment Method</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="border border-gray-800 bg-gray-950 rounded-xl p-3 flex items-center gap-2 cursor-pointer hover:border-amber-400/50">
+                            <input type="radio" name="method" checked class="accent-amber-400">
+                            <span class="text-xs text-white font-bold">Paynow / Card</span>
+                        </label>
+                        <label class="border border-gray-800 bg-gray-950 rounded-xl p-3 flex items-center gap-2 cursor-pointer hover:border-amber-400/50">
+                            <input type="radio" name="method" class="accent-amber-400">
+                            <span class="text-xs text-white font-bold">EcoCash / ZiG</span>
+                        </label>
                     </div>
                 </div>
 
-                <!-- Optional Reference Input for On-Site Tracking -->
-                <div class="space-y-2 pt-2">
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Transaction Reference / Phone Used</label>
-                    <input type="text" id="tx-ref" placeholder="e.g. EcoCash SMS Ref or Sender Phone" class="w-full bg-white/5 border border-white/10 p-3 rounded text-white text-xs focus:border-amber-500 outline-none transition">
-                </div>
-
-                <!-- On-Site Finalization Button -->
-                <div class="pt-2">
-                    <button onclick="completeOnSitePayment()" class="w-full gold-gradient text-black font-bold py-4 rounded-xl text-sm hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
-                        <span>I Have Paid — Generate Instant Invoice</span>
-                        <span>→</span>
-                    </button>
-                </div>
-
-            </div>
-
+                <button type="submit" class="w-full bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase py-4 rounded-xl transition shadow-xl mt-4">
+                    Proceed to Payment →
+                </button>
+            </form>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-white/10 text-center text-xs text-slate-500 space-y-2">
-        <p>Direct On-Site Secure Payment Portal</p>
-        <p>&copy; 2026 Just Consult Adrian. All Rights Reserved.</p>
+    <footer class="border-t border-gray-900 py-6 text-center text-xs text-gray-500">
+        © 2026 Just Consult Adrian • Secure Multi-Currency Gateway
     </footer>
 
-    <!-- Interactive Scripting -->
     <script>
-        let currentAmount = 350;
-
-        function updateCheckoutAmount() {
-            const tierSelect = document.getElementById('payment-tier');
-            const customBox = document.getElementById('custom-amount-box');
-            const displayTotal = document.getElementById('display-total');
-
-            if(tierSelect.value === 'custom') {
-                customBox.classList.remove('hidden');
-                const customVal = document.getElementById('custom-input').value || 0;
-                currentAmount = parseFloat(customVal);
-                displayTotal.textContent = '$' + currentAmount;
-            } else {
-                customBox.classList.add('hidden');
-                currentAmount = parseInt(tierSelect.value);
-                displayTotal.textContent = '$' + currentAmount;
-            }
+        function handlePayment(e) {
+            e.preventDefault();
+            alert("Redirecting to Paynow / EcoCash secure gateway...");
         }
-
-        function syncCustomAmount() {
-            const customVal = document.getElementById('custom-input').value || 0;
-            currentAmount = parseFloat(customVal);
-            document.getElementById('display-total').textContent = '$' + currentAmount;
-        }
-
-        function switchTab(method) {
-            const tabs = ['ecocash', 'innbucks'];
-            tabs.forEach(t => {
-                const tabBtn = document.getElementById('tab-' + t);
-                const contentDiv = document.getElementById('content-' + t);
-                
-                if(t === method) {
-                    tabBtn.className = "py-3 text-xs font-bold rounded-lg transition bg-amber-500 text-black";
-                    contentDiv.classList.remove('hidden');
-                } else {
-                    tabBtn.className = "py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-white";
-                    contentDiv.classList.add('hidden');
-                }
-            });
-        }
-
-        function copyNumber(text, btnElement) {
-            navigator.clipboard.writeText(text).then(() => {
-                const originalText = btnElement.innerText;
-                btnElement.innerText = "Copied!";
-                setTimeout(() => {
-                    btnElement.innerText = originalText;
-                }, 2000);
-            });
-        }
-
-        function completeOnSitePayment() {
-    const tierSelect = document.getElementById('payment-tier');
-    const tierText = tierSelect.options[tierSelect.selectedIndex].text;
-    const clientName = document.getElementById('client-name').value || 'Valued Client';
-    const ref = document.getElementById('tx-ref').value || 'Direct Portal Payment';
-    
-    window.location.href = `success.html?amount=${currentAmount}&package=${encodeURIComponent(tierText)}&name=${encodeURIComponent(clientName)}&ref=${encodeURIComponent(ref)}`;
-}
     </script>
 </body>
 </html>
