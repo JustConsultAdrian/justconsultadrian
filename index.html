@@ -286,7 +286,8 @@
                 <a href="#about" class="hover:text-amber-400 transition">About</a>
                 <a href="#estimator" class="hover:text-amber-400 transition">Estimator</a>
                 <a href="#pricing" class="hover:text-amber-400 transition">Packages</a>
-                <a href="#insights" class="hover:text-amber-400 transition">Insights</a>
+                <!-- Change href="#" or href="" to href="#insights" -->
+<a href="#insights" class="text-gray-300 hover:text-amber-400 transition text-sm font-medium">Insights</a>
                 <button onclick="toggleModal('portal-modal')" aria-label="Open Client Portal" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5">
                     <span>Portal</span>
                     <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v3H4a2 2 0 00-2 2v5a2 2 0 002 2h12a2 2 0 002-2v-5a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H7V7a3 3 0 016 0v3z"/></svg>
@@ -322,7 +323,11 @@
             <a href="#pricing" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Pricing Packages</a>
             <a href="#insights" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Insights & Articles</a>
             <button onclick="toggleMobileMenu(); toggleModal('portal-modal');" class="block w-full text-left text-sm font-semibold text-amber-400">Client Portal Login 🔐</button>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block text-center gold-gradient-bg text-gray-950 font-bold py-3 rounded-xl text-sm">Book Strategy Call</a>
+            <!-- Replace your current Book Consultation button with this -->
+<a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl transition shadow-lg flex items-center gap-2">
+    <span>Book Consultation</span>
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+</a>
         </div>
     </header>
 
@@ -355,6 +360,15 @@
                             <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
                         </a>
                     </div>
+                    <!-- Hero Primary CTA Button -->
+<div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center sm:justify-start">
+    <a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-sm px-8 py-4 rounded-xl shadow-xl transition text-center">
+        Book Consultation &amp; Pay Deposit →
+    </a>
+    <a href="#services" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold text-sm px-8 py-4 rounded-xl border border-gray-700 transition text-center">
+        Explore Services
+    </a>
+</div>
                     <!-- 1. PERFORMANCE METRICS BANNER (Place immediately below Hero Section) -->
 <section class="border-y border-gray-800 bg-gray-900/40 py-8">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -418,30 +432,46 @@
     </div>
 </div>
 
-<!-- 3. VIDEO SHOWCASE SECTION (Place above Testimonials or Portfolio) -->
-<section class="py-16 bg-gray-900/60 border-y border-gray-800">
+<!-- Copyright-Free Branded Video Showcase Section -->
+<section class="py-16 bg-gray-950 border-y border-gray-800">
     <div class="max-w-5xl mx-auto px-4 text-center">
+        
         <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-            Inside the Design Process
+            Our Work in Motion
         </span>
         <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-3">
-            Building Websites That Dominate Search &amp; Convert
+            Crafting Digital Excellence for Your Brand
         </h2>
         <p class="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed mb-10">
-            See how clean code, instant load speeds, and tailored user flows transform casual visitors into long-term clients.
+            From Omni Presence Audits to high-speed responsive builds—see how we transform digital presence.
         </p>
 
-        <div class="relative rounded-2xl overflow-hidden border border-gray-700/80 bg-gray-950 shadow-2xl">
-            <div class="aspect-video w-full">
-                <iframe 
-                    class="w-full h-full"
-                    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=1&amp;rel=0" 
-                    title="Just Consult Adrian Web Design Overview" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+        <!-- Video Container with Custom Brand Overlay -->
+        <div class="relative rounded-2xl overflow-hidden border border-gray-700 bg-gray-900 shadow-2xl group">
+            
+            <!-- Royalty-Free HD Tech Background Video Loop -->
+            <video 
+                class="w-full h-[400px] object-cover opacity-60" 
+                autoplay muted loop playsinline
+                poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-code-project-on-a-computer-screen-27367-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Dark Overlay Vignette -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
+
+            <!-- Brand Overlay (Your Logo & Service Title) -->
+            <div class="absolute inset-0 flex flex-col justify-end p-8 text-left">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="w-3 h-3 bg-amber-400 rounded-full animate-pulse"></span>
+                    <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Just Consult Adrian Showcase</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Omni Presence Audits &amp; Custom Web Engineering</h3>
+                <p class="text-xs text-gray-300 mt-1 max-w-md">Built for speed, security, and maximum conversion performance in Harare, Zimbabwe.</p>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -595,6 +625,197 @@
                 </div>
             </div>
         </section>
+        <!-- CLIENT SHOWCASE & CASE STUDIES SECTION -->
+<section id="case-studies" class="py-20 bg-gray-950 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3.5 py-1.5 rounded-full border border-amber-400/20">
+                Proven Client Results
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
+                From Hidden Bottlenecks to <span class="text-amber-400">Measurable Growth</span>
+            </h2>
+            <p class="text-gray-400 text-sm md:text-base mt-4 leading-relaxed">
+                See how our Omni Presence Audits and high-performance web engineering turn underperforming digital assets into client generation engines.
+            </p>
+        </div>
+
+        <!-- Case Studies Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- CASE STUDY 1: B2B Corporate & Legal Services -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
+                <div>
+                    <!-- Industry & Result Metric Badge -->
+                    <div class="flex items-center justify-between gap-2 mb-6">
+                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
+                            Corporate Services
+                        </span>
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+                            +280% Inquiries
+                        </span>
+                    </div>
+
+                    <!-- Client Title -->
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
+                        Enterprise Legal &amp; Financial Advisory
+                    </h3>
+                    <p class="text-xs text-amber-400 font-semibold mt-1">
+                        Service: Omni Presence Audit + UI/UX Overhaul
+                    </p>
+
+                    <!-- Problem / Solution Breakdown -->
+                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
+                        <div class="flex items-start gap-2">
+                            <span class="text-rose-400 font-bold">Challenge:</span>
+                            <span class="text-gray-400">High traffic but near-zero contact form conversions due to mobile layout friction and slow loading.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-emerald-400 font-bold">Solution:</span>
+                            <span class="text-gray-300">Audited mobile load speeds, streamlined CTA funnels, and integrated instant appointment booking.</span>
+                        </div>
+                    </div>
+
+                    <!-- Verified Key Takeaways -->
+                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-400">✓</span> Load speed decreased from 5.2s to 0.8s
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-400">✓</span> #1 Local search placement in Harare
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Action Links -->
+                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
+                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
+                        Get Similar Results →
+                    </a>
+                </div>
+            </div>
+
+            <!-- CASE STUDY 2: Retail & Commercial Brand -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
+                <div>
+                    <!-- Industry & Result Metric Badge -->
+                    <div class="flex items-center justify-between gap-2 mb-6">
+                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
+                            E-Commerce &amp; Retail
+                        </span>
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+                            3.2x Conversion Rate
+                        </span>
+                    </div>
+
+                    <!-- Client Title -->
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
+                        Regional Logistics &amp; Distribution Portal
+                    </h3>
+                    <p class="text-xs text-amber-400 font-semibold mt-1">
+                        Service: Web Engineering + Payment Gateway Integration
+                    </p>
+
+                    <!-- Problem / Solution Breakdown -->
+                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
+                        <div class="flex items-start gap-2">
+                            <span class="text-rose-400 font-bold">Challenge:</span>
+                            <span class="text-gray-400">Manual WhatsApp order taking created order delays and unrecorded client payment receipts.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-emerald-400 font-bold">Solution:</span>
+                            <span class="text-gray-300">Deployed a custom web portal with EcoCash &amp; card checkouts and automated digital receipts.</span>
+                        </div>
+                    </div>
+
+                    <!-- Verified Key Takeaways -->
+                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-400">✓</span> 100% automated receipt generation
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-400">✓</span> Zero manual tracking errors reported
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Action Links -->
+                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
+                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
+                        Get Similar Results →
+                    </a>
+                </div>
+            </div>
+
+            <!-- CASE STUDY 3: Local SME SEO & Branding -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
+                <div>
+                    <!-- Industry & Result Metric Badge -->
+                    <div class="flex items-center justify-between gap-2 mb-6">
+                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
+                            Agribusiness &amp; Trade
+                        </span>
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+                            Top 3 Google Rank
+                        </span>
+                    </div>
+
+                    <!-- Client Title -->
+                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
+                        Agri-Tech &amp; Poultry Equipment Supplier
+                    </h3>
+                    <p class="text-xs text-amber-400 font-semibold mt-1">
+                        Service: Technical SEO + Digital Brand Identity
+                    </p>
+
+                    <!-- Problem / Solution Breakdown -->
+                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
+                        <div class="flex items-start gap-2">
+                            <span class="text-rose-400 font-bold">Challenge:</span>
+                            <span class="text-gray-400">Invisible on Google search results, losing high-value local contracts to larger competitors.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-emerald-400 font-bold">Solution:</span>
+                            <span class="text-gray-300">Optimized local search schemas, keyword targeting, and mobile responsive structure.</span>
+                        </div>
+                    </div>
+
+                    <!-- Verified Key Takeaways -->
+                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-400">✓</span> Captured high-intent search traffic in 45 days
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-400">✓</span> 4x Increase in inbound contract quotes
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Action Links -->
+                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
+                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
+                        Get Similar Results →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Strategic Conversion Banner Below Showcase -->
+        <div class="mt-12 bg-gradient-to-r from-gray-900 via-gray-900 to-amber-950/40 border border-amber-400/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div class="text-center md:text-left">
+                <h4 class="text-xl font-bold text-white">Ready to uncover what's holding your website back?</h4>
+                <p class="text-xs text-gray-400 mt-1">Book an Omni Presence Audit today and get a full technical, speed, and lead conversion roadmap.</p>
+            </div>
+            <a href="pay.html" class="whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition shadow-lg">
+                Book Audit &amp; Consultation →
+            </a>
+        </div>
+
+    </div>
+</section>
 
         <!-- Portfolio Showcase -->
         <section id="portfolio" class="py-32 bg-gray-900/40 border-y border-slate-800/80">
@@ -748,6 +969,77 @@
                 </div>
             </div>
         </section>
+        <!-- INSIGHTS & CMS CONTENT SECTION -->
+<section id="insights" class="py-20 bg-gray-900 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+            <div>
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+                    Knowledge Hub
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4">Latest Insights &amp; Breakdown Videos</h2>
+                <p class="text-gray-400 text-sm mt-2">Articles, strategy notes, and technical SEO breakdowns.</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <span class="text-xs text-amber-400 bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-lg">
+                    ⚡ CMS Feed Connected
+                </span>
+            </div>
+        </div>
+
+        <!-- Insights Grid (CMS Ready) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Article 1 Card -->
+            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="SEO Strategy Article" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute top-3 left-3 bg-gray-900/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-700 uppercase">Article</span>
+                </div>
+                <div class="p-6">
+                    <p class="text-xs text-gray-500 mb-2">July 2026 • 5 min read</p>
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Why Page Speed Defines Conversion Rates in 2026</h3>
+                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+                        A deep dive into how Core Web Vitals impact your Google search rankings and customer retention.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Video Article 2 Card -->
+            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Omni Presence Audit Video" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute top-3 left-3 bg-amber-400 text-gray-950 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Video Guide</span>
+                </div>
+                <div class="p-6">
+                    <p class="text-xs text-gray-500 mb-2">July 2026 • 8 min watch</p>
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Inside an Omni Presence Audit: What We Look For</h3>
+                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+                        Watch us diagnose UI friction, mobile responsiveness bugs, and technical SEO schema errors live.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 3 Card -->
+            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Local SEO Guide" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                    <span class="absolute top-3 left-3 bg-gray-900/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-700 uppercase">SEO Insights</span>
+                </div>
+                <div class="p-6">
+                    <p class="text-xs text-gray-500 mb-2">July 2026 • 4 min read</p>
+                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Dominating Local Google Search for Zimbabwe Businesses</h3>
+                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+                        Practical steps to optimize your Google Business Profile and local schema to capture nearby search traffic.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
 
         <!-- Contact Section -->
         <section id="contact" class="py-32 bg-gray-900/60 border-t border-slate-800/80">
@@ -825,7 +1117,8 @@
                     <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
                     <li><a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a></li>
                     <li><a href="#pricing" class="hover:text-amber-400 transition">Pricing</a></li>
-                    <li><a href="#insights" class="hover:text-amber-400 transition">Insights</a></li>
+                    <!-- Change href="#" or href="" to href="#insights" -->
+<a href="#insights" class="text-gray-300 hover:text-amber-400 transition text-sm font-medium">Insights</a>
                 </ul>
             </div>
 
