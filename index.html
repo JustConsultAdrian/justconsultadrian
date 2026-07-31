@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Just Consult Adrian | Digital Services & Legal Engineering</title>
+    <meta name="description" content="High-performance web engineering, technical SEO audits, legal compliance, and digital agency solutions in Harare, Zimbabwe.">
     
-    <!-- Mobile Web App Capability -->
+    <!-- PWA WEB APP META TAGS -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#030712">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Just Consult Adrian">
+    <meta name="apple-mobile-web-app-title" content="JCA Agency">
 
-    <!-- Technical & SEO Metadata -->
-    <title>Just Consult Adrian | Premier Web Engineering & Digital Strategy</title>
-    <meta name="description" content="Just Consult Adrian is a premier web engineering and branding agency in Harare, Zimbabwe. We architect high-converting websites, corporate identities, and SEO infrastructure.">
-    <meta name="keywords" content="Website Design Zimbabwe, Website Developer Harare, Business Websites Zimbabwe, Web Development Harare, Branding Zimbabwe, SEO Zimbabwe, Just Consult Adrian">
-    <meta name="author" content="Just Consult Adrian">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#030712">
-    <link rel="canonical" href="https://www.justconsultadrian.com/">
-    <link rel="manifest" href="/manifest.json">
-
-    <!-- Font & Asset Preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="hero.png">
-
-    <!-- External Modular Assets -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- TAILWIND CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -35,1156 +22,351 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            gold: '#f59e0b',
-                            goldDark: '#d97706',
-                            accent: '#8b5cf6',
-                            emerald: '#10b981',
-                            blue: '#3b82f6',
-                            darkBg: '#030712',
-                            cardBg: '#0f172a'
-                        }
+                        amber: { 300: '#fcd34d', 400: '#fbbf24', 500: '#f59e0b' }
                     }
                 }
             }
         }
     </script>
 
-    <!-- Social & Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Just Consult Adrian">
-    <meta property="og:title" content="Just Consult Adrian | Web Engineering & Strategy">
-    <meta property="og:description" content="Architecting high-converting digital platforms, corporate brand systems, and organic acquisition channels.">
-    <meta property="og:image" content="https://www.justconsultadrian.com/logo.jpg">
-    <meta property="og:url" content="https://www.justconsultadrian.com">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-    <link rel="apple-touch-icon" href="logo.jpg">
-
-    <!-- Comprehensive Schema.org JSON-LD Graph -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": ["ProfessionalService", "Organization"],
-          "@id": "https://www.justconsultadrian.com/#organization",
-          "name": "Just Consult Adrian",
-          "url": "https://www.justconsultadrian.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.justconsultadrian.com/logo.jpg"
-          },
-          "image": "https://www.justconsultadrian.com/logo.jpg",
-          "telephone": "+263774235841",
-          "email": "JustConsultAdrian@gmail.com",
-          "priceRange": "$$$",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Harare",
-            "addressCountry": "ZW"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-17.8292",
-            "longitude": "31.0522"
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "08:00",
-              "closes": "17:00"
+    <!-- ANTI-FOUC THEME PERSISTENCE INLINE SCRIPT -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('jca_theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
             }
-          ],
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61591434127111"
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "18"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.justconsultadrian.com/#person",
-          "name": "Adrian Chombe",
-          "jobTitle": "Founder & Head of Strategy",
-          "worksFor": { "@id": "https://www.justconsultadrian.com/#organization" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.justconsultadrian.com/"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the typical timeline for a web engineering project?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Standard and Elite corporate builds are completed within 5 to 10 business days."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What local payment gateways are accepted in Zimbabwe?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We accept payments via EcoCash, InnBucks, ZiG, and direct USD bank transfers."
-              }
-            }
-          ]
-        }
-      ]
-    }
+        })();
     </script>
-    <!-- LocalBusiness & Web Designer Schema for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Just Consult Adrian",
-  "url": "https://www.justconsultadrian.com",
-  "description": "High-performance web design, Omni Presence Audits, and technical SEO services in Harare, Zimbabwe.",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Just Consult Adrian",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-    "telephone": "+263774235841",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Harare",
-      "addressCountry": "ZW"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -17.8216,
-      "longitude": 31.0492
-    }
-  }
-}
-</script>
-</head>
 
-<body class="bg-gray-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-gray-950">
-
-    <!-- Top Scroll Reading Progress Bar -->
-    <div id="scroll-progress"></div>
-
-    <!-- Toast Notification Container -->
-    <div id="toast-container" aria-live="polite"></div>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-50 p-4 bg-gray-900/95 border-t border-slate-800 backdrop-blur-md hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
-            <p>🔒 We use essential cookies and privacy-first analytics to optimize your booking experience. Read our <button onclick="toggleModal('privacy-modal')" class="underline text-amber-400">Privacy Policy</button>.</p>
-            <div class="flex gap-3">
-                <button onclick="acceptCookies()" aria-label="Accept Cookies" class="gold-gradient-bg text-gray-950 px-5 py-2 rounded-xl font-bold hover:brightness-110 transition">Accept All</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- CLIENT PORTAL MODAL -->
-<div id="portal-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-    
-    <!-- Modal Card Container -->
-    <div class="relative w-full max-w-md bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+    <!-- LENIS SMOOTH SCROLL BASELINE STYLES -->
+    <style>
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
         
-        <!-- Close Button (X) -->
-        <button onclick="toggleModal('portal-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-lg font-bold p-2 focus:outline-none">
-            ✕
-        </button>
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(251, 191, 36, 0.4);
+            box-shadow: 0 0 30px -10px rgba(251, 191, 36, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen selection:bg-amber-400 selection:text-gray-950">
 
-        <!-- Header -->
-        <div class="text-center mb-6">
-            <span class="text-[11px] font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                Client Portal
-            </span>
-            <h3 class="text-2xl font-bold text-white mt-3">Client Access 🔐</h3>
-            <p class="text-xs text-gray-400 mt-1">Sign in to view project progress, audit reports, and invoices.</p>
-        </div>
-
-        <!-- Login Form -->
-        <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Demo Login: Access is reserved for active clients.');">
+    <!-- HEADER / NAVIGATION BAR -->
+    <header class="border-b border-gray-800 bg-gray-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
             
-            <!-- Email / Username Input -->
-            <div>
-                <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Username or Email</label>
-                <input type="email" required placeholder="client@example.com" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 transition" />
-            </div>
-
-            <!-- Password Input -->
-            <div>
-                <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Password</label>
-                <input type="password" required placeholder="••••••••" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 transition" />
-            </div>
-
-            <!-- Options Row -->
-            <div class="flex items-center justify-between text-xs text-gray-400">
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" class="accent-amber-400 rounded bg-gray-800 border-gray-700" />
-                    <span>Remember me</span>
-                </label>
-                <a href="#contact" onclick="toggleModal('portal-modal')" class="hover:text-amber-400 transition">Forgot password?</a>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="w-full py-3 bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-sm rounded-xl transition shadow-lg mt-2">
-                Sign In
-            </button>
-
-            <!-- Onboarding Helper Note -->
-            <p class="text-xs text-gray-400 mt-4 text-center border-t border-gray-800/80 pt-4">
-                Portal access is reserved for active clients. Credentials are issued upon project onboarding. 
-                <a href="#contact" onclick="toggleModal('portal-modal')" class="text-amber-400 underline font-semibold">Contact us</a> to start a project.
-            </p>
-
-        </form>
-
-    </div>
-</div>
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" role="dialog" aria-modal="true" aria-hidden="true" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
-        <div class="glass-panel max-w-2xl w-full p-8 rounded-3xl max-h-[80vh] overflow-y-auto relative text-slate-300 text-xs space-y-4">
-            <button onclick="toggleModal('privacy-modal')" aria-label="Close Privacy Modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
-            <h3 class="text-xl font-bold text-white">Privacy Policy & Data Handling</h3>
-            <p>At Just Consult Adrian, commercial information collected via form submissions is strictly utilized for strategic consultation and client project execution.</p>
-            <h4 class="font-bold text-amber-400 text-sm">Data Protection</h4>
-            <p>We do not sell, rent, or trade personal data to third parties. All lead details are encrypted over modern SSL connections.</p>
-            <h4 class="font-bold text-amber-400 text-sm">Direct Contact</h4>
-            <p>For inquiries regarding data retention, contact: <span class="text-white font-mono">JustConsultAdrian@gmail.com</span>.</p>
-        </div>
-    </div>
-
-    <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 transition-all">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Main Navigation">
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="logo.jpg" width="44" height="44" alt="Just Consult Adrian Logo" class="h-11 w-11 rounded-xl object-cover border border-amber-500/30 group-hover:border-amber-400 transition shadow-lg">
-                <div class="flex flex-col">
-                    <span class="font-black text-lg tracking-tight text-white group-hover:text-amber-400 transition">JUST CONSULT ADRIAN</span>
-                    <span class="text-[10px] font-semibold tracking-widest text-amber-400/90 uppercase">Strategy • Engineering • Growth</span>
-                </div>
+            <a href="index.html" class="text-lg font-extrabold tracking-tight text-white">
+                Just Consult <span class="text-amber-400">Adrian</span>
             </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-300">
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-gray-300">
                 <a href="#services" class="hover:text-amber-400 transition">Services</a>
-                <a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a>
-                <a href="#about" class="hover:text-amber-400 transition">About</a>
-                <a href="#estimator" class="hover:text-amber-400 transition">Estimator</a>
-                <a href="#pricing" class="hover:text-amber-400 transition">Packages</a>
-                <!-- Change href="#" or href="" to href="#insights" -->
-<a href="#insights" class="text-gray-300 hover:text-amber-400 transition text-sm font-medium">Insights</a>
-                <button onclick="toggleModal('portal-modal')" aria-label="Open Client Portal" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5">
-                    <span>Portal</span>
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v3H4a2 2 0 00-2 2v5a2 2 0 002 2h12a2 2 0 002-2v-5a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H7V7a3 3 0 016 0v3z"/></svg>
-                </button>
-            </div>
+                <a href="#booking" class="hover:text-amber-400 transition">Book Call</a>
+                <a href="#resources" class="hover:text-amber-400 transition">Knowledge Centre</a>
+                <a href="dashboard.html" class="hover:text-amber-400 transition">Client Portal</a>
+            </nav>
 
-            <!-- Controls -->
-            <div class="hidden lg:flex items-center gap-4">
-                <button onclick="toggleTheme()" aria-label="Toggle Theme Mode" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 text-amber-400 transition">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+            <div class="flex items-center gap-3">
+                <!-- ACCESSIBLE THEME TOGGLE BUTTON -->
+                <button id="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false"
+                        class="p-2 rounded-xl border border-gray-800 bg-gray-900 text-gray-300 hover:text-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 transition">
+                    <span class="sr-only">Switch theme</span>
+                    <svg id="theme-toggle-sun-icon" class="w-4 h-4 hidden dark:block text-amber-400 fill-current" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="theme-toggle-moon-icon" class="w-4 h-4 block dark:hidden text-gray-700 fill-current" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
                 </button>
-                <a href="#contact" class="gold-gradient-bg text-gray-950 font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-lg shadow-amber-500/20 transform hover:scale-105">
-                    Book Consultation
+
+                <a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase px-4 py-2 rounded-xl transition shadow-md">
+                    Pay Invoice
                 </a>
             </div>
-
-            <!-- Mobile Buttons -->
-            <div class="flex lg:hidden items-center gap-3">
-                <button onclick="toggleTheme()" aria-label="Toggle Mobile Theme" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-amber-400">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-                </button>
-                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Navigation Menu" aria-expanded="false" class="text-white p-2">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-            </div>
-        </nav>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-gray-950 border-b border-slate-800 px-6 py-6 space-y-4">
-            <a href="#services" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Services</a>
-            <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Portfolio & Case Studies</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">About Adrian</a>
-            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Project Estimator</a>
-            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Pricing Packages</a>
-            <a href="#insights" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Insights & Articles</a>
-            <button onclick="toggleMobileMenu(); toggleModal('portal-modal');" class="block w-full text-left text-sm font-semibold text-amber-400">Client Portal Login 🔐</button>
-            <!-- Replace your current Book Consultation button with this -->
-<a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl transition shadow-lg flex items-center gap-2">
-    <span>Book Consultation</span>
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-</a>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-[90vh] flex items-center justify-center py-24 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-300 text-xs font-bold tracking-wide backdrop-blur-md">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                        <span>Harare Digital Desk • World-Class Web Standards</span>
-                    </div>
-
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight">
-                        Engineered for Authority.<br>
-                        <span class="accent-gradient-text">Built to Convert.</span><br>
-                        <span class="purple-gradient-text">Scaled for Revenue.</span>
-                    </h1>
-
-                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        We construct high-tier digital assets, persuasive brand architectures, and organic growth infrastructure for ambitious enterprises.
-                    </p>
-
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#contact" class="gold-gradient-bg text-gray-950 font-black px-8 py-4 rounded-xl text-sm uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/25 transform hover:-translate-y-0.5">
-                            Book Free Strategy Session
-                        </a>
-                        <a href="#portfolio" class="bg-slate-900/80 border border-slate-700 text-slate-200 px-8 py-4 rounded-xl font-bold text-sm hover:border-amber-400 hover:text-white transition flex items-center gap-2">
-                            <span>Explore Portfolio</span>
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
-                        </a>
-                    </div>
-                    <!-- Hero Primary CTA Button -->
-<div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center sm:justify-start">
-    <a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-sm px-8 py-4 rounded-xl shadow-xl transition text-center">
-        Book Consultation &amp; Pay Deposit →
-    </a>
-    <a href="#services" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold text-sm px-8 py-4 rounded-xl border border-gray-700 transition text-center">
-        Explore Services
-    </a>
-</div>
-                    <!-- 1. PERFORMANCE METRICS BANNER (Place immediately below Hero Section) -->
-<section class="border-y border-gray-800 bg-gray-900/40 py-8">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-amber-400">99+</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">PageSpeed Score</p>
-        </div>
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-white">&lt; 1.2s</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Avg Load Time</p>
-        </div>
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-amber-400">100%</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Mobile Responsive</p>
-        </div>
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-white">360°</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Audit Coverage</p>
-        </div>
-    </div>
-</section>
-
-<!-- 2. SERVICES & OMNI PRESENCE AUDIT IMAGE CARDS (Place inside Services Section) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
-    <!-- Web Design Card -->
-    <div class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 shadow-2xl">
-        <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" 
-                 alt="High Performance Web Design and Development" 
-                 width="800" height="500" loading="lazy" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-        </div>
-        <div class="p-6">
-            <span class="text-xs font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20 uppercase tracking-widest">
-                Core Service
+    <!-- HERO SECTION -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center space-y-6" data-reveal>
+            <span class="text-amber-400 text-xs font-mono font-bold uppercase tracking-widest bg-amber-400/10 border border-amber-400/20 px-3.5 py-1.5 rounded-full inline-block">
+                Digital Services &amp; Omni Presence Consultancy
             </span>
-            <h3 class="text-xl font-bold text-white mt-3">High-Converting Web Design</h3>
-            <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                Custom, ultra-fast responsive sites built with clean code architecture, pixel-perfect UX, and built-in lead generation.
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Enterprise Web Engineering &amp; Strategic Legal Compliance
+            </h1>
+            <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                We design bulletproof digital platforms, optimize technical search presences, and integrate corporate governance systems tailored for growth-minded African enterprises.
             </p>
-        </div>
-    </div>
-
-    <!-- Omni Presence Audit Card -->
-    <div class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 shadow-2xl">
-        <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
-                 alt="Omni Presence Audit Dashboard Analytics" 
-                 width="800" height="500" loading="lazy" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-        </div>
-        <div class="p-6">
-            <span class="text-xs font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20 uppercase tracking-widest">
-                Diagnostic Audit
-            </span>
-            <h3 class="text-xl font-bold text-white mt-3">Omni Presence Audits</h3>
-            <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                Full 360° technical evaluation covering page speed, mobile UX friction, technical SEO, and conversion bottlenecks.
-            </p>
-        </div>
-    </div>
-</div>
-
-<!-- Copyright-Free Branded Video Showcase Section -->
-<section class="py-16 bg-gray-950 border-y border-gray-800">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-        
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-            Our Work in Motion
-        </span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-3">
-            Crafting Digital Excellence for Your Brand
-        </h2>
-        <p class="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed mb-10">
-            From Omni Presence Audits to high-speed responsive builds—see how we transform digital presence.
-        </p>
-
-        <!-- Video Container with Custom Brand Overlay -->
-        <div class="relative rounded-2xl overflow-hidden border border-gray-700 bg-gray-900 shadow-2xl group">
-            
-            <!-- Royalty-Free HD Tech Background Video Loop -->
-            <video 
-                class="w-full h-[400px] object-cover opacity-60" 
-                autoplay muted loop playsinline
-                poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-code-project-on-a-computer-screen-27367-large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <!-- Dark Overlay Vignette -->
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
-
-            <!-- Brand Overlay (Your Logo & Service Title) -->
-            <div class="absolute inset-0 flex flex-col justify-end p-8 text-left">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="w-3 h-3 bg-amber-400 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Just Consult Adrian Showcase</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Omni Presence Audits &amp; Custom Web Engineering</h3>
-                <p class="text-xs text-gray-300 mt-1 max-w-md">Built for speed, security, and maximum conversion performance in Harare, Zimbabwe.</p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#booking" class="bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition shadow-xl">
+                    Schedule Strategy Call →
+                </a>
+                <a href="#resources" class="bg-gray-900 border border-gray-800 hover:border-amber-400/50 text-gray-300 font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition">
+                    Explore Resources
+                </a>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
-
-<!-- 4. TESTIMONIALS SECTION (Place directly above Footer) -->
-<section class="py-20 bg-gray-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                Client Proof
-            </span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4">
-                Trusted by Forward-Thinking Businesses
-            </h2>
-            <p class="text-gray-400 text-sm mt-2">Real results from design revamps and Omni Presence Audits.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-400/30 transition">
-                <div>
-                    <div class="flex text-amber-400 text-sm mb-4">★★★★★</div>
-                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
-                        "Adrian completely rebuilt our website. Our PageSpeed score jumped from 42 to 98, and client inquiries doubled within 3 weeks."
-                    </p>
-                </div>
-                <div class="flex items-center gap-4 border-t border-gray-800/80 pt-4">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=150&amp;q=80" alt="Farai M." class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
-                    <div>
-                        <h4 class="text-white font-bold text-sm">Farai Makoni</h4>
-                        <p class="text-gray-500 text-xs">Managing Director, Apex Logistics</p>
-                    </div>
-                </div>
+    <!-- SERVICES GRID -->
+    <section id="services" class="py-16 bg-gray-900/50 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12" data-reveal>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Core Capabilities</h2>
+                <p class="text-xs text-gray-400 mt-1">High-impact engineering and legal solutions built to scale.</p>
             </div>
 
-            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-400/30 transition">
-                <div>
-                    <div class="flex text-amber-400 text-sm mb-4">★★★★★</div>
-                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
-                        "The Omni Presence Audit uncovered critical mobile navigation flaws and SEO schema errors we had no idea existed."
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card rounded-2xl p-6 transition duration-300 space-y-3" data-reveal>
+                    <div class="text-amber-400 text-xl font-mono">01/</div>
+                    <h3 class="text-lg font-bold text-white">Omni Presence Audits</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Complete technical SEO diagnostic, Core Web Vitals profiling, schema validation, and ZDPA privacy compliance checks.</p>
                 </div>
-                <div class="flex items-center gap-4 border-t border-gray-800/80 pt-4">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=150&amp;q=80" alt="Tariro C." class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
-                    <div>
-                        <h4 class="text-white font-bold text-sm">Tariro Chideya</h4>
-                        <p class="text-gray-500 text-xs">Founder, Horizon Digital</p>
-                    </div>
+                <!-- Card 2 -->
+                <div class="glass-card rounded-2xl p-6 transition duration-300 space-y-3" data-reveal>
+                    <div class="text-amber-400 text-xl font-mono">02/</div>
+                    <h3 class="text-lg font-bold text-white">Web Engineering</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Lightning-fast static and dynamic web systems optimized for 95+ performance scores and mobile responsiveness.</p>
                 </div>
-            </div>
-
-            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-400/30 transition">
-                <div>
-                    <div class="flex text-amber-400 text-sm mb-4">★★★★★</div>
-                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
-                        "Fast delivery, flawless execution, and unbelievable attention to detail. A web designer who truly understands both SEO and UI aesthetics."
-                    </p>
-                </div>
-                <div class="flex items-center gap-4 border-t border-gray-800/80 pt-4">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=150&amp;q=80" alt="Sarah K." class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
-                    <div>
-                        <h4 class="text-white font-bold text-sm">Sarah K.</h4>
-                        <p class="text-gray-500 text-xs">Operations Lead, Vektor Health</p>
-                    </div>
+                <!-- Card 3 -->
+                <div class="glass-card rounded-2xl p-6 transition duration-300 space-y-3" data-reveal>
+                    <div class="text-amber-400 text-xl font-mono">03/</div>
+                    <h3 class="text-lg font-bold text-white">Contract & Legal Framing</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Custom terms of service, client retainer agreements, digital service level frameworks, and Zimbabwean statutory compliance.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-                    <!-- Dynamic Counter Numbers -->
-                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
-                        <div>
-                            <p class="text-2xl font-black text-white"><span class="counter" data-target="99">0</span>.8%</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Performance Score</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-black text-amber-400"><span class="counter" data-target="100">0</span>%</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">On-Time Sprint Record</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-black text-emerald-400"><span class="counter" data-target="18">0</span>+</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Deployments</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Showcase Glass Graphic -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-3xl border border-white/10 p-3 glass-panel shadow-2xl">
-                        <div class="rounded-2xl overflow-hidden bg-gray-900 border border-slate-800 relative">
-                            <div class="bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-800">
-                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                                <span class="text-[11px] font-mono text-slate-400 ml-2">https://www.justconsultadrian.com</span>
-                            </div>
-                            <div class="p-6 space-y-4">
-                                <div class="h-32 rounded-xl bg-gradient-to-r from-amber-500/20 to-purple-600/20 p-4 border border-amber-500/30 flex flex-col justify-end">
-                                    <span class="text-xs font-mono text-amber-400">⚡ Core Web Vitals: OPTIMAL</span>
-                                    <h4 class="text-lg font-extrabold text-white">Conversion Architecture</h4>
-                                </div>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                        <p class="text-[10px] text-slate-400">Schema Graph</p>
-                                        <p class="text-sm font-bold text-emerald-400">Structured JSON-LD</p>
-                                    </div>
-                                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                        <p class="text-[10px] text-slate-400">Security Header</p>
-                                        <p class="text-sm font-bold text-amber-400">256-bit HSTS</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section with SVGs -->
-        <section id="services" class="py-32 max-w-7xl mx-auto px-6 relative">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-3">Core Solutions</h2>
-                <h3 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Capabilities That Drive Revenue</h3>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="glass-panel p-8 rounded-3xl hover:border-amber-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
-                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-amber-400 transition">Elite Web Engineering</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">High-speed landing pages and web platforms engineered to eliminate bounce rates and convert visitors into qualified calls.</p>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="glass-panel p-8 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
-                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-purple-400 transition">Brand Positioning</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">Establish undeniable market authority with cohesive visual brand guidelines, custom invoices, and persuasive copy.</p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="glass-panel p-8 rounded-3xl hover:border-emerald-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
-                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Organic SEO Infrastructure</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">Rank high for valuable commercial search terms in Harare and internationally with rich schema graphs.</p>
-                </div>
-            </div>
-        </section>
-        <!-- CLIENT SHOWCASE & CASE STUDIES SECTION -->
-<section id="case-studies" class="py-20 bg-gray-950 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3.5 py-1.5 rounded-full border border-amber-400/20">
-                Proven Client Results
-            </span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
-                From Hidden Bottlenecks to <span class="text-amber-400">Measurable Growth</span>
-            </h2>
-            <p class="text-gray-400 text-sm md:text-base mt-4 leading-relaxed">
-                See how our Omni Presence Audits and high-performance web engineering turn underperforming digital assets into client generation engines.
-            </p>
-        </div>
-
-        <!-- Case Studies Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- CASE STUDY 1: B2B Corporate & Legal Services -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
-                <div>
-                    <!-- Industry & Result Metric Badge -->
-                    <div class="flex items-center justify-between gap-2 mb-6">
-                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
-                            Corporate Services
-                        </span>
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                            +280% Inquiries
-                        </span>
-                    </div>
-
-                    <!-- Client Title -->
-                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
-                        Enterprise Legal &amp; Financial Advisory
-                    </h3>
-                    <p class="text-xs text-amber-400 font-semibold mt-1">
-                        Service: Omni Presence Audit + UI/UX Overhaul
-                    </p>
-
-                    <!-- Problem / Solution Breakdown -->
-                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
-                        <div class="flex items-start gap-2">
-                            <span class="text-rose-400 font-bold">Challenge:</span>
-                            <span class="text-gray-400">High traffic but near-zero contact form conversions due to mobile layout friction and slow loading.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="text-emerald-400 font-bold">Solution:</span>
-                            <span class="text-gray-300">Audited mobile load speeds, streamlined CTA funnels, and integrated instant appointment booking.</span>
-                        </div>
-                    </div>
-
-                    <!-- Verified Key Takeaways -->
-                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> Load speed decreased from 5.2s to 0.8s
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> #1 Local search placement in Harare
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Action Links -->
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
-                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
-                        Get Similar Results →
-                    </a>
-                </div>
-            </div>
-
-            <!-- CASE STUDY 2: Retail & Commercial Brand -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
-                <div>
-                    <!-- Industry & Result Metric Badge -->
-                    <div class="flex items-center justify-between gap-2 mb-6">
-                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
-                            E-Commerce &amp; Retail
-                        </span>
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                            3.2x Conversion Rate
-                        </span>
-                    </div>
-
-                    <!-- Client Title -->
-                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
-                        Regional Logistics &amp; Distribution Portal
-                    </h3>
-                    <p class="text-xs text-amber-400 font-semibold mt-1">
-                        Service: Web Engineering + Payment Gateway Integration
-                    </p>
-
-                    <!-- Problem / Solution Breakdown -->
-                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
-                        <div class="flex items-start gap-2">
-                            <span class="text-rose-400 font-bold">Challenge:</span>
-                            <span class="text-gray-400">Manual WhatsApp order taking created order delays and unrecorded client payment receipts.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="text-emerald-400 font-bold">Solution:</span>
-                            <span class="text-gray-300">Deployed a custom web portal with EcoCash &amp; card checkouts and automated digital receipts.</span>
-                        </div>
-                    </div>
-
-                    <!-- Verified Key Takeaways -->
-                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> 100% automated receipt generation
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> Zero manual tracking errors reported
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Action Links -->
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
-                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
-                        Get Similar Results →
-                    </a>
-                </div>
-            </div>
-
-            <!-- CASE STUDY 3: Local SME SEO & Branding -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
-                <div>
-                    <!-- Industry & Result Metric Badge -->
-                    <div class="flex items-center justify-between gap-2 mb-6">
-                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
-                            Agribusiness &amp; Trade
-                        </span>
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                            Top 3 Google Rank
-                        </span>
-                    </div>
-
-                    <!-- Client Title -->
-                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
-                        Agri-Tech &amp; Poultry Equipment Supplier
-                    </h3>
-                    <p class="text-xs text-amber-400 font-semibold mt-1">
-                        Service: Technical SEO + Digital Brand Identity
-                    </p>
-
-                    <!-- Problem / Solution Breakdown -->
-                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
-                        <div class="flex items-start gap-2">
-                            <span class="text-rose-400 font-bold">Challenge:</span>
-                            <span class="text-gray-400">Invisible on Google search results, losing high-value local contracts to larger competitors.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="text-emerald-400 font-bold">Solution:</span>
-                            <span class="text-gray-300">Optimized local search schemas, keyword targeting, and mobile responsive structure.</span>
-                        </div>
-                    </div>
-
-                    <!-- Verified Key Takeaways -->
-                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> Captured high-intent search traffic in 45 days
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> 4x Increase in inbound contract quotes
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Action Links -->
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
-                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
-                        Get Similar Results →
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Strategic Conversion Banner Below Showcase -->
-        <div class="mt-12 bg-gradient-to-r from-gray-900 via-gray-900 to-amber-950/40 border border-amber-400/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
-            <div class="text-center md:text-left">
-                <h4 class="text-xl font-bold text-white">Ready to uncover what's holding your website back?</h4>
-                <p class="text-xs text-gray-400 mt-1">Book an Omni Presence Audit today and get a full technical, speed, and lead conversion roadmap.</p>
-            </div>
-            <a href="pay.html" class="whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition shadow-lg">
-                Book Audit &amp; Consultation →
-            </a>
-        </div>
-
-    </div>
-</section>
-
-        <!-- Portfolio Showcase -->
-        <section id="portfolio" class="py-32 bg-gray-900/40 border-y border-slate-800/80">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Selected Works</h2>
-                        <h3 class="text-3xl sm:text-4xl font-black text-white">Client Showcase & Case Studies</h3>
-                    </div>
-                    
-                    <div class="flex flex-wrap gap-2 text-xs font-bold">
-                        <button onclick="filterPortfolio('all', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-amber-500 text-gray-950">All Work</button>
-                        <button onclick="filterPortfolio('web', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Web Design</button>
-                        <button onclick="filterPortfolio('branding', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Branding</button>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="port-item web glass-panel rounded-3xl overflow-hidden group">
-                        <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <img src="hero.png" loading="lazy" decoding="async" width="600" height="400" alt="ParcMed Medical Specialties Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Branding</span>
-                            <h4 class="text-lg font-bold text-white">LEGAL CONSULTANCY WITH TONY</h4>
-                            <p class="text-xs text-slate-400">High-converting marketing materials and LinkedIn visual identity system.</p>
-                        </div>
-                    </div>
-
-                    <div class="port-item web glass-panel rounded-3xl overflow-hidden group">
-                        <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <img src="logo.jpg" loading="lazy" decoding="async" width="600" height="400" alt="Just Consult Adrian Platform" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">Web Engineering</span>
-                            <h4 class="text-lg font-bold text-white">Just Consult Adrian Engine</h4>
-                            <p class="text-xs text-slate-400">Glassmorphic web platform with interactive quote calculation engine.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Founder -->
-        <section id="about" class="py-32 max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 relative">
-                    <div class="rounded-3xl border border-slate-800 overflow-hidden glass-panel p-2">
-                        <img src="logo.jpg" loading="lazy" decoding="async" width="500" height="500" alt="Adrian Chombe - Founder" class="rounded-2xl w-full h-auto object-cover">
-                    </div>
-                </div>
-                <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs font-extrabold tracking-widest text-amber-400 uppercase">Leadership</span>
-                    <h3 class="text-3xl sm:text-5xl font-black text-white leading-tight">Closing the Gap Between Ambition & Revenue</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        "We architect digital infrastructure designed to project undeniable authority, build trust instantly, and generate measurable commercial returns."
-                    </p>
-                    <div>
-                        <p class="text-base font-extrabold text-white">Adrian Chombe</p>
-                        <p class="text-xs text-amber-400 font-semibold">Founder & Head of Strategy</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Scope Estimator -->
-        <section id="estimator" class="py-28 bg-gray-900/60 border-y border-slate-800/80">
-            <div class="max-w-3xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Pricing Transparency</h2>
-                    <h3 class="text-3xl font-black text-white">Interactive Project Scope Calculator</h3>
-                </div>
-
-                <div class="glass-panel p-8 sm:p-10 rounded-3xl space-y-6 border border-amber-500/20">
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">1. Select Service Tier</label>
-                        <select id="calc-service" onchange="calculateEstimate()" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-sm text-white focus:border-amber-400 outline-none">
-                            <option value="300">Standard Entry Landing Page ($300)</option>
-                            <option value="350" selected>Elite Enterprise Multi-Page Platform ($350)</option>
-                            <option value="450">Premium Growth Accelerator Package ($450)</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">2. Delivery Sprint Speed</label>
-                        <select id="calc-speed" onchange="calculateEstimate()" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-sm text-white focus:border-amber-400 outline-none">
-                            <option value="0">Standard Delivery Timeline (5-7 Days)</option>
-                            <option value="50">Priority Sprint Delivery (+$50)</option>
-                        </select>
-                    </div>
-
-                    <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <div>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Estimated Total</span>
-                            <span id="calc-total" class="text-4xl font-black text-amber-400">$350</span>
-                        </div>
-                        <a href="#contact" onclick="syncEstimateToForm()" class="gold-gradient-bg text-gray-950 font-black px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider text-center hover:brightness-110 transition">
-                            Apply Estimate To Form
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Tiers -->
-        <section id="pricing" class="py-32 max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Investments</h2>
-                <h3 class="text-3xl sm:text-5xl font-black text-white">Transparent Development Packages</h3>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <h4 class="text-lg font-bold text-white">Standard Entry</h4>
-                        <p class="text-3xl font-black text-amber-400 mt-2">$300</p>
-                        <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li>✓ High-Speed Landing Page</li>
-                            <li>✓ Mobile Responsive Design</li>
-                            <li>✓ Direct WhatsApp Integration</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="mt-8 block text-center py-3 rounded-xl border border-amber-500/50 text-amber-400 font-bold text-xs hover:bg-amber-500 hover:text-gray-950 transition">Select Standard</a>
-                </div>
-
-                <div class="glass-panel p-8 rounded-3xl border-2 border-amber-500 relative flex flex-col justify-between shadow-2xl">
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 gold-gradient-bg text-gray-950 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Most Popular</div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white">Elite Enterprise</h4>
-                        <p class="text-3xl font-black text-amber-400 mt-2">$350</p>
-                        <ul class="mt-6 space-y-3 text-xs text-slate-200">
-                            <li>✓ Multi-Page Site Architecture</li>
-                            <li>✓ Rich JSON-LD Schema SEO</li>
-                            <li>✓ Copywriting & Brand Positioning</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="mt-8 block text-center py-3.5 rounded-xl gold-gradient-bg text-gray-950 font-black text-xs uppercase tracking-wider hover:brightness-110 transition">Select Elite Enterprise</a>
-                </div>
-
-                <div class="glass-panel p-8 rounded-3xl border border-purple-500/30 flex flex-col justify-between">
-                    <div>
-                        <h4 class="text-lg font-bold text-white">Premium Accelerator</h4>
-                        <p class="text-3xl font-black text-purple-400 mt-2">$450</p>
-                        <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li>✓ Everything in Elite Enterprise</li>
-                            <li>✓ 1-Month Retainer Maintenance</li>
-                            <li>✓ Priority Strategy Execution</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="mt-8 block text-center py-3 rounded-xl border border-purple-500/50 text-purple-400 font-bold text-xs hover:bg-purple-500 hover:text-white transition">Select Accelerator</a>
-                </div>
-            </div>
-        </section>
-        <!-- INSIGHTS & CMS CONTENT SECTION -->
-<section id="insights" class="py-20 bg-gray-900 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Header -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-            <div>
+    <!-- INTEGRATED APPOINTMENT BOOKING SECTION -->
+    <section id="booking" class="py-16 bg-gray-950 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4" data-reveal>
+            <div class="text-center mb-10">
                 <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                    Knowledge Hub
+                    Direct Calendar Access
                 </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4">Latest Insights &amp; Breakdown Videos</h2>
-                <p class="text-gray-400 text-sm mt-2">Articles, strategy notes, and technical SEO breakdowns.</p>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Schedule a Consultation</h2>
             </div>
-            <div class="mt-4 md:mt-0">
-                <span class="text-xs text-amber-400 bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-lg">
-                    ⚡ CMS Feed Connected
-                </span>
-            </div>
-        </div>
 
-        <!-- Insights Grid (CMS Ready) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Article 1 Card (Fully Clickable) -->
-<a href="article-pagespeed.html" class="block bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/50 transition duration-300 group shadow-lg">
-    <div class="h-48 overflow-hidden relative">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" 
-             alt="Why Page Speed Defines Conversion Rates in 2026" 
-             class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-        <span class="absolute top-3 left-3 bg-gray-900/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-700 uppercase">Article</span>
-    </div>
-    <div class="p-6">
-        <p class="text-xs text-gray-500 mb-2">July 2026 • 5 min read</p>
-        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition leading-snug">
-            Why Page Speed Defines Conversion Rates in 2026
-        </h3>
-        <p class="text-xs text-gray-400 mt-2 leading-relaxed">
-            A deep dive into how Core Web Vitals impact your Google search rankings, user retention, and client acquisition.
-        </p>
-        <div class="mt-4 flex items-center gap-1 text-xs font-bold text-amber-400 group-hover:translate-x-1 transition duration-300">
-            <span>Read Article</span>
-            <span>→</span>
-        </div>
-    </div>
-</a>
-
-            <!-- Video Article 2 Card -->
-            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Omni Presence Audit Video" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <span class="absolute top-3 left-3 bg-amber-400 text-gray-950 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Video Guide</span>
-                </div>
-                <div class="p-6">
-                    <p class="text-xs text-gray-500 mb-2">July 2026 • 8 min watch</p>
-                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Inside an Omni Presence Audit: What We Look For</h3>
-                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
-                        Watch us diagnose UI friction, mobile responsiveness bugs, and technical SEO schema errors live.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Article 3 Card -->
-            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Local SEO Guide" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <span class="absolute top-3 left-3 bg-gray-900/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-700 uppercase">SEO Insights</span>
-                </div>
-                <div class="p-6">
-                    <p class="text-xs text-gray-500 mb-2">July 2026 • 4 min read</p>
-                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Dominating Local Google Search for Zimbabwe Businesses</h3>
-                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
-                        Practical steps to optimize your Google Business Profile and local schema to capture nearby search traffic.
-                    </p>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-32 bg-gray-900/60 border-t border-slate-800/80">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Direct Channel</h2>
-                    <h3 class="text-3xl sm:text-5xl font-black text-white">Initiate Consultation</h3>
-                </div>
-
-                <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800">
-                    <form action="https://formspree.io/f/xlgyobko" method="POST" class="space-y-6" onsubmit="showToast('Submitting inquiry brief...');">
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Business Name *</label>
-                                <input type="text" name="name" required placeholder="e.g. Acme Corp" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Email Address *</label>
-                                <input type="email" name="email" required placeholder="name@company.com" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                            </div>
-                        </div>
-
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Phone / WhatsApp *</label>
-                                <input type="tel" name="phone" required placeholder="+263 77 423 5841" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Target Package Scope</label>
-                                <select id="form-package-select" name="package" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                                    <option>Standard Entry ($300)</option>
-                                    <option selected>Elite Enterprise ($350)</option>
-                                    <option>Premium Accelerator ($450)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-2">Project Brief</label>
-                            <textarea name="message" rows="4" placeholder="Describe your primary business objectives..." class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none"></textarea>
-                        </div>
-
-                        <button type="submit" aria-label="Submit Form Brief" class="w-full gold-gradient-bg text-gray-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/20">
-                            Submit Consultation Brief
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-8">
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">1. Select Consultation Type</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="service-options">
+                        <button type="button" onclick="selectService(this, 'Discovery Call (15m)')" class="service-card active p-4 rounded-xl border border-amber-400 bg-amber-400/10 text-left transition">
+                            <span class="text-xs font-mono text-amber-400 font-bold block">15 MIN</span>
+                            <h4 class="text-sm font-bold text-white mt-1">Discovery Call</h4>
                         </button>
-                    </form>
+                        <button type="button" onclick="selectService(this, 'Technical Strategy (30m)')" class="service-card p-4 rounded-xl border border-gray-800 bg-gray-950 text-left hover:border-amber-400/50 transition">
+                            <span class="text-xs font-mono text-amber-400 font-bold block">30 MIN</span>
+                            <h4 class="text-sm font-bold text-white mt-1">Technical Strategy</h4>
+                        </button>
+                        <button type="button" onclick="selectService(this, 'Legal Retainer Review (60m)')" class="service-card p-4 rounded-xl border border-gray-800 bg-gray-950 text-left hover:border-amber-400/50 transition">
+                            <span class="text-xs font-mono text-amber-400 font-bold block">60 MIN</span>
+                            <h4 class="text-sm font-bold text-white mt-1">Legal &amp; Scope Review</h4>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">2. Choose Available Date</label>
+                    <div class="grid grid-cols-3 sm:grid-cols-5 gap-2" id="date-picker-grid"></div>
+                </div>
+
+                <form id="booking-form" onsubmit="submitBooking(event)" class="space-y-4 pt-4 border-t border-gray-800">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" id="book-name" required placeholder="Full Name *" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-xs text-white focus:border-amber-400 outline-none">
+                        <input type="email" id="book-email" required placeholder="Email Address *" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-xs text-white focus:border-amber-400 outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition shadow-xl">
+                        Confirm Consultation Booking →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- KNOWLEDGE CENTRE RESOURCE HUB -->
+    <section id="resources" class="py-16 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4" data-reveal>
+            <div class="text-center mb-10">
+                <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+                    Resource Center
+                </span>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Free Downloads &amp; Toolkits</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-950 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded">PDF Checklist</span>
+                        <h3 class="text-base font-bold text-white mt-3">2026 Web Launch Diagnostic</h3>
+                        <p class="text-xs text-gray-400 mt-2">A 40-point diagnostic checklist covering speed, WCAG accessibility, and SEO.</p>
+                    </div>
+                    <button type="button" onclick="openLeadModal('2026 Web Launch Diagnostic')" class="mt-6 w-full bg-gray-900 border border-gray-800 text-amber-400 hover:bg-amber-400 hover:text-gray-950 font-bold text-xs uppercase py-3 rounded-xl transition">
+                        Download Free ↓
+                    </button>
+                </div>
+
+                <div class="bg-gray-950 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">DOCX Contract</span>
+                        <h3 class="text-base font-bold text-white mt-3">Web Service Contract Model</h3>
+                        <p class="text-xs text-gray-400 mt-2">Production client agreement complete with payment milestone clauses.</p>
+                    </div>
+                    <button type="button" onclick="openLeadModal('Web Service Contract Model')" class="mt-6 w-full bg-gray-900 border border-gray-800 text-amber-400 hover:bg-amber-400 hover:text-gray-950 font-bold text-xs uppercase py-3 rounded-xl transition">
+                        Download Free ↓
+                    </button>
+                </div>
+
+                <div class="bg-gray-950 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded">PDF Guide</span>
+                        <h3 class="text-base font-bold text-white mt-3">ZDPA Privacy Blueprint</h3>
+                        <p class="text-xs text-gray-400 mt-2">Guide detailing user consent standards under Zimbabwean privacy law.</p>
+                    </div>
+                    <button type="button" onclick="openLeadModal('ZDPA Privacy Blueprint')" class="mt-6 w-full bg-gray-900 border border-gray-800 text-amber-400 hover:bg-amber-400 hover:text-gray-950 font-bold text-xs uppercase py-3 rounded-xl transition">
+                        Download Free ↓
+                    </button>
                 </div>
             </div>
-        </section>
-    </main>
-
-  <!-- Footer Section -->
-<footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- 4-Column Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-            
-            <!-- Column 1: Brand Info -->
-            <div>
-                <h4 class="text-xl font-bold text-white mb-4">
-                    Just Consult <span class="text-amber-400">Adrian</span>
-                </h4>
-                <p class="text-sm leading-relaxed mb-4 text-gray-400">
-                    Crafting high-converting, responsive websites and bespoke digital solutions for growing businesses.
-                </p>
-                <p class="text-xs text-gray-500">
-                    📍 Harare, Zimbabwe
-                </p>
-            </div>
-
-            <!-- Column 2: Quick Links -->
-            <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Quick Links</h5>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a></li>
-                    <li><a href="#pricing" class="hover:text-amber-400 transition">Pricing</a></li>
-                    <!-- Change href="#" or href="" to href="#insights" -->
-<a href="#insights" class="text-gray-300 hover:text-amber-400 transition text-sm font-medium">Insights</a>
-                </ul>
-            </div>
-
-            <!-- Column 3: Core Services -->
-            <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Services</h5>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#services" class="hover:text-amber-400 transition">Web Design & Development</a></li>
-                    <li><a href="#services" class="hover:text-amber-400 transition">SEO & Speed Optimization</a></li>
-                    <li><a href="#services" class="hover:text-amber-400 transition">UI/UX Design</a></li>
-                    <li><a href="#services" class="hover:text-amber-400 transition">Website Maintenance</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Legal & Portal (Updated) -->
-            <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Legal & Portal</h5>
-                <ul class="space-y-2 text-sm">
-                    <li>
-                        <button onclick="toggleModal('privacy-modal')" class="hover:text-amber-400 transition text-left">Privacy Policy</button>
-                    </li>
-                    <li>
-                        <!-- Direct link to terms.html for Search Console / Sitemap indexing -->
-                        <a href="terms.html" class="hover:text-amber-400 transition block">Terms & Conditions</a>
-                    </li>
-                    <li>
-                        <button onclick="toggleModal('portal-modal')" class="text-amber-400 hover:underline text-left">Client Portal 🔐</button>
-                    </li>
-                </ul>
-            </div>
-
         </div>
+    </section>
 
-        <!-- Bottom Copyright Bar -->
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-            <p>&copy; 2026 Just Consult Adrian. All rights reserved.</p>
-            <a href="#" class="hover:text-amber-400 transition">Back to top ↑</a>
+    <!-- LEAD CAPTURE MODAL -->
+    <div id="lead-modal" class="fixed inset-0 bg-gray-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-4">
+            <button type="button" onclick="closeLeadModal()" class="absolute top-4 right-4 text-gray-500 hover:text-white">✕</button>
+            <h3 class="text-lg font-bold text-white" id="modal-resource-title">Download Resource</h3>
+            <form onsubmit="processResourceDownload(event)" class="space-y-3">
+                <input type="text" id="lead-name" required placeholder="Your Full Name *" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white outline-none">
+                <input type="email" id="lead-email" required placeholder="Email Address *" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white outline-none">
+                <button type="submit" class="w-full bg-amber-400 text-gray-950 font-bold text-xs uppercase py-3 rounded-xl">Unlock &amp; Download ↓</button>
+            </form>
         </div>
     </div>
-</footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" onclick="scrollToTop()" aria-label="Scroll Back To Top" class="fixed bottom-24 right-6 z-40 bg-slate-900 border border-slate-700 text-amber-400 p-3.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:border-amber-400">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"/></svg>
-    </button>
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 bg-gray-950 py-8 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>© 2026 Just Consult Adrian • Harare, Zimbabwe</div>
+            <div class="flex gap-4">
+                <a href="pay.html" class="hover:text-amber-400">Payment Gateway</a>
+                <a href="dashboard.html" class="hover:text-amber-400">Client Portal</a>
+                <a href="admin.html" class="hover:text-amber-400">Admin Control</a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Floating Sticky WhatsApp Quick Chat Button -->
-    <a href="https://wa.me/263774235841?text=Hi%20Adrian,%20I'd%20like%20to%20consult%20on%20a%20web%20project." 
-       target="_blank" 
-       rel="noopener"
-       aria-label="Contact on WhatsApp"
-       class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-400 text-gray-950 p-4 rounded-full shadow-2xl hover:scale-110 transition transform flex items-center justify-center border border-emerald-300">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-        </svg>
-    </a>
+    <!-- JS ENGINE LIBRARIES -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-    <!-- Engine Script Execution -->
-    <script src="script.js"></script>
+    <!-- CONSOLIDATED SCRIPTS ENGINE -->
+    <script>
+        // 1. Theme Switcher & Accessibility State
+        const themeBtn = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        function updateAriaState() {
+            const isDark = htmlEl.classList.contains('dark');
+            themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        }
+        updateAriaState();
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = htmlEl.classList.toggle('dark');
+            localStorage.setItem('jca_theme', isDark ? 'dark' : 'light');
+            updateAriaState();
+        });
+
+        // 2. Lenis Smooth Scroll & GSAP ScrollTrigger Reveal
+        document.addEventListener("DOMContentLoaded", () => {
+            const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+            gsap.registerPlugin(ScrollTrigger);
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => lenis.raf(time * 1000));
+            gsap.ticker.lagSmoothing(0);
+
+            document.querySelectorAll('[data-reveal]').forEach((el) => {
+                gsap.fromTo(el, 
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 90%" } }
+                );
+            });
+        });
+
+        // 3. Dynamic Date Picker Setup
+        document.addEventListener("DOMContentLoaded", () => {
+            const dateContainer = document.getElementById("date-picker-grid");
+            let today = new Date();
+            let count = 0, added = 0;
+            while (count < 5) {
+                let d = new Date();
+                d.setDate(today.getDate() + added + 1);
+                added++;
+                if (d.getDay() === 0) continue;
+                let dayName = d.toLocaleDateString('en-US', { weekday: 'short' });
+                let monthDay = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                
+                let btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = `p-2.5 rounded-xl border border-gray-800 bg-gray-950 text-xs text-center transition ${count===0?'border-amber-400 bg-amber-400/10 text-amber-400 font-bold':''}`;
+                btn.innerHTML = `<span class="block text-[9px] text-gray-500 uppercase">${dayName}</span>${monthDay}`;
+                dateContainer.appendChild(btn);
+                count++;
+            }
+        });
+
+        // 4. Booking & Lead Magnet Handlers
+        let activeResource = "";
+        function selectService(el, service) {
+            document.querySelectorAll('.service-card').forEach(c => c.className = "service-card p-4 rounded-xl border border-gray-800 bg-gray-950 text-left hover:border-amber-400/50 transition");
+            el.className = "service-card active p-4 rounded-xl border border-amber-400 bg-amber-400/10 text-left transition";
+        }
+
+        function submitBooking(e) {
+            e.preventDefault();
+            let name = document.getElementById('book-name').value;
+            alert(`Thank you ${name}, your consultation request has been logged!`);
+        }
+
+        function openLeadModal(title) {
+            activeResource = title;
+            document.getElementById('modal-resource-title').innerText = title;
+            document.getElementById('lead-modal').classList.remove('hidden');
+        }
+
+        function closeLeadModal() { document.getElementById('lead-modal').classList.add('hidden'); }
+
+        function processResourceDownload(e) {
+            e.preventDefault();
+            let name = document.getElementById('lead-name').value;
+            closeLeadModal();
+            alert(`Download initiated for ${name} (${activeResource}).`);
+        }
+
+        // 5. PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(err => console.log(err));
+            });
+        }
+    </script>
 </body>
 </html>
