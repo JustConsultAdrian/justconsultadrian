@@ -1,26 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Mobile Web App Capability -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Terms - Just Consult Adrian">
-
-    <!-- Technical & SEO Metadata -->
-    <title>Terms & Conditions | Just Consult Adrian</title>
-    <meta name="description" content="Terms and Conditions governing access to and use of Just Consult Adrian's web engineering, digital strategy, branding, and SEO services in Harare, Zimbabwe.">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#030712">
-    <link rel="canonical" href="https://www.justconsultadrian.com/terms.html">
-    <link rel="manifest" href="/manifest.json">
-
-    <!-- External Assets & Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Terms of Service & Privacy Framework - Just Consult Adrian</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,338 +11,107 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            gold: '#f59e0b',
-                            goldDark: '#d97706',
-                            accent: '#8b5cf6',
-                            emerald: '#10b981',
-                            darkBg: '#030712',
-                            cardBg: '#0f172a'
-                        }
+                        amber: { 300: '#fcd34d', 400: '#fbbf24', 500: '#f59e0b' }
                     }
                 }
             }
         }
     </script>
-
-    <!-- Structured Data JSON-LD for Legal Document -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Terms and Conditions",
-      "url": "https://www.justconsultadrian.com/terms.html",
-      "description": "Legal Terms and Conditions governing client agreements and website use for Just Consult Adrian.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Just Consult Adrian",
-        "url": "https://www.justconsultadrian.com"
-      }
-    }
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('jca_theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
     </script>
 </head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-<body class="bg-gray-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-gray-950">
-
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Terms Header Navigation">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="logo.jpg" width="44" height="44" alt="Just Consult Adrian Logo" class="h-11 w-11 rounded-xl object-cover border border-amber-500/30 group-hover:border-amber-400 transition shadow-lg">
-                <div class="flex flex-col">
-                    <span class="font-black text-lg tracking-tight text-white group-hover:text-amber-400 transition">JUST CONSULT ADRIAN</span>
-                    <span class="text-[10px] font-semibold tracking-widest text-amber-400/90 uppercase">Terms & Conditions</span>
-                </div>
+    <!-- HEADER -->
+    <header class="border-b border-gray-800 bg-gray-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-lg font-extrabold text-white">
+                Just Consult <span class="text-amber-400">Adrian</span>
             </a>
-
-            <div class="flex items-center gap-4">
-                <a href="index.html" class="bg-slate-900 border border-slate-700 text-slate-200 px-5 py-2 rounded-xl font-bold text-xs hover:border-amber-400 hover:text-white transition">
-                    ← Back To Main Desk
-                </a>
-            </div>
-        </nav>
+            <a href="index.html" class="text-xs text-gray-400 hover:text-white transition">← Return to Main Site</a>
+        </div>
     </header>
 
-    <main class="py-16 max-w-5xl mx-auto px-6">
-        <!-- Page Title Header -->
-        <div class="mb-12 border-b border-slate-800 pb-8">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-wide mb-4">
-                <span>Legal Framework & Governance</span>
-            </div>
-            <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">Terms & Conditions</h1>
-            <p class="text-xs font-mono text-slate-400">Last Updated: July 2026</p>
+    <!-- CONTENT CONTAINER -->
+    <main class="max-w-4xl mx-auto px-4 py-12 w-full space-y-10">
+        
+        <div class="border-b border-gray-800 pb-6 space-y-2">
+            <span class="text-xs font-mono text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full uppercase">
+                Legal & Governance Standard
+            </span>
+            <h1 class="text-3xl font-extrabold text-white">Terms of Service & Data Privacy Policy</h1>
+            <p class="text-xs text-gray-400">Effective Date: July 2026 • Governing Jurisdictional Law: Republic of Zimbabwe</p>
         </div>
 
-        <!-- Terms Content Box -->
-        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800 space-y-10 text-slate-300 text-sm leading-relaxed">
-            
-            <section class="space-y-3">
-                <p>Welcome to <strong>Just Consult Adrian</strong> ("we", "our", "us").</p>
-                <p>These Terms and Conditions govern your access to and use of our website, products, services, consultations, digital deliverables, branding services, web development services, SEO services, digital marketing services, and all related offerings.</p>
-                <p>By accessing this website or engaging our services, you agree to be legally bound by these Terms.</p>
-            </section>
+        <div class="space-y-8 text-xs sm:text-sm text-gray-300 leading-relaxed">
 
-            <hr class="border-slate-800">
-
-            <!-- 1. Company Information -->
+            <!-- Section 1 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">1. Company Information</h2>
-                <div class="grid sm:grid-cols-2 gap-4 bg-gray-900/60 p-5 rounded-2xl border border-slate-800 font-mono text-xs">
-                    <div>
-                        <span class="text-slate-400 block">Business Name:</span>
-                        <span class="text-white font-bold">Just Consult Adrian</span>
-                    </div>
-                    <div>
-                        <span class="text-slate-400 block">Location:</span>
-                        <span class="text-white font-bold">Harare, Zimbabwe</span>
-                    </div>
-                    <div>
-                        <span class="text-slate-400 block">Official Email:</span>
-                        <a href="mailto:JustConsultAdrian@gmail.com" class="text-amber-400 hover:underline">JustConsultAdrian@gmail.com</a>
-                    </div>
-                    <div>
-                        <span class="text-slate-400 block">Website:</span>
-                        <a href="https://www.justconsultadrian.com" class="text-amber-400 hover:underline">https://www.justconsultadrian.com</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 2. Acceptance of Terms -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">2. Acceptance of Terms</h2>
-                <p>By using this website you confirm that:</p>
-                <ul class="list-disc pl-6 space-y-2 text-slate-300">
-                    <li>you are at least 18 years old or have permission from a parent or guardian</li>
-                    <li>all information you provide is accurate</li>
-                    <li>you will not misuse our services</li>
-                    <li>you agree to these Terms and Conditions</li>
-                </ul>
-                <p class="text-xs text-amber-400/90 italic">If you disagree with these Terms, you should discontinue use of this website immediately.</p>
-            </section>
-
-            <!-- 3. Services -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">3. Services</h2>
-                <p>Our services include, but are not limited to:</p>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Website Design & Dev</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Website Maintenance</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Hosting Assistance</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Branding & Logo Design</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Copywriting & Content</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Search Engine Optimization</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Digital Strategy & Audit</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Corporate Identity Systems</div>
-                    <div class="bg-gray-900/40 p-3 rounded-xl border border-slate-800">• Landing Page Funnels</div>
-                </div>
-                <p class="text-xs text-slate-400">Additional services may be introduced from time to time.</p>
-            </section>
-
-            <!-- 4. Quotations -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">4. Quotations</h2>
-                <p>All quotations:</p>
-                <ul class="list-disc pl-6 space-y-1.5">
-                    <li>remain valid for 30 days unless otherwise stated</li>
-                    <li>may change if project scope or requirements change</li>
-                    <li>exclude third-party costs (such as domain registration, premium plugins, or hosting fees) unless specified</li>
-                    <li>are estimates until confirmed in writing</li>
-                </ul>
-            </section>
-
-            <!-- 5. Payments -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">5. Payments</h2>
-                <p>Projects begin only after any agreed upfront deposit or initial payment has been confirmed.</p>
-                <p>Accepted payment channels include:</p>
-                <p class="font-bold text-white bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-xs">
-                    EcoCash • InnBucks • ZiG • Bank Transfer • Visa • Mastercard • Other pre-approved methods
+                <h2 class="text-base font-bold text-white uppercase font-mono tracking-wide text-amber-400">1. Engagement & Service Scope</h2>
+                <p>
+                    <strong>Just Consult Adrian</strong> ("the Agency") provides web engineering, digital services, technical search optimization (SEO), and corporate governance consultancy. All client engagements are subject to a formal scope definition outlined in the issued invoice or master retainer agreement. Any additional features or out-of-scope revisions will be billed according to standard agency rates.
                 </p>
-                <p class="text-xs text-slate-400">Late payments or delayed milestones may delay project delivery timelines.</p>
             </section>
 
-            <!-- 6. Refund Policy -->
+            <!-- Section 2 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">6. Refund Policy</h2>
-                <p>Because our engineering and strategic work is highly customized:</p>
-                <ul class="list-disc pl-6 space-y-1.5">
-                    <li>consultation fees are non-refundable</li>
-                    <li>completed design work is non-refundable</li>
-                    <li>completed development work is non-refundable</li>
-                </ul>
-                <p class="text-xs text-slate-400">Partial refunds may be considered only where required by applicable law or where both parties formally agree in writing.</p>
-            </section>
-
-            <!-- 7. Project Timelines -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">7. Project Timelines</h2>
-                <p>Delivery estimates are based upon:</p>
-                <ul class="list-disc pl-6 space-y-1.5">
-                    <li>timely client communication and feedback</li>
-                    <li>prompt receipt of required content and branding materials</li>
-                    <li>prompt approval of design mockups and staging builds</li>
-                </ul>
-                <p>Delays caused by client inaction or delayed approvals extend project delivery timelines accordingly.</p>
-            </section>
-
-            <!-- 8. Client Responsibilities -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">8. Client Responsibilities</h2>
-                <p>The client agrees to:</p>
-                <ul class="list-disc pl-6 space-y-1.5">
-                    <li>provide accurate business and contact information</li>
-                    <li>supply required text, imagery, and product details in a timely manner</li>
-                    <li>respond promptly to project milestone reviews</li>
-                    <li>obtain permission for any third-party material supplied to us</li>
-                    <li>review final deliverables promptly during testing phases</li>
+                <h2 class="text-base font-bold text-white uppercase font-mono tracking-wide text-amber-400">2. Payment Terms & Multi-Currency Settlement</h2>
+                <p>
+                    All services are priced in <strong>United States Dollars (USD)</strong> unless explicitly stated otherwise. Payments rendered in local currency (ZiG) are subject to conversion rates prevailing on the transaction date as mandated by applicable financial regulations in Zimbabwe.
+                </p>
+                <ul class="list-disc pl-5 space-y-1 text-gray-400">
+                    <li>Deposit requirements: A minimum non-refundable deposit of 50% is required prior to project kick-off.</li>
+                    <li>Milestone releases: Final codebases, admin transfer credentials, and live server deployments are released strictly upon full settlement of the remaining balance.</li>
                 </ul>
             </section>
 
-            <!-- 9. Intellectual Property -->
+            <!-- Section 3 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">9. Intellectual Property</h2>
-                <p>Upon receipt of full final payment, the client owns the final agreed front-end visual deliverables, except where third-party open-source libraries or asset licences apply.</p>
-                <p>We retain full ownership of:</p>
-                <ul class="list-disc pl-6 space-y-1.5 text-slate-400">
-                    <li>proprietary code libraries and reusable frameworks</li>
-                    <li>internal development tools and automation scripts</li>
-                    <li>templates, strategic blueprints, and methodology frameworks</li>
-                </ul>
+                <h2 class="text-base font-bold text-white uppercase font-mono tracking-wide text-amber-400">3. Intellectual Property Handover</h2>
+                <p>
+                    Upon 100% settlement of all open balances, full ownership rights to bespoke website assets, customized scripts, and design materials transfer entirely to the Client. The Agency retains the right to display completed project screenshots and public case studies within its promotional portfolio unless restricted by a signed Non-Disclosure Agreement (NDA).
+                </p>
             </section>
 
-            <!-- 10. Portfolio Rights -->
+            <!-- Section 4 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">10. Portfolio Rights</h2>
-                <p>Unless explicitly agreed otherwise in writing, Just Consult Adrian retains the right to display completed visual work, case studies, and performance statistics within:</p>
-                <ul class="list-disc pl-6 space-y-1 text-slate-400 text-xs">
-                    <li>our official website portfolio</li>
-                    <li>sales presentations and client pitch decks</li>
-                    <li>marketing collateral and official social media channels</li>
-                </ul>
-                <p class="text-xs text-amber-400/90">Confidential projects governed by a Non-Disclosure Agreement (NDA) will not be publicly disclosed.</p>
+                <h2 class="text-base font-bold text-white uppercase font-mono tracking-wide text-amber-400">4. Data Protection & ZDPA Compliance</h2>
+                <p>
+                    In compliance with the <em>Cyber and Data Protection Act [Chapter 12:07] of Zimbabwe (ZDPA)</em>, the Agency collects personal information (such as names, contact emails, and business data) solely for consultation scheduling, project billing, and service fulfillment. Personal data is encrypted in transit and never sold or shared with unauthorized third parties.
+                </p>
             </section>
 
-            <!-- 11. Third-Party Services -->
+            <!-- Section 5 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">11. Third-Party Services</h2>
-                <p>Our solutions may integrate third-party platforms, including Google, Cloudflare, GitHub, Formspree, Netlify, Vercel, Tailwind CSS, payment gateways, and hosting infrastructure. Their respective terms of service and privacy policies apply.</p>
-            </section>
-
-            <!-- 12. Availability -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">12. Availability</h2>
-                <p>We aim to maintain uninterrupted website availability. However, we cannot guarantee error-free operation, continuous availability, or universal compatibility across every outdated browser or custom hardware setup.</p>
-            </section>
-
-            <!-- 13. Limitation of Liability -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">13. Limitation of Liability</h2>
-                <p>To the maximum extent permitted by law, Just Consult Adrian shall not be liable for indirect losses, consequential losses, loss of profits, business interruption, data loss, reputational damage, cyber attacks by third parties, hosting outages, or search engine ranking fluctuations.</p>
-                <p class="text-xs text-slate-400">Our total cumulative liability shall not exceed the total amount paid by the client for the specific service giving rise to the claim.</p>
-            </section>
-
-            <!-- 14. No Guarantee -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">14. No Guarantee</h2>
-                <p>Although we apply technical best practices, we cannot guarantee first-page Google rankings, specific sales figures, specific revenue metrics, or uninterrupted web traffic, as overall commercial success depends on external market forces.</p>
-            </section>
-
-            <!-- 15. Website Security -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">15. Website Security</h2>
-                <p>Clients and users agree not to attempt unauthorized access, upload malicious code, exploit technical vulnerabilities, or launch automated cyber attacks against our systems. Infringements will be reported to law enforcement authorities.</p>
-            </section>
-
-            <!-- 16. Acceptable Use -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">16. Acceptable Use</h2>
-                <p>Users must not break applicable laws, distribute harmful software, impersonate others, infringe intellectual property rights, submit false information, or use this website for fraudulent purposes.</p>
-            </section>
-
-            <!-- 17. User Content -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">17. User Content</h2>
-                <p>Where users submit text or assets, they confirm they hold full ownership rights. We reserve the right to remove any inappropriate or infringing content from our platforms.</p>
-            </section>
-
-            <!-- 18. Confidentiality -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">18. Confidentiality</h2>
-                <p>We treat client operational and commercial information strictly confidentially, disclosing information only when required by law or with explicit client consent.</p>
-            </section>
-
-            <!-- 19. Privacy -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">19. Privacy</h2>
-                <p>Our Privacy Policy explains how personal data is collected, stored, and processed. By using this website, you confirm agreement with our data handling standards.</p>
-            </section>
-
-            <!-- 20. Cookies -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">20. Cookies</h2>
-                <p>This website utilizes cookies for functionality, security, analytics, and performance. You may disable cookies in browser settings, though some features may experience degraded functionality.</p>
-            </section>
-
-            <!-- 21. Search Engine Optimisation -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">21. Search Engine Optimisation</h2>
-                <p>SEO rankings depend on search engine algorithms that update frequently. Accordingly, no static keyword rank guarantees are provided.</p>
-            </section>
-
-            <!-- 22. Maintenance -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">22. Maintenance</h2>
-                <p>Maintenance contracts cover only explicitly listed technical services. Additional feature requests or redesigns are quoted separately.</p>
-            </section>
-
-            <!-- 23. Force Majeure -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">23. Force Majeure</h2>
-                <p>We are not liable for delays resulting from events beyond reasonable control, including natural disasters, regional power outages, internet backbone failures, government restrictions, or major cyber security incidents.</p>
-            </section>
-
-            <!-- 24. Suspension of Services -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">24. Suspension of Services</h2>
-                <p>We reserve the right to suspend or terminate services where invoices remain unpaid, abusive behavior occurs, or terms are breached.</p>
-            </section>
-
-            <!-- 25. Governing Law -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">25. Governing Law</h2>
-                <p>These Terms are governed by and construed in accordance with the laws of the Republic of Zimbabwe. Any legal disputes shall be subject to the jurisdiction of the competent courts of Zimbabwe.</p>
-            </section>
-
-            <!-- 26. Changes to These Terms -->
-            <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white text-amber-400">26. Changes to These Terms</h2>
-                <p>We reserve the right to update these Terms at any time. Continued use of our website or services constitutes full acceptance of the updated Terms.</p>
-            </section>
-
-            <!-- 27. Contact Information -->
-            <section class="space-y-3 bg-gray-900 p-6 rounded-2xl border border-slate-800">
-                <h2 class="text-xl font-bold text-white text-amber-400">27. Contact & Governance Desk</h2>
-                <p class="text-xs text-slate-300">For legal inquiries, scope clarification, or service questions:</p>
-                <p class="text-xs font-mono text-white pt-2">
-                    <strong>Just Consult Adrian</strong><br>
-                    Harare, Zimbabwe<br>
-                    Email: <a href="mailto:JustConsultAdrian@gmail.com" class="text-amber-400 underline">JustConsultAdrian@gmail.com</a><br>
-                    Web: <a href="https://www.justconsultadrian.com" class="text-amber-400 underline">https://www.justconsultadrian.com</a>
+                <h2 class="text-base font-bold text-white uppercase font-mono tracking-wide text-amber-400">5. Limitation of Liability</h2>
+                <p>
+                    While the Agency implements industry-standard cyber practices and performance optimization, the Agency shall not be liable for third-party hosting outages, domain registrar downtime, or unauthorized client modifications following project handover.
                 </p>
             </section>
 
         </div>
+
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center space-y-3">
+            <h3 class="text-sm font-bold text-white">Questions regarding these terms?</h3>
+            <p class="text-xs text-gray-400">Reach out directly via our consultation portal for corporate clarification.</p>
+            <a href="index.html#booking" class="inline-block bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase px-6 py-2.5 rounded-xl transition">
+                Contact Legal Consultancy →
+            </a>
+        </div>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Just Consult Adrian. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="index.html" class="hover:text-amber-400 transition">Main Website</a>
-                <a href="terms.html" class="text-amber-400 font-bold">Terms & Conditions</a>
-            </div>
-        </div>
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-900 py-6 text-center text-xs text-gray-500">
+        © 2026 Just Consult Adrian • Legal Engineering &amp; Digital Services
     </footer>
 
 </body>
