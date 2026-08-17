@@ -3,46 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Mobile Web App Capability -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Just Consult Adrian">
+    <title>Just Consult Adrian | Full-Stack Engineering & Strategy</title>
+    <meta name="description" content="Digital transformation, custom software engineering, and strategic business consulting.">
 
-    <!-- Technical & SEO Metadata -->
-    <title>Just Consult Adrian | Premier Web Engineering & Digital Strategy</title>
-    <meta name="description" content="Just Consult Adrian is a premier web engineering and branding agency in Harare, Zimbabwe. We architect high-converting websites, corporate identities, and SEO infrastructure.">
-    <meta name="keywords" content="Website Design Zimbabwe, Website Developer Harare, Business Websites Zimbabwe, Web Development Harare, Branding Zimbabwe, SEO Zimbabwe, Just Consult Adrian">
-    <meta name="author" content="Just Consult Adrian">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#030712">
-    <link rel="canonical" href="https://www.justconsultadrian.com/">
-    <link rel="manifest" href="/manifest.json">
-
-    <!-- Font & Asset Preloading -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="hero.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-    <!-- External Modular Assets -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
                     colors: {
                         brand: {
-                            gold: '#f59e0b',
-                            goldDark: '#d97706',
-                            accent: '#8b5cf6',
-                            emerald: '#10b981',
-                            blue: '#3b82f6',
-                            darkBg: '#030712',
-                            cardBg: '#0f172a'
+                            50: '#f0f7ff',
+                            500: '#0066ff',
+                            600: '#0052cc',
+                            900: '#0a192f',
                         }
                     }
                 }
@@ -50,1141 +34,323 @@
         }
     </script>
 
-    <!-- Social & Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Just Consult Adrian">
-    <meta property="og:title" content="Just Consult Adrian | Web Engineering & Strategy">
-    <meta property="og:description" content="Architecting high-converting digital platforms, corporate brand systems, and organic acquisition channels.">
-    <meta property="og:image" content="https://www.justconsultadrian.com/logo.jpg">
-    <meta property="og:url" content="https://www.justconsultadrian.com">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-    <link rel="apple-touch-icon" href="logo.jpg">
-
-    <!-- Comprehensive Schema.org JSON-LD Graph -->
+    <!-- Consolidated JSON-LD Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": ["ProfessionalService", "Organization"],
-          "@id": "https://www.justconsultadrian.com/#organization",
+          "@type": "WebSite",
+          "@id": "https://justconsultadrian.com/#website",
+          "url": "https://justconsultadrian.com/",
           "name": "Just Consult Adrian",
-          "url": "https://www.justconsultadrian.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.justconsultadrian.com/logo.jpg"
-          },
-          "image": "https://www.justconsultadrian.com/logo.jpg",
-          "telephone": "+263774235841",
-          "email": "JustConsultAdrian@gmail.com",
-          "priceRange": "$$$",
+          "description": "Full-Stack Digital Engineering & Strategic Consultancy"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://justconsultadrian.com/#organization",
+          "name": "Just Consult Adrian",
+          "url": "https://justconsultadrian.com/",
+          "logo": "https://justconsultadrian.com/assets/logo.png",
+          "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Harare",
             "addressCountry": "ZW"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-17.8292",
-            "longitude": "31.0522"
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "08:00",
-              "closes": "17:00"
-            }
-          ],
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61591434127111"
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "18"
           }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.justconsultadrian.com/#person",
-          "name": "Adrian Chombe",
-          "jobTitle": "Founder & Head of Strategy",
-          "worksFor": { "@id": "https://www.justconsultadrian.com/#organization" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.justconsultadrian.com/"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the typical timeline for a web engineering project?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Standard and Elite corporate builds are completed within 5 to 10 business days."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What local payment gateways are accepted in Zimbabwe?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We accept payments via EcoCash, InnBucks, ZiG, and direct USD bank transfers."
-              }
-            }
-          ]
         }
       ]
     }
     </script>
-    <!-- LocalBusiness & Web Designer Schema for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Just Consult Adrian",
-  "url": "https://www.justconsultadrian.com",
-  "description": "High-performance web design, Omni Presence Audits, and technical SEO services in Harare, Zimbabwe.",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Just Consult Adrian",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
-    "telephone": "+263774235841",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Harare",
-      "addressCountry": "ZW"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -17.8216,
-      "longitude": 31.0492
-    }
-  }
-}
-</script>
 </head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-<body class="bg-gray-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-gray-950">
-
-    <!-- Top Scroll Reading Progress Bar -->
-    <div id="scroll-progress"></div>
-
-    <!-- Toast Notification Container -->
-    <div id="toast-container" aria-live="polite"></div>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-50 p-4 bg-gray-900/95 border-t border-slate-800 backdrop-blur-md hidden">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-300">
-            <p>🔒 We use essential cookies and privacy-first analytics to optimize your booking experience. Read our <button onclick="toggleModal('privacy-modal')" class="underline text-amber-400">Privacy Policy</button>.</p>
-            <div class="flex gap-3">
-                <button onclick="acceptCookies()" aria-label="Accept Cookies" class="gold-gradient-bg text-gray-950 px-5 py-2 rounded-xl font-bold hover:brightness-110 transition">Accept All</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- CLIENT PORTAL MODAL -->
-<div id="portal-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-    
-    <!-- Modal Card Container -->
-    <div class="relative w-full max-w-md bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
-        
-        <!-- Close Button (X) -->
-        <button onclick="toggleModal('portal-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-lg font-bold p-2 focus:outline-none">
-            ✕
-        </button>
-
-        <!-- Header -->
-        <div class="text-center mb-6">
-            <span class="text-[11px] font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                Client Portal
-            </span>
-            <h3 class="text-2xl font-bold text-white mt-3">Client Access 🔐</h3>
-            <p class="text-xs text-gray-400 mt-1">Sign in to view project progress, audit reports, and invoices.</p>
-        </div>
-
-        <!-- Login Form -->
-        <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Demo Login: Access is reserved for active clients.');">
-            
-            <!-- Email / Username Input -->
-            <div>
-                <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Username or Email</label>
-                <input type="email" required placeholder="client@example.com" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 transition" />
-            </div>
-
-            <!-- Password Input -->
-            <div>
-                <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Password</label>
-                <input type="password" required placeholder="••••••••" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 transition" />
-            </div>
-
-            <!-- Options Row -->
-            <div class="flex items-center justify-between text-xs text-gray-400">
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" class="accent-amber-400 rounded bg-gray-800 border-gray-700" />
-                    <span>Remember me</span>
-                </label>
-                <a href="#contact" onclick="toggleModal('portal-modal')" class="hover:text-amber-400 transition">Forgot password?</a>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="w-full py-3 bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-sm rounded-xl transition shadow-lg mt-2">
-                Sign In
-            </button>
-
-            <!-- Onboarding Helper Note -->
-            <p class="text-xs text-gray-400 mt-4 text-center border-t border-gray-800/80 pt-4">
-                Portal access is reserved for active clients. Credentials are issued upon project onboarding. 
-                <a href="#contact" onclick="toggleModal('portal-modal')" class="text-amber-400 underline font-semibold">Contact us</a> to start a project.
-            </p>
-
-        </form>
-
-    </div>
-</div>
-    <!-- Privacy Policy Modal -->
-    <div id="privacy-modal" role="dialog" aria-modal="true" aria-hidden="true" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
-        <div class="glass-panel max-w-2xl w-full p-8 rounded-3xl max-h-[80vh] overflow-y-auto relative text-slate-300 text-xs space-y-4">
-            <button onclick="toggleModal('privacy-modal')" aria-label="Close Privacy Modal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">✕</button>
-            <h3 class="text-xl font-bold text-white">Privacy Policy & Data Handling</h3>
-            <p>At Just Consult Adrian, commercial information collected via form submissions is strictly utilized for strategic consultation and client project execution.</p>
-            <h4 class="font-bold text-amber-400 text-sm">Data Protection</h4>
-            <p>We do not sell, rent, or trade personal data to third parties. All lead details are encrypted over modern SSL connections.</p>
-            <h4 class="font-bold text-amber-400 text-sm">Direct Contact</h4>
-            <p>For inquiries regarding data retention, contact: <span class="text-white font-mono">JustConsultAdrian@gmail.com</span>.</p>
-        </div>
-    </div>
-
-    <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80 transition-all">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Main Navigation">
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="logo.jpg" width="44" height="44" alt="Just Consult Adrian Logo" class="h-11 w-11 rounded-xl object-cover border border-amber-500/30 group-hover:border-amber-400 transition shadow-lg">
-                <div class="flex flex-col">
-                    <span class="font-black text-lg tracking-tight text-white group-hover:text-amber-400 transition">JUST CONSULT ADRIAN</span>
-                    <span class="text-[10px] font-semibold tracking-widest text-amber-400/90 uppercase">Strategy • Engineering • Growth</span>
-                </div>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="text-blue-500">&lt;/&gt;</span> Just Consult Adrian
             </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+                <a href="#case-studies" class="hover:text-blue-400 transition-colors">Case Studies</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition-colors">Portfolio</a>
+                <a href="#estimator" class="hover:text-blue-400 transition-colors">Scope Calculator</a>
+                <a href="#pricing" class="hover:text-blue-400 transition-colors">Pricing</a>
+                <a href="#insights" class="hover:text-blue-400 transition-colors">Insights</a>
+            </nav>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-300">
-                <a href="#services" class="hover:text-amber-400 transition">Services</a>
-                <a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a>
-                <a href="#about" class="hover:text-amber-400 transition">About</a>
-                <a href="#estimator" class="hover:text-amber-400 transition">Estimator</a>
-                <a href="#pricing" class="hover:text-amber-400 transition">Packages</a>
-                <!-- Change href="#" or href="" to href="#insights" -->
-<a href="#insights" class="text-gray-300 hover:text-amber-400 transition text-sm font-medium">Insights</a>
-                <button onclick="toggleModal('portal-modal')" aria-label="Open Client Portal" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5">
-                    <span>Portal</span>
-                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M10 2a5 5 0 00-5 5v3H4a2 2 0 00-2 2v5a2 2 0 002 2h12a2 2 0 002-2v-5a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm3 8H7V7a3 3 0 016 0v3z"/></svg>
-                </button>
-            </div>
-
-            <!-- Controls -->
-            <div class="hidden lg:flex items-center gap-4">
-                <button onclick="toggleTheme()" aria-label="Toggle Theme Mode" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 text-amber-400 transition">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-                </button>
-                <a href="#contact" class="gold-gradient-bg text-gray-950 font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-lg shadow-amber-500/20 transform hover:scale-105">
+            <div class="flex items-center gap-4">
+                <a href="pay.html" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-600/20 transition-all">
                     Book Consultation
                 </a>
             </div>
-
-            <!-- Mobile Buttons -->
-            <div class="flex lg:hidden items-center gap-3">
-                <button onclick="toggleTheme()" aria-label="Toggle Mobile Theme" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-amber-400">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-                </button>
-                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open Navigation Menu" aria-expanded="false" class="text-white p-2">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-            </div>
-        </nav>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-gray-950 border-b border-slate-800 px-6 py-6 space-y-4">
-            <a href="#services" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Services</a>
-            <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Portfolio & Case Studies</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">About Adrian</a>
-            <a href="#estimator" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Project Estimator</a>
-            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Pricing Packages</a>
-            <a href="#insights" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-slate-300 hover:text-amber-400">Insights & Articles</a>
-            <button onclick="toggleMobileMenu(); toggleModal('portal-modal');" class="block w-full text-left text-sm font-semibold text-amber-400">Client Portal Login 🔐</button>
-            <!-- Replace your current Book Consultation button with this -->
-<a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl transition shadow-lg flex items-center gap-2">
-    <span>Book Consultation</span>
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-[90vh] flex items-center justify-center py-24 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-300 text-xs font-bold tracking-wide backdrop-blur-md">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                        <span>Harare Digital Desk • World-Class Web Standards</span>
-                    </div>
-
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight">
-                        Engineered for Authority.<br>
-                        <span class="accent-gradient-text">Built to Convert.</span><br>
-                        <span class="purple-gradient-text">Scaled for Revenue.</span>
-                    </h1>
-
-                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        We construct high-tier digital assets, persuasive brand architectures, and organic growth infrastructure for ambitious enterprises.
-                    </p>
-
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#contact" class="gold-gradient-bg text-gray-950 font-black px-8 py-4 rounded-xl text-sm uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/25 transform hover:-translate-y-0.5">
-                            Book Free Strategy Session
-                        </a>
-                        <a href="#portfolio" class="bg-slate-900/80 border border-slate-700 text-slate-200 px-8 py-4 rounded-xl font-bold text-sm hover:border-amber-400 hover:text-white transition flex items-center gap-2">
-                            <span>Explore Portfolio</span>
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
-                        </a>
-                    </div>
-                    <!-- Hero Primary CTA Button -->
-<div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center sm:justify-start">
-    <a href="pay.html" class="bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold text-sm px-8 py-4 rounded-xl shadow-xl transition text-center">
-        Book Consultation &amp; Pay Deposit →
-    </a>
-    <a href="#services" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold text-sm px-8 py-4 rounded-xl border border-gray-700 transition text-center">
-        Explore Services
-    </a>
-</div>
-                    <!-- 1. PERFORMANCE METRICS BANNER (Place immediately below Hero Section) -->
-<section class="border-y border-gray-800 bg-gray-900/40 py-8">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-amber-400">99+</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">PageSpeed Score</p>
-        </div>
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-white">&lt; 1.2s</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Avg Load Time</p>
-        </div>
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-amber-400">100%</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Mobile Responsive</p>
-        </div>
-        <div>
-            <p class="text-3xl md:text-4xl font-extrabold text-white">360°</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Audit Coverage</p>
-        </div>
-    </div>
-</section>
-
-<!-- 2. SERVICES & OMNI PRESENCE AUDIT IMAGE CARDS (Place inside Services Section) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
-    <!-- Web Design Card -->
-    <div class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 shadow-2xl">
-        <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" 
-                 alt="High Performance Web Design and Development" 
-                 width="800" height="500" loading="lazy" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-        </div>
-        <div class="p-6">
-            <span class="text-xs font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20 uppercase tracking-widest">
-                Core Service
-            </span>
-            <h3 class="text-xl font-bold text-white mt-3">High-Converting Web Design</h3>
-            <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                Custom, ultra-fast responsive sites built with clean code architecture, pixel-perfect UX, and built-in lead generation.
-            </p>
-        </div>
-    </div>
-
-    <!-- Omni Presence Audit Card -->
-    <div class="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 shadow-2xl">
-        <div class="h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
-                 alt="Omni Presence Audit Dashboard Analytics" 
-                 width="800" height="500" loading="lazy" 
-                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-        </div>
-        <div class="p-6">
-            <span class="text-xs font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20 uppercase tracking-widest">
-                Diagnostic Audit
-            </span>
-            <h3 class="text-xl font-bold text-white mt-3">Omni Presence Audits</h3>
-            <p class="text-gray-400 text-sm mt-2 leading-relaxed">
-                Full 360° technical evaluation covering page speed, mobile UX friction, technical SEO, and conversion bottlenecks.
-            </p>
-        </div>
-    </div>
-</div>
-
-<!-- Copyright-Free Branded Video Showcase Section -->
-<section class="py-16 bg-gray-950 border-y border-gray-800">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-        
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-            Our Work in Motion
-        </span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-3">
-            Crafting Digital Excellence for Your Brand
-        </h2>
-        <p class="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed mb-10">
-            From Omni Presence Audits to high-speed responsive builds—see how we transform digital presence.
-        </p>
-
-        <!-- Video Container with Custom Brand Overlay -->
-        <div class="relative rounded-2xl overflow-hidden border border-gray-700 bg-gray-900 shadow-2xl group">
-            
-            <!-- Royalty-Free HD Tech Background Video Loop -->
-            <video 
-                class="w-full h-[400px] object-cover opacity-60" 
-                autoplay muted loop playsinline
-                poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-code-project-on-a-computer-screen-27367-large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <!-- Dark Overlay Vignette -->
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
-
-            <!-- Brand Overlay (Your Logo & Service Title) -->
-            <div class="absolute inset-0 flex flex-col justify-end p-8 text-left">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="w-3 h-3 bg-amber-400 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Just Consult Adrian Showcase</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Omni Presence Audits &amp; Custom Web Engineering</h3>
-                <p class="text-xs text-gray-300 mt-1 max-w-md">Built for speed, security, and maximum conversion performance in Harare, Zimbabwe.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- 4. TESTIMONIALS SECTION (Place directly above Footer) -->
-<section class="py-20 bg-gray-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                Client Proof
-            </span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4">
-                Trusted by Forward-Thinking Businesses
-            </h2>
-            <p class="text-gray-400 text-sm mt-2">Real results from design revamps and Omni Presence Audits.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-400/30 transition">
-                <div>
-                    <div class="flex text-amber-400 text-sm mb-4">★★★★★</div>
-                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
-                        "Adrian completely rebuilt our website. Our PageSpeed score jumped from 42 to 98, and client inquiries doubled within 3 weeks."
-                    </p>
-                </div>
-                <div class="flex items-center gap-4 border-t border-gray-800/80 pt-4">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=150&amp;q=80" alt="Farai M." class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
-                    <div>
-                        <h4 class="text-white font-bold text-sm">Farai Makoni</h4>
-                        <p class="text-gray-500 text-xs">Managing Director, Apex Logistics</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-400/30 transition">
-                <div>
-                    <div class="flex text-amber-400 text-sm mb-4">★★★★★</div>
-                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
-                        "The Omni Presence Audit uncovered critical mobile navigation flaws and SEO schema errors we had no idea existed."
-                    </p>
-                </div>
-                <div class="flex items-center gap-4 border-t border-gray-800/80 pt-4">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=150&amp;q=80" alt="Tariro C." class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
-                    <div>
-                        <h4 class="text-white font-bold text-sm">Tariro Chideya</h4>
-                        <p class="text-gray-500 text-xs">Founder, Horizon Digital</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl flex flex-col justify-between hover:border-amber-400/30 transition">
-                <div>
-                    <div class="flex text-amber-400 text-sm mb-4">★★★★★</div>
-                    <p class="text-gray-300 text-sm leading-relaxed italic mb-6">
-                        "Fast delivery, flawless execution, and unbelievable attention to detail. A web designer who truly understands both SEO and UI aesthetics."
-                    </p>
-                </div>
-                <div class="flex items-center gap-4 border-t border-gray-800/80 pt-4">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=150&amp;q=80" alt="Sarah K." class="w-11 h-11 rounded-full object-cover border border-amber-400/40" />
-                    <div>
-                        <h4 class="text-white font-bold text-sm">Sarah K.</h4>
-                        <p class="text-gray-500 text-xs">Operations Lead, Vektor Health</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-                    <!-- Dynamic Counter Numbers -->
-                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
-                        <div>
-                            <p class="text-2xl font-black text-white"><span class="counter" data-target="99">0</span>.8%</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Performance Score</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-black text-amber-400"><span class="counter" data-target="100">0</span>%</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">On-Time Sprint Record</p>
-                        </div>
-                        <div>
-                            <p class="text-2xl font-black text-emerald-400"><span class="counter" data-target="18">0</span>+</p>
-                            <p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Deployments</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Showcase Glass Graphic -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-3xl border border-white/10 p-3 glass-panel shadow-2xl">
-                        <div class="rounded-2xl overflow-hidden bg-gray-900 border border-slate-800 relative">
-                            <div class="bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-800">
-                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                                <span class="text-[11px] font-mono text-slate-400 ml-2">https://www.justconsultadrian.com</span>
-                            </div>
-                            <div class="p-6 space-y-4">
-                                <div class="h-32 rounded-xl bg-gradient-to-r from-amber-500/20 to-purple-600/20 p-4 border border-amber-500/30 flex flex-col justify-end">
-                                    <span class="text-xs font-mono text-amber-400">⚡ Core Web Vitals: OPTIMAL</span>
-                                    <h4 class="text-lg font-extrabold text-white">Conversion Architecture</h4>
-                                </div>
-                                <div class="grid grid-cols-2 gap-3">
-                                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                        <p class="text-[10px] text-slate-400">Schema Graph</p>
-                                        <p class="text-sm font-bold text-emerald-400">Structured JSON-LD</p>
-                                    </div>
-                                    <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-                                        <p class="text-[10px] text-slate-400">Security Header</p>
-                                        <p class="text-sm font-bold text-amber-400">256-bit HSTS</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section with SVGs -->
-        <section id="services" class="py-32 max-w-7xl mx-auto px-6 relative">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-3">Core Solutions</h2>
-                <h3 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Capabilities That Drive Revenue</h3>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="glass-panel p-8 rounded-3xl hover:border-amber-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
-                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-amber-400 transition">Elite Web Engineering</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">High-speed landing pages and web platforms engineered to eliminate bounce rates and convert visitors into qualified calls.</p>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="glass-panel p-8 rounded-3xl hover:border-purple-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
-                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-purple-400 transition">Brand Positioning</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">Establish undeniable market authority with cohesive visual brand guidelines, custom invoices, and persuasive copy.</p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="glass-panel p-8 rounded-3xl hover:border-emerald-500/50 transition duration-300 group">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
-                        <svg class="w-6 h-6 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Organic SEO Infrastructure</h4>
-                    <p class="text-slate-400 mt-3 text-xs leading-relaxed">Rank high for valuable commercial search terms in Harare and internationally with rich schema graphs.</p>
-                </div>
-            </div>
-        </section>
-        <!-- CLIENT SHOWCASE & CASE STUDIES SECTION -->
-<section id="case-studies" class="py-20 bg-gray-950 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3.5 py-1.5 rounded-full border border-amber-400/20">
-                Proven Client Results
-            </span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
-                From Hidden Bottlenecks to <span class="text-amber-400">Measurable Growth</span>
-            </h2>
-            <p class="text-gray-400 text-sm md:text-base mt-4 leading-relaxed">
-                See how our Omni Presence Audits and high-performance web engineering turn underperforming digital assets into client generation engines.
-            </p>
-        </div>
-
-        <!-- Case Studies Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- CASE STUDY 1: B2B Corporate & Legal Services -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
-                <div>
-                    <!-- Industry & Result Metric Badge -->
-                    <div class="flex items-center justify-between gap-2 mb-6">
-                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
-                            Corporate Services
-                        </span>
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                            +280% Inquiries
-                        </span>
-                    </div>
-
-                    <!-- Client Title -->
-                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
-                        Enterprise Legal &amp; Financial Advisory
-                    </h3>
-                    <p class="text-xs text-amber-400 font-semibold mt-1">
-                        Service: Omni Presence Audit + UI/UX Overhaul
-                    </p>
-
-                    <!-- Problem / Solution Breakdown -->
-                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
-                        <div class="flex items-start gap-2">
-                            <span class="text-rose-400 font-bold">Challenge:</span>
-                            <span class="text-gray-400">High traffic but near-zero contact form conversions due to mobile layout friction and slow loading.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="text-emerald-400 font-bold">Solution:</span>
-                            <span class="text-gray-300">Audited mobile load speeds, streamlined CTA funnels, and integrated instant appointment booking.</span>
-                        </div>
-                    </div>
-
-                    <!-- Verified Key Takeaways -->
-                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> Load speed decreased from 5.2s to 0.8s
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> #1 Local search placement in Harare
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Action Links -->
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
-                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
-                        Get Similar Results →
-                    </a>
-                </div>
-            </div>
-
-            <!-- CASE STUDY 2: Retail & Commercial Brand -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
-                <div>
-                    <!-- Industry & Result Metric Badge -->
-                    <div class="flex items-center justify-between gap-2 mb-6">
-                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
-                            E-Commerce &amp; Retail
-                        </span>
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                            3.2x Conversion Rate
-                        </span>
-                    </div>
-
-                    <!-- Client Title -->
-                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
-                        Regional Logistics &amp; Distribution Portal
-                    </h3>
-                    <p class="text-xs text-amber-400 font-semibold mt-1">
-                        Service: Web Engineering + Payment Gateway Integration
-                    </p>
-
-                    <!-- Problem / Solution Breakdown -->
-                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
-                        <div class="flex items-start gap-2">
-                            <span class="text-rose-400 font-bold">Challenge:</span>
-                            <span class="text-gray-400">Manual WhatsApp order taking created order delays and unrecorded client payment receipts.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="text-emerald-400 font-bold">Solution:</span>
-                            <span class="text-gray-300">Deployed a custom web portal with EcoCash &amp; card checkouts and automated digital receipts.</span>
-                        </div>
-                    </div>
-
-                    <!-- Verified Key Takeaways -->
-                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> 100% automated receipt generation
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> Zero manual tracking errors reported
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Action Links -->
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
-                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
-                        Get Similar Results →
-                    </a>
-                </div>
-            </div>
-
-            <!-- CASE STUDY 3: Local SME SEO & Branding -->
-            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-amber-400/50 transition duration-300 shadow-xl group">
-                <div>
-                    <!-- Industry & Result Metric Badge -->
-                    <div class="flex items-center justify-between gap-2 mb-6">
-                        <span class="text-[11px] font-mono uppercase tracking-wider text-gray-400 bg-gray-800 px-3 py-1 rounded-md">
-                            Agribusiness &amp; Trade
-                        </span>
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
-                            Top 3 Google Rank
-                        </span>
-                    </div>
-
-                    <!-- Client Title -->
-                    <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
-                        Agri-Tech &amp; Poultry Equipment Supplier
-                    </h3>
-                    <p class="text-xs text-amber-400 font-semibold mt-1">
-                        Service: Technical SEO + Digital Brand Identity
-                    </p>
-
-                    <!-- Problem / Solution Breakdown -->
-                    <div class="my-6 space-y-3 text-xs text-gray-300 border-y border-gray-800/80 py-4">
-                        <div class="flex items-start gap-2">
-                            <span class="text-rose-400 font-bold">Challenge:</span>
-                            <span class="text-gray-400">Invisible on Google search results, losing high-value local contracts to larger competitors.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <span class="text-emerald-400 font-bold">Solution:</span>
-                            <span class="text-gray-300">Optimized local search schemas, keyword targeting, and mobile responsive structure.</span>
-                        </div>
-                    </div>
-
-                    <!-- Verified Key Takeaways -->
-                    <ul class="space-y-2 mb-8 text-xs text-gray-400">
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> Captured high-intent search traffic in 45 days
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-amber-400">✓</span> 4x Increase in inbound contract quotes
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Action Links -->
-                <div class="pt-4 border-t border-gray-800 flex items-center justify-between gap-4">
-                    <a href="pay.html" class="w-full text-center py-2.5 bg-amber-400 hover:bg-amber-300 text-gray-950 text-xs font-bold rounded-xl transition shadow">
-                        Get Similar Results →
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Strategic Conversion Banner Below Showcase -->
-        <div class="mt-12 bg-gradient-to-r from-gray-900 via-gray-900 to-amber-950/40 border border-amber-400/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
-            <div class="text-center md:text-left">
-                <h4 class="text-xl font-bold text-white">Ready to uncover what's holding your website back?</h4>
-                <p class="text-xs text-gray-400 mt-1">Book an Omni Presence Audit today and get a full technical, speed, and lead conversion roadmap.</p>
-            </div>
-            <a href="pay.html" class="whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-gray-950 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition shadow-lg">
-                Book Audit &amp; Consultation →
-            </a>
-        </div>
-
-    </div>
-</section>
-
-        <!-- Portfolio Showcase -->
-        <section id="portfolio" class="py-32 bg-gray-900/40 border-y border-slate-800/80">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Selected Works</h2>
-                        <h3 class="text-3xl sm:text-4xl font-black text-white">Client Showcase & Case Studies</h3>
-                    </div>
+        <section class="relative min-h-[85vh] flex items-center justify-center py-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
-                    <div class="flex flex-wrap gap-2 text-xs font-bold">
-                        <button onclick="filterPortfolio('all', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-amber-500 text-gray-950">All Work</button>
-                        <button onclick="filterPortfolio('web', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Web Design</button>
-                        <button onclick="filterPortfolio('branding', this)" class="port-filter-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white">Branding</button>
-                    </div>
-                </div>
+                    <!-- Hero Content Column -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                            Digital Strategy &amp; Web Engineering
+                        </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="port-item web glass-panel rounded-3xl overflow-hidden group">
-                        <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <img src="hero.png" loading="lazy" decoding="async" width="600" height="400" alt="ParcMed Medical Specialties Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Branding</span>
-                            <h4 class="text-lg font-bold text-white">LEGAL CONSULTANCY WITH TONY</h4>
-                            <p class="text-xs text-slate-400">High-converting marketing materials and LinkedIn visual identity system.</p>
+                        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Building High-Impact Digital Experiences &amp; Scalable Systems
+                        </h1>
+
+                        <p class="text-lg text-slate-400 max-w-2xl">
+                            Empowering brands with enterprise web development, automated business workflows, and legal-tech consulting designed for sustainable revenue growth.
+                        </p>
+
+                        <!-- Single Consolidated Hero CTA Block -->
+                        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                            <a href="pay.html" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-xl shadow-blue-600/25 transition-all">
+                                Book Consultation &amp; Pay Deposit &rarr;
+                            </a>
+                            <a href="#services" class="inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl transition-all">
+                                Explore Services
+                            </a>
                         </div>
                     </div>
 
-                    <div class="port-item web glass-panel rounded-3xl overflow-hidden group">
-                        <div class="h-48 bg-slate-800 relative overflow-hidden">
-                            <img src="logo.jpg" loading="lazy" decoding="async" width="600" height="400" alt="Just Consult Adrian Platform" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-widest">Web Engineering</span>
-                            <h4 class="text-lg font-bold text-white">Just Consult Adrian Engine</h4>
-                            <p class="text-xs text-slate-400">Glassmorphic web platform with interactive quote calculation engine.</p>
+                    <!-- Hero Visual Column -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="aspect-square rounded-2xl bg-gradient-to-tr from-blue-600/20 via-slate-800 to-indigo-500/20 p-8 border border-slate-800 backdrop-blur-xl flex flex-col justify-between shadow-2xl">
+                                <div class="space-y-4">
+                                    <div class="h-3 w-1/3 bg-blue-500/40 rounded"></div>
+                                    <div class="h-8 w-3/4 bg-slate-700/50 rounded-lg"></div>
+                                    <div class="h-20 w-full bg-slate-900/80 rounded-xl border border-slate-800/80 p-4">
+                                        <div class="h-2 w-1/2 bg-slate-700 rounded mb-2"></div>
+                                        <div class="h-2 w-5/6 bg-slate-800 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                                        <span class="text-2xl font-bold text-white">99.9%</span>
+                                        <p class="text-xs text-slate-400">Reliability Rate</p>
+                                    </div>
+                                    <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                                        <span class="text-2xl font-bold text-blue-400">3.5x</span>
+                                        <p class="text-xs text-slate-400">Average ROI</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                </div><!-- End Hero Grid -->
             </div>
         </section>
 
-        <!-- About Founder -->
-        <section id="about" class="py-32 max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 relative">
-                    <div class="rounded-3xl border border-slate-800 overflow-hidden glass-panel p-2">
-                        <img src="logo.jpg" loading="lazy" decoding="async" width="500" height="500" alt="Adrian Chombe - Founder" class="rounded-2xl w-full h-auto object-cover">
-                    </div>
-                </div>
-                <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs font-extrabold tracking-widest text-amber-400 uppercase">Leadership</span>
-                    <h3 class="text-3xl sm:text-5xl font-black text-white leading-tight">Closing the Gap Between Ambition & Revenue</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        "We architect digital infrastructure designed to project undeniable authority, build trust instantly, and generate measurable commercial returns."
-                    </p>
+        <!-- 1. Performance Metrics Banner (Extracted outside Hero) -->
+        <section class="py-12 border-y border-slate-800/80 bg-slate-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <p class="text-base font-extrabold text-white">Adrian Chombe</p>
-                        <p class="text-xs text-amber-400 font-semibold">Founder & Head of Strategy</p>
+                        <div class="text-3xl font-extrabold text-white">50+</div>
+                        <div class="text-sm text-slate-400 mt-1">Projects Delivered</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-blue-400">&lt; 1s</div>
+                        <div class="text-sm text-slate-400 mt-1">Page Load Latency</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-white">100%</div>
+                        <div class="text-sm text-slate-400 mt-1">Compliance &amp; Security</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-blue-400">24/7</div>
+                        <div class="text-sm text-slate-400 mt-1">System Monitoring</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Scope Estimator -->
-        <section id="estimator" class="py-28 bg-gray-900/60 border-y border-slate-800/80">
-            <div class="max-w-3xl mx-auto px-6">
+        <!-- Services Section & Image Cards -->
+        <section id="services" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white sm:text-4xl">Core Capabilities</h2>
+                    <p class="mt-4 text-slate-400">End-to-end technical execution tailored to corporate strategy and operational scaling.</p>
+                </div>
+
+                <!-- Services Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center font-bold text-xl mb-6">&lt;/&gt;</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Custom Web Engineering</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">High-performance web applications, client portals, and headless CMS implementations built with modern frameworks.</p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center font-bold text-xl mb-6">&sect;</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Legal &amp; Business Strategy</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Commercial strategy, digital terms structure, and operational audit frameworks tailored for modern enterprises.</p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center font-bold text-xl mb-6">&#9881;</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Digital Audits &amp; Optimization</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Omni-presence audits, technical SEO overhauls, and security hardening to maximize conversion performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Showcase Section -->
+        <section class="py-20 bg-slate-900/30 border-y border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-white">Platform Showcase</h2>
+                    <p class="text-slate-400 mt-2">See how custom automation and clean architecture transform workflow efficiency.</p>
+                </div>
+                <div class="max-w-4xl mx-auto aspect-video rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden shadow-2xl flex items-center justify-center relative">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center mx-auto mb-4 border border-blue-500/30">
+                            &#9654;
+                        </div>
+                        <p class="text-slate-300 font-medium">Interactive Demo &amp; System Walkthrough</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="case-studies" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white sm:text-4xl">Featured Impact</h2>
+                    <p class="mt-4 text-slate-400">Measurable results engineered for client operations.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Medical Specialties Marketing</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-4">PARCMED Exhibition System</h3>
+                        <p class="text-slate-400 text-sm mb-6">Designed digital assets and promotional workflows for MedTech Innovation showcase.</p>
+                        <a href="#" class="text-blue-400 font-semibold text-sm hover:underline">Read Full Case Study &rarr;</a>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Business Architecture</span>
+                        <h3 class="text-2xl font-bold text-white mt-2 mb-4">Omni-Presence Audit Suite</h3>
+                        <p class="text-slate-400 text-sm mb-6">Comprehensive digital audit framework identifying workflow bottlenecks and growth opportunities.</p>
+                        <a href="#" class="text-blue-400 font-semibold text-sm hover:underline">Read Full Case Study &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scope Calculator Section -->
+        <section id="estimator" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Pricing Transparency</h2>
-                    <h3 class="text-3xl font-black text-white">Interactive Project Scope Calculator</h3>
+                    <h2 class="text-3xl font-bold text-white">Interactive Scope Estimator</h2>
+                    <p class="text-slate-400 mt-2">Estimate your project parameters before scheduling a consultation.</p>
                 </div>
-
-                <div class="glass-panel p-8 sm:p-10 rounded-3xl space-y-6 border border-amber-500/20">
+                <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-6">
                     <div>
-                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">1. Select Service Tier</label>
-                        <select id="calc-service" onchange="calculateEstimate()" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-sm text-white focus:border-amber-400 outline-none">
-                            <option value="300">Standard Entry Landing Page ($300)</option>
-                            <option value="350" selected>Elite Enterprise Multi-Page Platform ($350)</option>
-                            <option value="450">Premium Growth Accelerator Package ($450)</option>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Project Category</label>
+                        <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500 outline-none">
+                            <option>Full-Stack Web Development</option>
+                            <option>Business &amp; Legal Digital Audit</option>
+                            <option>Brand System &amp; Web Infrastructure</option>
                         </select>
                     </div>
-
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-300 mb-2">2. Delivery Sprint Speed</label>
-                        <select id="calc-speed" onchange="calculateEstimate()" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-sm text-white focus:border-amber-400 outline-none">
-                            <option value="0">Standard Delivery Timeline (5-7 Days)</option>
-                            <option value="50">Priority Sprint Delivery (+$50)</option>
-                        </select>
-                    </div>
-
-                    <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <div>
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Estimated Total</span>
-                            <span id="calc-total" class="text-4xl font-black text-amber-400">$350</span>
-                        </div>
-                        <a href="#contact" onclick="syncEstimateToForm()" class="gold-gradient-bg text-gray-950 font-black px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider text-center hover:brightness-110 transition">
-                            Apply Estimate To Form
-                        </a>
+                    <div class="pt-4 flex justify-between items-center border-t border-slate-800">
+                        <span class="text-slate-400 text-sm">Estimated Timeline</span>
+                        <span class="text-white font-bold">2 - 4 Weeks</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Tiers -->
-        <section id="pricing" class="py-32 max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Investments</h2>
-                <h3 class="text-3xl sm:text-5xl font-black text-white">Transparent Development Packages</h3>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <h4 class="text-lg font-bold text-white">Standard Entry</h4>
-                        <p class="text-3xl font-black text-amber-400 mt-2">$300</p>
-                        <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li>✓ High-Speed Landing Page</li>
-                            <li>✓ Mobile Responsive Design</li>
-                            <li>✓ Direct WhatsApp Integration</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="mt-8 block text-center py-3 rounded-xl border border-amber-500/50 text-amber-400 font-bold text-xs hover:bg-amber-500 hover:text-gray-950 transition">Select Standard</a>
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white sm:text-4xl">Transparent Engagements</h2>
+                    <p class="mt-4 text-slate-400">Structured development and advisory packages.</p>
                 </div>
-
-                <div class="glass-panel p-8 rounded-3xl border-2 border-amber-500 relative flex flex-col justify-between shadow-2xl">
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 gold-gradient-bg text-gray-950 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Most Popular</div>
-                    <div>
-                        <h4 class="text-lg font-bold text-white">Elite Enterprise</h4>
-                        <p class="text-3xl font-black text-amber-400 mt-2">$350</p>
-                        <ul class="mt-6 space-y-3 text-xs text-slate-200">
-                            <li>✓ Multi-Page Site Architecture</li>
-                            <li>✓ Rich JSON-LD Schema SEO</li>
-                            <li>✓ Copywriting & Brand Positioning</li>
-                        </ul>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Package 1 -->
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Audit &amp; Strategy</h3>
+                            <p class="text-slate-400 text-sm mt-2">Comprehensive review of web presence and digital compliance.</p>
+                            <div class="my-6">
+                                <span class="text-4xl font-extrabold text-white">Custom</span>
+                            </div>
+                        </div>
+                        <a href="pay.html" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-center block transition-all">Book Audit</a>
                     </div>
-                    <a href="#contact" class="mt-8 block text-center py-3.5 rounded-xl gold-gradient-bg text-gray-950 font-black text-xs uppercase tracking-wider hover:brightness-110 transition">Select Elite Enterprise</a>
-                </div>
-
-                <div class="glass-panel p-8 rounded-3xl border border-purple-500/30 flex flex-col justify-between">
-                    <div>
-                        <h4 class="text-lg font-bold text-white">Premium Accelerator</h4>
-                        <p class="text-3xl font-black text-purple-400 mt-2">$450</p>
-                        <ul class="mt-6 space-y-3 text-xs text-slate-300">
-                            <li>✓ Everything in Elite Enterprise</li>
-                            <li>✓ 1-Month Retainer Maintenance</li>
-                            <li>✓ Priority Strategy Execution</li>
-                        </ul>
+                    <!-- Package 2 -->
+                    <div class="p-8 rounded-2xl bg-slate-900 border-2 border-blue-600 relative flex flex-col justify-between">
+                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Popular</span>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Web Platform</h3>
+                            <p class="text-slate-400 text-sm mt-2">Bespoke web application with modern stack and optimized hosting.</p>
+                            <div class="my-6">
+                                <span class="text-4xl font-extrabold text-white">Growth</span>
+                            </div>
+                        </div>
+                        <a href="pay.html" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-center block transition-all">Get Started</a>
                     </div>
-                    <a href="#contact" class="mt-8 block text-center py-3 rounded-xl border border-purple-500/50 text-purple-400 font-bold text-xs hover:bg-purple-500 hover:text-white transition">Select Accelerator</a>
+                    <!-- Package 3 -->
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Enterprise Advisory</h3>
+                            <p class="text-slate-400 text-sm mt-2">Ongoing technical leadership, maintenance, and strategic support.</p>
+                            <div class="my-6">
+                                <span class="text-4xl font-extrabold text-white">Retainer</span>
+                            </div>
+                        </div>
+                        <a href="pay.html" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-center block transition-all">Inquire Now</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- INSIGHTS & CMS CONTENT SECTION -->
-<section id="insights" class="py-20 bg-gray-900 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Header -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-            <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
-                    Knowledge Hub
-                </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4">Latest Insights &amp; Breakdown Videos</h2>
-                <p class="text-gray-400 text-sm mt-2">Articles, strategy notes, and technical SEO breakdowns.</p>
-            </div>
-            <div class="mt-4 md:mt-0">
-                <span class="text-xs text-amber-400 bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-lg">
-                    ⚡ CMS Feed Connected
-                </span>
-            </div>
-        </div>
 
-        <!-- Insights Grid (CMS Ready) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Article 1 Card (Fully Clickable) -->
-<a href="article-pagespeed.html" class="block bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/50 transition duration-300 group shadow-lg">
-    <div class="h-48 overflow-hidden relative">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" 
-             alt="Why Page Speed Defines Conversion Rates in 2026" 
-             class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-        <span class="absolute top-3 left-3 bg-gray-900/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-700 uppercase">Article</span>
-    </div>
-    <div class="p-6">
-        <p class="text-xs text-gray-500 mb-2">July 2026 • 5 min read</p>
-        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition leading-snug">
-            Why Page Speed Defines Conversion Rates in 2026
-        </h3>
-        <p class="text-xs text-gray-400 mt-2 leading-relaxed">
-            A deep dive into how Core Web Vitals impact your Google search rankings, user retention, and client acquisition.
-        </p>
-        <div class="mt-4 flex items-center gap-1 text-xs font-bold text-amber-400 group-hover:translate-x-1 transition duration-300">
-            <span>Read Article</span>
-            <span>→</span>
-        </div>
-    </div>
-</a>
-
-            <!-- Video Article 2 Card -->
-            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Omni Presence Audit Video" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <span class="absolute top-3 left-3 bg-amber-400 text-gray-950 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Video Guide</span>
+        <!-- Testimonials Section (Extracted) -->
+        <section class="py-24 bg-slate-900/50 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-white">Client Feedback</h2>
+                    <p class="text-slate-400 mt-2">Delivering clean technical execution and commercial results.</p>
                 </div>
-                <div class="p-6">
-                    <p class="text-xs text-gray-500 mb-2">July 2026 • 8 min watch</p>
-                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Inside an Omni Presence Audit: What We Look For</h3>
-                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
-                        Watch us diagnose UI friction, mobile responsiveness bugs, and technical SEO schema errors live.
-                    </p>
-                </div>
-            </article>
-
-            <!-- Article 3 Card -->
-            <article class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden hover:border-amber-400/30 transition group">
-                <div class="h-48 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Local SEO Guide" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                    <span class="absolute top-3 left-3 bg-gray-900/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-700 uppercase">SEO Insights</span>
-                </div>
-                <div class="p-6">
-                    <p class="text-xs text-gray-500 mb-2">July 2026 • 4 min read</p>
-                    <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Dominating Local Google Search for Zimbabwe Businesses</h3>
-                    <p class="text-xs text-gray-400 mt-2 leading-relaxed">
-                        Practical steps to optimize your Google Business Profile and local schema to capture nearby search traffic.
-                    </p>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-32 bg-gray-900/60 border-t border-slate-800/80">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-xs font-extrabold tracking-widest text-amber-400 uppercase mb-2">Direct Channel</h2>
-                    <h3 class="text-3xl sm:text-5xl font-black text-white">Initiate Consultation</h3>
-                </div>
-
-                <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-slate-800">
-                    <form action="https://formspree.io/f/xlgyobko" method="POST" class="space-y-6" onsubmit="showToast('Submitting inquiry brief...');">
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Business Name *</label>
-                                <input type="text" name="name" required placeholder="e.g. Acme Corp" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Email Address *</label>
-                                <input type="email" name="email" required placeholder="name@company.com" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                            </div>
-                        </div>
-
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Phone / WhatsApp *</label>
-                                <input type="tel" name="phone" required placeholder="+263 77 423 5841" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-2">Target Package Scope</label>
-                                <select id="form-package-select" name="package" class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none">
-                                    <option>Standard Entry ($300)</option>
-                                    <option selected>Elite Enterprise ($350)</option>
-                                    <option>Premium Accelerator ($450)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-2">Project Brief</label>
-                            <textarea name="message" rows="4" placeholder="Describe your primary business objectives..." class="w-full bg-gray-950 border border-slate-700 rounded-xl p-4 text-xs text-white focus:border-amber-400 outline-none"></textarea>
-                        </div>
-
-                        <button type="submit" aria-label="Submit Form Brief" class="w-full gold-gradient-bg text-gray-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider hover:brightness-110 transition shadow-2xl shadow-amber-500/20">
-                            Submit Consultation Brief
-                        </button>
-                    </form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800/80">
+                        <p class="text-slate-300 italic mb-6">"Adrian delivered clear digital strategy and robust technical assets for our event showcase with precision."</p>
+                        <div class="font-bold text-white">PARCMED Marketing Team</div>
+                        <div class="text-xs text-slate-500">Medical Specialties Strategy</div>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800/80">
+                        <p class="text-slate-300 italic mb-6">"Fast turnaround, exceptional web execution, and seamless integration of business requirements."</p>
+                        <div class="font-bold text-white">Omni-Presence Partner</div>
+                        <div class="text-xs text-slate-500">Web Infrastructure</div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-  <!-- Footer Section -->
-<footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- 4-Column Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-            
-            <!-- Column 1: Brand Info -->
-            <div>
-                <h4 class="text-xl font-bold text-white mb-4">
-                    Just Consult <span class="text-amber-400">Adrian</span>
-                </h4>
-                <p class="text-sm leading-relaxed mb-4 text-gray-400">
-                    Crafting high-converting, responsive websites and bespoke digital solutions for growing businesses.
-                </p>
-                <p class="text-xs text-gray-500">
-                    📍 Harare, Zimbabwe
-                </p>
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-slate-400 text-sm">
+                &copy; 2026 Just Consult Adrian. All rights reserved.
             </div>
-
-            <!-- Column 2: Quick Links -->
-            <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Quick Links</h5>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-amber-400 transition">Portfolio</a></li>
-                    <li><a href="#pricing" class="hover:text-amber-400 transition">Pricing</a></li>
-                    <!-- Change href="#" or href="" to href="#insights" -->
-<a href="#insights" class="text-gray-300 hover:text-amber-400 transition text-sm font-medium">Insights</a>
-                </ul>
+            <div class="flex gap-6 text-sm text-slate-400">
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="pay.html" class="hover:text-white transition-colors">Client Deposit</a>
             </div>
-
-            <!-- Column 3: Core Services -->
-            <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Services</h5>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#services" class="hover:text-amber-400 transition">Web Design & Development</a></li>
-                    <li><a href="#services" class="hover:text-amber-400 transition">SEO & Speed Optimization</a></li>
-                    <li><a href="#services" class="hover:text-amber-400 transition">UI/UX Design</a></li>
-                    <li><a href="#services" class="hover:text-amber-400 transition">Website Maintenance</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Legal & Portal (Updated) -->
-            <div>
-                <h5 class="font-bold text-white uppercase tracking-wider text-[11px] mb-4">Legal & Portal</h5>
-                <ul class="space-y-2 text-sm">
-                    <li>
-                        <button onclick="toggleModal('privacy-modal')" class="hover:text-amber-400 transition text-left">Privacy Policy</button>
-                    </li>
-                    <li>
-                        <!-- Direct link to terms.html for Search Console / Sitemap indexing -->
-                        <a href="terms.html" class="hover:text-amber-400 transition block">Terms & Conditions</a>
-                    </li>
-                    <li>
-                        <button onclick="toggleModal('portal-modal')" class="text-amber-400 hover:underline text-left">Client Portal 🔐</button>
-                    </li>
-                </ul>
-            </div>
-
         </div>
+    </footer>
 
-        <!-- Bottom Copyright Bar -->
-        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-            <p>&copy; 2026 Just Consult Adrian. All rights reserved.</p>
-            <a href="#" class="hover:text-amber-400 transition">Back to top ↑</a>
-        </div>
-    </div>
-</footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" onclick="scrollToTop()" aria-label="Scroll Back To Top" class="fixed bottom-24 right-6 z-40 bg-slate-900 border border-slate-700 text-amber-400 p-3.5 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 hover:border-amber-400">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"/></svg>
-    </button>
-
-    <!-- Floating Sticky WhatsApp Quick Chat Button -->
-    <a href="https://wa.me/263774235841?text=Hi%20Adrian,%20I'd%20like%20to%20consult%20on%20a%20web%20project." 
-       target="_blank" 
-       rel="noopener"
-       aria-label="Contact on WhatsApp"
-       class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-400 text-gray-950 p-4 rounded-full shadow-2xl hover:scale-110 transition transform flex items-center justify-center border border-emerald-300">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-        </svg>
-    </a>
-
-    <!-- Engine Script Execution -->
-    <script src="script.js"></script>
 </body>
 </html>
